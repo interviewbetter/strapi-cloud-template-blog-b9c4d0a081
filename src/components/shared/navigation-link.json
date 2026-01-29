@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_shared_navigation_links",
+  "info": {
+    "displayName": "navigation.link",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {},
+  "config": {}
+}
