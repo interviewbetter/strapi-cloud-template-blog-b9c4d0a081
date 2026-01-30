@@ -1,5 +1,38 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedComponent extends Struct.ComponentSchema {
+  collectionName: 'components_shared_components';
+  info: {
+    displayName: 'component';
+  };
+  attributes: {};
+}
+
+export interface SharedCourseDetails extends Struct.ComponentSchema {
+  collectionName: 'components_shared_course_details';
+  info: {
+    displayName: 'courseDetails';
+  };
+  attributes: {
+    badge: Schema.Attribute.String;
+    desc: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCourses extends Struct.ComponentSchema {
+  collectionName: 'components_shared_courses';
+  info: {
+    displayName: 'Courses';
+  };
+  attributes: {
+    courseDetails: Schema.Attribute.Component<'shared.course-details', true>;
+    courseName: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -26,6 +59,16 @@ export interface SharedNavigationMenuItems extends Struct.ComponentSchema {
     displayName: 'navigation.menuItems';
   };
   attributes: {};
+}
+
+export interface SharedOptions extends Struct.ComponentSchema {
+  collectionName: 'components_shared_options';
+  info: {
+    displayName: 'options';
+  };
+  attributes: {
+    tabName: Schema.Attribute.Component<'shared.tab-name', false>;
+  };
 }
 
 export interface SharedQuote extends Struct.ComponentSchema {
@@ -79,16 +122,52 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTabName extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tab_names';
+  info: {
+    displayName: 'Tab name';
+  };
+  attributes: {
+    courses: Schema.Attribute.Component<'shared.courses', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTabs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tabs';
+  info: {
+    displayName: 'tabs';
+  };
+  attributes: {
+    FullStack: Schema.Attribute.Component<'shared.ui-ux', true>;
+  };
+}
+
+export interface SharedUiUx extends Struct.ComponentSchema {
+  collectionName: 'components_shared_ui_uxes';
+  info: {
+    displayName: 'UI UX';
+  };
+  attributes: {};
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.component': SharedComponent;
+      'shared.course-details': SharedCourseDetails;
+      'shared.courses': SharedCourses;
       'shared.media': SharedMedia;
       'shared.navigation-link': SharedNavigationLink;
       'shared.navigation-menu-items': SharedNavigationMenuItems;
+      'shared.options': SharedOptions;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.tab-name': SharedTabName;
+      'shared.tabs': SharedTabs;
+      'shared.ui-ux': SharedUiUx;
     }
   }
 }

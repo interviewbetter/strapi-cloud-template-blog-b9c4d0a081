@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "career_paths",
+  "info": {
+    "singularName": "career-path",
+    "pluralName": "career-paths",
+    "displayName": "career-path"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "component": "shared.options",
+      "repeatable": true
+    }
+  }
+}

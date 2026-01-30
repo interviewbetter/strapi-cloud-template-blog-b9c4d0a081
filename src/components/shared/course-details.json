@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_course_details",
+  "info": {
+    "displayName": "courseDetails"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

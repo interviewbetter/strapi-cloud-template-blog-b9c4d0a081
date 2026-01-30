@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_tabs",
+  "info": {
+    "displayName": "tabs"
+  },
+  "options": {},
+  "attributes": {
+    "FullStack": {
+      "type": "component",
+      "component": "shared.ui-ux",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

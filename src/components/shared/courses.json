@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_courses",
+  "info": {
+    "displayName": "Courses"
+  },
+  "options": {},
+  "attributes": {
+    "courseName": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "courseDetails": {
+      "type": "component",
+      "component": "shared.course-details",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

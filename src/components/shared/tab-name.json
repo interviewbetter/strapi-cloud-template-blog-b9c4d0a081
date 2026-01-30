@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_tab_names",
+  "info": {
+    "displayName": "Tab name"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "courses": {
+      "type": "component",
+      "component": "shared.courses",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
