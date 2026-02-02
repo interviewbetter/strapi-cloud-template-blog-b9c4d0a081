@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_home_pages",
+  "info": {
+    "singularName": "ib-home-page",
+    "pluralName": "ib-home-pages",
+    "displayName": "IB_Home_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "careerPath": {
+      "type": "json"
+    }
+  }
+}
