@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_home_pages",
+  "info": {
+    "singularName": "ib-home-page",
+    "pluralName": "ib-home-pages",
+    "displayName": "IB_Home_page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "json"
+    },
+    "footer": {
+      "type": "json"
+    },
+    "header": {
+      "type": "json"
+    },
+    "footerMobile": {
+      "type": "json"
+    },
+    "headerMobile": {
+      "type": "json"
+    },
+    "heroMobile": {
+      "type": "json"
+    },
+    "heroMenu": {
+      "type": "json"
+    }
+  }
+}
