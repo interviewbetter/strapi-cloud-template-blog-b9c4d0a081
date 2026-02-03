@@ -681,11 +681,7 @@ export interface ApiHeaderHeader extends Struct.CollectionTypeSchema {
 export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
   collectionName: 'ib_home_pages';
   info: {
-<<<<<<< HEAD
-    displayName: 'IB_Home_page';
-=======
     displayName: 'IB_Home_Page';
->>>>>>> 87ff6c840f8f30f56d1f7d64f93304941bff7df6
     pluralName: 'ib-home-pages';
     singularName: 'ib-home-page';
   };
@@ -693,18 +689,6 @@ export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-<<<<<<< HEAD
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    footer: Schema.Attribute.JSON;
-    footerMobile: Schema.Attribute.JSON;
-    header: Schema.Attribute.JSON;
-    headerMobile: Schema.Attribute.JSON;
-    hero: Schema.Attribute.JSON;
-    heroMenu: Schema.Attribute.JSON;
-    heroMobile: Schema.Attribute.JSON;
-=======
     allInOneCareer: Schema.Attribute.JSON;
     announcementBar: Schema.Attribute.JSON;
     careerPath: Schema.Attribute.JSON;
@@ -720,74 +704,13 @@ export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     hiring: Schema.Attribute.JSON;
->>>>>>> 87ff6c840f8f30f56d1f7d64f93304941bff7df6
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::ib-home-page.ib-home-page'
     > &
       Schema.Attribute.Private;
-<<<<<<< HEAD
-    publishedAt: Schema.Attribute.DateTime;
-    topBar: Schema.Attribute.JSON;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
-  collectionName: 'landing_pages';
-  info: {
-    displayName: 'landing-page';
-    pluralName: 'landing-pages';
-    singularName: 'landing-page';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    content: Schema.Attribute.JSON;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::landing-page.landing-page'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.JSON;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiLandingLanding extends Struct.CollectionTypeSchema {
-  collectionName: 'landings';
-  info: {
-    displayName: 'landing';
-    pluralName: 'landings';
-    singularName: 'landing';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::landing.landing'
-    > &
-      Schema.Attribute.Private;
-=======
     popularCourses: Schema.Attribute.JSON;
->>>>>>> 87ff6c840f8f30f56d1f7d64f93304941bff7df6
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1314,11 +1237,6 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::header.header': ApiHeaderHeader;
       'api::ib-home-page.ib-home-page': ApiIbHomePageIbHomePage;
-<<<<<<< HEAD
-      'api::landing-page.landing-page': ApiLandingPageLandingPage;
-      'api::landing.landing': ApiLandingLanding;
-=======
->>>>>>> 87ff6c840f8f30f56d1f7d64f93304941bff7df6
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
