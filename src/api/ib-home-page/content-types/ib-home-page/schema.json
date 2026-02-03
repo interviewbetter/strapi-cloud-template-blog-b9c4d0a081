@@ -11,10 +11,43 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "announcementBar": {
+      "type": "json"
+    },
+    "header": {
+      "type": "json"
+    },
     "heroSection": {
       "type": "json"
     },
+    "allInOneCareer": {
+      "type": "json"
+    },
+    "popularCourses": {
+      "type": "json"
+    },
     "careerPath": {
+      "type": "json"
+    },
+    "faangPrep": {
+      "type": "json"
+    },
+    "hiring": {
+      "type": "json"
+    },
+    "careerStart": {
+      "type": "json"
+    },
+    "footerDesktop": {
+      "type": "json"
+    },
+    "footerMobile": {
+      "type": "json"
+    },
+    "headerMobile": {
+      "type": "json"
+    },
+    "heroMobile": {
       "type": "json"
     }
   }

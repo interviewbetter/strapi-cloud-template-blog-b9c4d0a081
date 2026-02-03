@@ -661,17 +661,28 @@ export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    allInOneCareer: Schema.Attribute.JSON;
+    announcementBar: Schema.Attribute.JSON;
     careerPath: Schema.Attribute.JSON;
+    careerStart: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faangPrep: Schema.Attribute.JSON;
+    footerDesktop: Schema.Attribute.JSON;
+    footerMobile: Schema.Attribute.JSON;
+    header: Schema.Attribute.JSON;
+    headerMobile: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
+    hiring: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::ib-home-page.ib-home-page'
     > &
       Schema.Attribute.Private;
+    popularCourses: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
