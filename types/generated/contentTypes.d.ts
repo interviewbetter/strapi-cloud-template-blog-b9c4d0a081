@@ -534,7 +534,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
 export interface ApiCareerPathCareerPath extends Struct.CollectionTypeSchema {
   collectionName: 'career_paths';
   info: {
-    displayName: 'career-path';
+    displayName: 'careerPath';
     pluralName: 'career-paths';
     singularName: 'career-path';
   };
@@ -545,15 +545,12 @@ export interface ApiCareerPathCareerPath extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::career-path.career-path'
     > &
       Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    options: Schema.Attribute.Component<'shared.options', true>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -684,7 +681,11 @@ export interface ApiHeaderHeader extends Struct.CollectionTypeSchema {
 export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
   collectionName: 'ib_home_pages';
   info: {
+<<<<<<< HEAD
     displayName: 'IB_Home_page';
+=======
+    displayName: 'IB_Home_Page';
+>>>>>>> 87ff6c840f8f30f56d1f7d64f93304941bff7df6
     pluralName: 'ib-home-pages';
     singularName: 'ib-home-page';
   };
@@ -692,6 +693,7 @@ export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+<<<<<<< HEAD
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -702,12 +704,30 @@ export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
     hero: Schema.Attribute.JSON;
     heroMenu: Schema.Attribute.JSON;
     heroMobile: Schema.Attribute.JSON;
+=======
+    allInOneCareer: Schema.Attribute.JSON;
+    announcementBar: Schema.Attribute.JSON;
+    careerPath: Schema.Attribute.JSON;
+    careerStart: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faangPrep: Schema.Attribute.JSON;
+    footerDesktop: Schema.Attribute.JSON;
+    footerMobile: Schema.Attribute.JSON;
+    header: Schema.Attribute.JSON;
+    headerMobile: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    hiring: Schema.Attribute.JSON;
+>>>>>>> 87ff6c840f8f30f56d1f7d64f93304941bff7df6
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::ib-home-page.ib-home-page'
     > &
       Schema.Attribute.Private;
+<<<<<<< HEAD
     publishedAt: Schema.Attribute.DateTime;
     topBar: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
@@ -765,6 +785,9 @@ export interface ApiLandingLanding extends Struct.CollectionTypeSchema {
       'api::landing.landing'
     > &
       Schema.Attribute.Private;
+=======
+    popularCourses: Schema.Attribute.JSON;
+>>>>>>> 87ff6c840f8f30f56d1f7d64f93304941bff7df6
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1029,8 +1052,8 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    alternativeText: Schema.Attribute.Text;
-    caption: Schema.Attribute.Text;
+    alternativeText: Schema.Attribute.String;
+    caption: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1054,7 +1077,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     mime: Schema.Attribute.String & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    previewUrl: Schema.Attribute.Text;
+    previewUrl: Schema.Attribute.String;
     provider: Schema.Attribute.String & Schema.Attribute.Required;
     provider_metadata: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
@@ -1063,7 +1086,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url: Schema.Attribute.Text & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
     width: Schema.Attribute.Integer;
   };
 }
@@ -1291,8 +1314,11 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::header.header': ApiHeaderHeader;
       'api::ib-home-page.ib-home-page': ApiIbHomePageIbHomePage;
+<<<<<<< HEAD
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
+=======
+>>>>>>> 87ff6c840f8f30f56d1f7d64f93304941bff7df6
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -4,20 +4,41 @@
   "info": {
     "singularName": "ib-home-page",
     "pluralName": "ib-home-pages",
-    "displayName": "IB_Home_page"
+    "displayName": "IB_Home_Page"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "hero": {
-      "type": "json"
-    },
-    "footer": {
+    "announcementBar": {
       "type": "json"
     },
     "header": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "allInOneCareer": {
+      "type": "json"
+    },
+    "popularCourses": {
+      "type": "json"
+    },
+    "careerPath": {
+      "type": "json"
+    },
+    "faangPrep": {
+      "type": "json"
+    },
+    "hiring": {
+      "type": "json"
+    },
+    "careerStart": {
+      "type": "json"
+    },
+    "footerDesktop": {
       "type": "json"
     },
     "footerMobile": {
@@ -27,12 +48,6 @@
       "type": "json"
     },
     "heroMobile": {
-      "type": "json"
-    },
-    "heroMenu": {
-      "type": "json"
-    },
-    "topBar": {
       "type": "json"
     }
   }

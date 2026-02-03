@@ -4,23 +4,11 @@
   "info": {
     "singularName": "career-path",
     "pluralName": "career-paths",
-    "displayName": "career-path"
+    "displayName": "careerPath"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
-  "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    },
-    "options": {
-      "type": "component",
-      "component": "shared.options",
-      "repeatable": true
-    }
-  }
+  "attributes": {}
 }
