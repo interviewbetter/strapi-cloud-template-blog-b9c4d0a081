@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_freshser_pages",
+  "info": {
+    "singularName": "ib-freshser-page",
+    "pluralName": "ib-freshser-pages",
+    "displayName": "IB_Freshser_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "careerPath": {
+      "type": "json"
+    },
+    "allInOneCareer": {
+      "type": "json"
+    },
+    "hiring": {
+      "type": "json"
+    },
+    "careerStart": {
+      "type": "json"
+    }
+  }
+}
