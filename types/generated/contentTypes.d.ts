@@ -696,6 +696,7 @@ export interface ApiIbFreshserPageIbFreshserPage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faangPrep: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     hiring: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
