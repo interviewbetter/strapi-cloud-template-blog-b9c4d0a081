@@ -25,6 +25,9 @@
     },
     "careerStart": {
       "type": "json"
+    },
+    "faangPrep": {
+      "type": "json"
     }
   }
 }
