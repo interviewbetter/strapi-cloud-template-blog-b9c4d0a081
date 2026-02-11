@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foundersbar_blogs",
+  "info": {
+    "singularName": "foundersbar-blog",
+    "pluralName": "foundersbar-blogs",
+    "displayName": "foundersbarBlog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "createdby": {
+      "type": "string"
+    },
+    "createdbyimage": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "createdDate": {
+      "type": "date"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ctaContentMobile": {
+      "type": "string"
+    },
+    "ctaContent": {
+      "type": "json"
+    },
+    "blogSections": {
+      "type": "component",
+      "component": "shared.foundersbar-blog-sections",
+      "repeatable": true
+    },
+    "foundersbar_blog_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::foundersbar-category.foundersbar-category",
+      "inversedBy": "foundersbar_blogs"
+    }
+  }
+}

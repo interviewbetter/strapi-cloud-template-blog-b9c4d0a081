@@ -1,5 +1,54 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedBlogSections extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blog_sections';
+  info: {
+    displayName: 'blogSections';
+    icon: 'manyWays';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    sectionslug: Schema.Attribute.String;
+    title: Schema.Attribute.Blocks;
+  };
+}
+
+export interface SharedBlogs extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blogs';
+  info: {
+    displayName: 'blogs';
+  };
+  attributes: {
+    blogid: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    createdby: Schema.Attribute.String;
+    createdbyimage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    createddate: Schema.Attribute.String;
+    description: Schema.Attribute.Blocks;
+    sections: Schema.Attribute.Component<'shared.blog-sections', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCategories extends Struct.ComponentSchema {
+  collectionName: 'components_shared_categories';
+  info: {
+    displayName: 'categories';
+    icon: 'crown';
+  };
+  attributes: {
+    blogs: Schema.Attribute.Component<'shared.blogs', true>;
+    categoryid: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    categoryName: Schema.Attribute.String;
+  };
+}
+
 export interface SharedComponent extends Struct.ComponentSchema {
   collectionName: 'components_shared_components';
   info: {
@@ -30,6 +79,22 @@ export interface SharedCourses extends Struct.ComponentSchema {
     courseDetails: Schema.Attribute.Component<'shared.course-details', true>;
     courseName: Schema.Attribute.String;
     key: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
+  collectionName: 'components_shared_foundersbar_blog_sections';
+  info: {
+    displayName: 'foundersbarBlogSections';
+  };
+  attributes: {
+    sectionDescription: Schema.Attribute.RichText;
+    sectionid: Schema.Attribute.String & Schema.Attribute.Unique;
+    sectionMedia: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    sectionTitle: Schema.Attribute.Text;
   };
 }
 
@@ -95,6 +160,19 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSections extends Struct.ComponentSchema {
+  collectionName: 'components_shared_sections';
+  info: {
+    displayName: 'sections';
+  };
+  attributes: {
+    anchor: Schema.Attribute.String;
+    description: Schema.Attribute.Blocks;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -154,15 +232,20 @@ export interface SharedUiUx extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.blog-sections': SharedBlogSections;
+      'shared.blogs': SharedBlogs;
+      'shared.categories': SharedCategories;
       'shared.component': SharedComponent;
       'shared.course-details': SharedCourseDetails;
       'shared.courses': SharedCourses;
+      'shared.foundersbar-blog-sections': SharedFoundersbarBlogSections;
       'shared.media': SharedMedia;
       'shared.navigation-link': SharedNavigationLink;
       'shared.navigation-menu-items': SharedNavigationMenuItems;
       'shared.options': SharedOptions;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
+      'shared.sections': SharedSections;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.tab-name': SharedTabName;

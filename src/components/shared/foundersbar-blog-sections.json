@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_foundersbar_blog_sections",
+  "info": {
+    "displayName": "foundersbarBlogSections"
+  },
+  "options": {},
+  "attributes": {
+    "sectionid": {
+      "type": "string",
+      "unique": true
+    },
+    "sectionTitle": {
+      "type": "text"
+    },
+    "sectionMedia": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sectionDescription": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}
