@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_shared_blogs",
+  "info": {
+    "displayName": "blogs"
+  },
+  "options": {},
+  "attributes": {
+    "blogid": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "createdbyimage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "createdby": {
+      "type": "string"
+    },
+    "createddate": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "component",
+      "component": "shared.blog-sections",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

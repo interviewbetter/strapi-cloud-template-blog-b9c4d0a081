@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_categories",
+  "info": {
+    "displayName": "categories",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "categoryid": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "categoryName": {
+      "type": "string"
+    },
+    "blogs": {
+      "type": "component",
+      "component": "shared.blogs",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

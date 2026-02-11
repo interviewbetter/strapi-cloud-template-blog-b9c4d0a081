@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_shared_blog_sections",
+  "info": {
+    "displayName": "blogSections",
+    "icon": "manyWays"
+  },
+  "options": {},
+  "attributes": {
+    "sectionslug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
