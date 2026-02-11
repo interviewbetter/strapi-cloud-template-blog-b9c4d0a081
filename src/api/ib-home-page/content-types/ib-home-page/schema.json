@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_home_pages",
+  "info": {
+    "singularName": "ib-home-page",
+    "pluralName": "ib-home-pages",
+    "displayName": "IB_Home_page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "allInOneCareer": {
+      "type": "json"
+    },
+    "popularCourses": {
+      "type": "json"
+    },
+    "hiringProcess": {
+      "type": "json"
+    }
+  }
+}

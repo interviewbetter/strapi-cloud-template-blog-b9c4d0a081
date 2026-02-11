@@ -623,6 +623,67 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiIbAcademyIbAcademy extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_academies';
+  info: {
+    displayName: 'IB_Academy';
+    pluralName: 'ib-academies';
+    singularName: 'ib-academy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-academy.ib-academy'
+    > &
+      Schema.Attribute.Private;
+    ourCourses: Schema.Attribute.JSON;
+    popularCourses: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    turnYourSkill: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_home_pages';
+  info: {
+    displayName: 'IB_Home_page';
+    pluralName: 'ib-home-pages';
+    singularName: 'ib-home-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    allInOneCareer: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hiringProcess: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-home-page.ib-home-page'
+    > &
+      Schema.Attribute.Private;
+    popularCourses: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1139,6 +1200,8 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::ib-academy.ib-academy': ApiIbAcademyIbAcademy;
+      'api::ib-home-page.ib-home-page': ApiIbHomePageIbHomePage;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
