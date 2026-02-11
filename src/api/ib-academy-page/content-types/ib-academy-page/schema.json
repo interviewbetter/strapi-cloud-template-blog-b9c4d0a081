@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_academy_pages",
+  "info": {
+    "singularName": "ib-academy-page",
+    "pluralName": "ib-academy-pages",
+    "displayName": "IB_Academy_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "json"
+    },
+    "popularCourses": {
+      "type": "json"
+    },
+    "ourCourses": {
+      "type": "json"
+    },
+    "turnYourSkills": {
+      "type": "json"
+    }
+  }
+}
