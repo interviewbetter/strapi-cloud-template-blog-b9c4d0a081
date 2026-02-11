@@ -760,6 +760,38 @@ export interface ApiHeaderHeader extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiIbAcademyPageIbAcademyPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_academy_pages';
+  info: {
+    displayName: 'IB_Academy_Page';
+    pluralName: 'ib-academy-pages';
+    singularName: 'ib-academy-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-academy-page.ib-academy-page'
+    > &
+      Schema.Attribute.Private;
+    ourCourses: Schema.Attribute.JSON;
+    popularCourses: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    turnYourSkills: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiIbCoursePageIbCoursePage
   extends Struct.CollectionTypeSchema {
   collectionName: 'ib_course_pages';
@@ -1442,6 +1474,7 @@ declare module '@strapi/strapi' {
       'api::foundersbar-category.foundersbar-category': ApiFoundersbarCategoryFoundersbarCategory;
       'api::global.global': ApiGlobalGlobal;
       'api::header.header': ApiHeaderHeader;
+      'api::ib-academy-page.ib-academy-page': ApiIbAcademyPageIbAcademyPage;
       'api::ib-course-page.ib-course-page': ApiIbCoursePageIbCoursePage;
       'api::ib-freshser-page.ib-freshser-page': ApiIbFreshserPageIbFreshserPage;
       'api::ib-home-page.ib-home-page': ApiIbHomePageIbHomePage;
