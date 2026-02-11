@@ -7,6 +7,9 @@
   "attributes": {
     "heroSection": {
       "type": "json"
+    },
+    "floattingButton": {
+      "type": "json"
     }
   },
   "config": {}

@@ -39,6 +39,7 @@ export interface SharedFullStackDevelopment extends Struct.ComponentSchema {
     displayName: 'Full-stack-development';
   };
   attributes: {
+    floattingButton: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
   };
 }
