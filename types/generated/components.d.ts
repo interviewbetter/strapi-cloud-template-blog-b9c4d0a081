@@ -33,6 +33,16 @@ export interface SharedCourses extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedFullStackDevelopment extends Struct.ComponentSchema {
+  collectionName: 'components_shared_full_stack_developments';
+  info: {
+    displayName: 'Full-stack-development';
+  };
+  attributes: {
+    heroSection: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -157,6 +167,7 @@ declare module '@strapi/strapi' {
       'shared.component': SharedComponent;
       'shared.course-details': SharedCourseDetails;
       'shared.courses': SharedCourses;
+      'shared.full-stack-development': SharedFullStackDevelopment;
       'shared.media': SharedMedia;
       'shared.navigation-link': SharedNavigationLink;
       'shared.navigation-menu-items': SharedNavigationMenuItems;

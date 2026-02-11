@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_course_pages",
+  "info": {
+    "singularName": "ib-course-page",
+    "pluralName": "ib-course-pages",
+    "displayName": "IB_Course_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullStackDevelopment": {
+      "type": "component",
+      "component": "shared.full-stack-development",
+      "repeatable": false
+    }
+  }
+}
