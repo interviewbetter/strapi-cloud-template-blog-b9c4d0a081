@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_full_stack_developments",
+  "info": {
+    "displayName": "Full stack development"
+  },
+  "options": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "floattingButton": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}
