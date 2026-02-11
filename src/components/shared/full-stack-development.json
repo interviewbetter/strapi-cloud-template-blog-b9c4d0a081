@@ -11,7 +11,7 @@
     "floattingButton": {
       "type": "json"
     },
-    "councillorSection": {
+    "councillor": {
       "type": "json"
     }
   },
