@@ -804,9 +804,21 @@ export interface ApiIbCoursePageIbCoursePage
     draftAndPublish: true;
   };
   attributes: {
+    backendDevelopment: Schema.Attribute.Component<
+      'shared.backend-development',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    deliveryManagement: Schema.Attribute.Component<
+      'shared.delivery-management',
+      false
+    >;
+    frontendDevelopment: Schema.Attribute.Component<
+      'shared.frontend-development',
+      false
+    >;
     fullStackDevelopment: Schema.Attribute.Component<
       'shared.full-stack-development',
       false
@@ -817,6 +829,14 @@ export interface ApiIbCoursePageIbCoursePage
       'api::ib-course-page.ib-course-page'
     > &
       Schema.Attribute.Private;
+    mobileDevelopment: Schema.Attribute.Component<
+      'shared.mobile-app-development',
+      false
+    >;
+    performanceMarketing: Schema.Attribute.Component<
+      'shared.perfomance-marketing',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

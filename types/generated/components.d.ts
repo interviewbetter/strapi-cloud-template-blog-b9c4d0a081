@@ -1,5 +1,21 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SharedBackendDevelopment extends Struct.ComponentSchema {
+  collectionName: 'components_shared_backend_developments';
+  info: {
+    displayName: 'Backend development';
+  };
+  attributes: {
+    contactCounsellor: Schema.Attribute.JSON;
+    floattingButton: Schema.Attribute.JSON;
+    futureOfThisCourse: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    internship: Schema.Attribute.JSON;
+    whyThisCourse: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedBlogSections extends Struct.ComponentSchema {
   collectionName: 'components_shared_blog_sections';
   info: {
@@ -82,6 +98,22 @@ export interface SharedCourses extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedDeliveryManagement extends Struct.ComponentSchema {
+  collectionName: 'components_shared_delivery_managements';
+  info: {
+    displayName: 'Delivery management';
+  };
+  attributes: {
+    contactCounsellor: Schema.Attribute.JSON;
+    floattingButton: Schema.Attribute.JSON;
+    futureOfThisCourse: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    internship: Schema.Attribute.JSON;
+    whyThisCourse: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
   collectionName: 'components_shared_foundersbar_blog_sections';
   info: {
@@ -95,6 +127,22 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
       true
     >;
     sectionTitle: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedFrontendDevelopment extends Struct.ComponentSchema {
+  collectionName: 'components_shared_frontend_developments';
+  info: {
+    displayName: 'Frontend development';
+  };
+  attributes: {
+    contactCounsellor: Schema.Attribute.JSON;
+    floattingButton: Schema.Attribute.JSON;
+    futureOfThisCourse: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    internship: Schema.Attribute.JSON;
+    whyThisCourse: Schema.Attribute.JSON;
   };
 }
 
@@ -126,6 +174,22 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedMobileAppDevelopment extends Struct.ComponentSchema {
+  collectionName: 'components_shared_mobile_app_developments';
+  info: {
+    displayName: 'Mobile app development';
+  };
+  attributes: {
+    contactCounsellor: Schema.Attribute.JSON;
+    floattingButton: Schema.Attribute.JSON;
+    futureOfThisCourse: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    internship: Schema.Attribute.JSON;
+    whyThisCourse: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedNavigationLink extends Struct.ComponentSchema {
   collectionName: 'components_shared_navigation_links';
   info: {
@@ -150,6 +214,22 @@ export interface SharedOptions extends Struct.ComponentSchema {
   };
   attributes: {
     tabName: Schema.Attribute.Component<'shared.tab-name', false>;
+  };
+}
+
+export interface SharedPerfomanceMarketing extends Struct.ComponentSchema {
+  collectionName: 'components_shared_perfomance_marketings';
+  info: {
+    displayName: 'Perfomance marketing';
+  };
+  attributes: {
+    contactCounsellor: Schema.Attribute.JSON;
+    floattingButton: Schema.Attribute.JSON;
+    futureOfThisCourse: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    internship: Schema.Attribute.JSON;
+    whyThisCourse: Schema.Attribute.JSON;
   };
 }
 
@@ -249,18 +329,23 @@ export interface SharedUiUx extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'shared.backend-development': SharedBackendDevelopment;
       'shared.blog-sections': SharedBlogSections;
       'shared.blogs': SharedBlogs;
       'shared.categories': SharedCategories;
       'shared.component': SharedComponent;
       'shared.course-details': SharedCourseDetails;
       'shared.courses': SharedCourses;
+      'shared.delivery-management': SharedDeliveryManagement;
       'shared.foundersbar-blog-sections': SharedFoundersbarBlogSections;
+      'shared.frontend-development': SharedFrontendDevelopment;
       'shared.full-stack-development': SharedFullStackDevelopment;
       'shared.media': SharedMedia;
+      'shared.mobile-app-development': SharedMobileAppDevelopment;
       'shared.navigation-link': SharedNavigationLink;
       'shared.navigation-menu-items': SharedNavigationMenuItems;
       'shared.options': SharedOptions;
+      'shared.perfomance-marketing': SharedPerfomanceMarketing;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.sections': SharedSections;

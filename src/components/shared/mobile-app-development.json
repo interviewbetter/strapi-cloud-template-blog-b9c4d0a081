@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_mobile_app_developments",
+  "info": {
+    "displayName": "Mobile app development"
+  },
+  "options": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "whyThisCourse": {
+      "type": "json"
+    },
+    "contactCounsellor": {
+      "type": "json"
+    },
+    "futureOfThisCourse": {
+      "type": "json"
+    },
+    "internship": {
+      "type": "json"
+    },
+    "heroMobile": {
+      "type": "json"
+    },
+    "floattingButton": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}
