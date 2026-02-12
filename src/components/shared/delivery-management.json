@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_delivery_managements",
+  "info": {
+    "displayName": "Delivery management"
+  },
+  "options": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "whyThisCourse": {
+      "type": "json"
+    },
+    "contactCounsellor": {
+      "type": "json"
+    },
+    "futureOfThisCourse": {
+      "type": "json"
+    },
+    "internship": {
+      "type": "json"
+    },
+    "heroMobile": {
+      "type": "json"
+    },
+    "floattingButton": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

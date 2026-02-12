@@ -15,6 +15,31 @@
       "type": "component",
       "component": "shared.full-stack-development",
       "repeatable": false
+    },
+    "performanceMarketing": {
+      "type": "component",
+      "component": "shared.perfomance-marketing",
+      "repeatable": false
+    },
+    "frontendDevelopment": {
+      "type": "component",
+      "component": "shared.frontend-development",
+      "repeatable": false
+    },
+    "backendDevelopment": {
+      "type": "component",
+      "component": "shared.backend-development",
+      "repeatable": false
+    },
+    "mobileDevelopment": {
+      "type": "component",
+      "component": "shared.mobile-app-development",
+      "repeatable": false
+    },
+    "deliveryManagement": {
+      "type": "component",
+      "component": "shared.delivery-management",
+      "repeatable": false
     }
   }
 }
