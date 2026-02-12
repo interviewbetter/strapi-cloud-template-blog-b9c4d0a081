@@ -25,6 +25,9 @@
     },
     "contactCounsellor": {
       "type": "json"
+    },
+    "whyPerformanceMarketing": {
+      "type": "json"
     }
   },
   "config": {}

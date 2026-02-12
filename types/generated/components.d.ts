@@ -111,6 +111,7 @@ export interface SharedFullStackDevelopment extends Struct.ComponentSchema {
     heroSection: Schema.Attribute.JSON;
     internship: Schema.Attribute.JSON;
     performanceMarketing: Schema.Attribute.JSON;
+    whyPerformanceMarketing: Schema.Attribute.JSON;
   };
 }
 
