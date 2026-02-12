@@ -106,6 +106,7 @@ export interface SharedFullStackDevelopment extends Struct.ComponentSchema {
   attributes: {
     councillor: Schema.Attribute.JSON;
     floattingButton: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
   };
 }

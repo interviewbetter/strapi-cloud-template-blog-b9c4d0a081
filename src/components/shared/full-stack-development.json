@@ -13,6 +13,9 @@
     },
     "councillor": {
       "type": "json"
+    },
+    "heroMobile": {
+      "type": "json"
     }
   },
   "config": {}
