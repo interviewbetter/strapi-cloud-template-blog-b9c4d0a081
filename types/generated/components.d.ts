@@ -107,11 +107,11 @@ export interface SharedFullStackDevelopment extends Struct.ComponentSchema {
     contactCounsellor: Schema.Attribute.JSON;
     councillor: Schema.Attribute.JSON;
     floattingButton: Schema.Attribute.JSON;
+    futureOfThisCourse: Schema.Attribute.JSON;
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     internship: Schema.Attribute.JSON;
-    performanceMarketing: Schema.Attribute.JSON;
-    whyPerformanceMarketing: Schema.Attribute.JSON;
+    whyThisCourse: Schema.Attribute.JSON;
   };
 }
 
