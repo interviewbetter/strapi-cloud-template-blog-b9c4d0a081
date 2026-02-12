@@ -16,6 +16,15 @@
     },
     "heroMobile": {
       "type": "json"
+    },
+    "internship": {
+      "type": "json"
+    },
+    "performanceMarketing": {
+      "type": "json"
+    },
+    "contactCounsellor": {
+      "type": "json"
     }
   },
   "config": {}
