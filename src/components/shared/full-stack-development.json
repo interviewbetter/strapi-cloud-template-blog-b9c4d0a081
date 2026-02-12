@@ -20,13 +20,13 @@
     "internship": {
       "type": "json"
     },
-    "performanceMarketing": {
+    "futureOfThisCourse": {
       "type": "json"
     },
     "contactCounsellor": {
       "type": "json"
     },
-    "whyPerformanceMarketing": {
+    "whyThisCourse": {
       "type": "json"
     }
   },
