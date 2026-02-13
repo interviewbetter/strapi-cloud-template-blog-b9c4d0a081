@@ -16,6 +16,9 @@
     },
     "heroMobile": {
       "type": "json"
+    },
+    "freePersonal": {
+      "type": "json"
     }
   }
 }
