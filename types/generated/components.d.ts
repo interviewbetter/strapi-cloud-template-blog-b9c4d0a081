@@ -12,6 +12,7 @@ export interface SharedBackendDevelopment extends Struct.ComponentSchema {
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     internship: Schema.Attribute.JSON;
+    prepPlan: Schema.Attribute.JSON;
     whyThisCourse: Schema.Attribute.JSON;
   };
 }
@@ -110,6 +111,7 @@ export interface SharedDeliveryManagement extends Struct.ComponentSchema {
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     internship: Schema.Attribute.JSON;
+    prepPlan: Schema.Attribute.JSON;
     whyThisCourse: Schema.Attribute.JSON;
   };
 }
@@ -188,6 +190,7 @@ export interface SharedMobileAppDevelopment extends Struct.ComponentSchema {
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     internship: Schema.Attribute.JSON;
+    prepPlan: Schema.Attribute.JSON;
     whyThisCourse: Schema.Attribute.JSON;
   };
 }
@@ -231,6 +234,7 @@ export interface SharedPerfomanceMarketing extends Struct.ComponentSchema {
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     internship: Schema.Attribute.JSON;
+    prepPlan: Schema.Attribute.JSON;
     whyThisCourse: Schema.Attribute.JSON;
   };
 }

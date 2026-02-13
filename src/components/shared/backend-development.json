@@ -25,6 +25,9 @@
     },
     "heroSection": {
       "type": "json"
+    },
+    "prepPlan": {
+      "type": "json"
     }
   },
   "config": {}
