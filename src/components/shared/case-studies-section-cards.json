@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_case_studies_section_cards",
+  "info": {
+    "displayName": "caseStudiesSectionCards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

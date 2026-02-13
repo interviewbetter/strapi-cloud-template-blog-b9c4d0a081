@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_foundersbar_case_studies_sections",
+  "info": {
+    "displayName": "foundersbarCaseStudiesSections"
+  },
+  "options": {},
+  "attributes": {
+    "sectionId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.case-studies-section-cards",
+      "repeatable": true
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

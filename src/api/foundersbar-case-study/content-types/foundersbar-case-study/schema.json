@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foundersbar_case_studies",
+  "info": {
+    "singularName": "foundersbar-case-study",
+    "pluralName": "foundersbar-case-studies",
+    "displayName": "foundersbarCaseStudyDetails"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "overviews": {
+      "type": "component",
+      "component": "shared.product-overview",
+      "repeatable": true
+    },
+    "caseStudiesSections": {
+      "type": "component",
+      "component": "shared.foundersbar-case-studies-sections",
+      "repeatable": true
+    }
+  }
+}

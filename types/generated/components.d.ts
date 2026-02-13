@@ -50,6 +50,17 @@ export interface SharedBlogs extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCaseStudiesSectionCards extends Struct.ComponentSchema {
+  collectionName: 'components_shared_case_studies_section_cards';
+  info: {
+    displayName: 'caseStudiesSectionCards';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedCategories extends Struct.ComponentSchema {
   collectionName: 'components_shared_categories';
   info: {
@@ -127,6 +138,24 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
       true
     >;
     sectionTitle: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedFoundersbarCaseStudiesSections
+  extends Struct.ComponentSchema {
+  collectionName: 'components_shared_foundersbar_case_studies_sections';
+  info: {
+    displayName: 'foundersbarCaseStudiesSections';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<
+      'shared.case-studies-section-cards',
+      true
+    >;
+    description: Schema.Attribute.RichText;
+    media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    sectionId: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -235,6 +264,19 @@ export interface SharedPerfomanceMarketing extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedProductOverview extends Struct.ComponentSchema {
+  collectionName: 'components_shared_product_overviews';
+  info: {
+    displayName: 'productOverview';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    overviewId: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -334,12 +376,14 @@ declare module '@strapi/strapi' {
       'shared.backend-development': SharedBackendDevelopment;
       'shared.blog-sections': SharedBlogSections;
       'shared.blogs': SharedBlogs;
+      'shared.case-studies-section-cards': SharedCaseStudiesSectionCards;
       'shared.categories': SharedCategories;
       'shared.component': SharedComponent;
       'shared.course-details': SharedCourseDetails;
       'shared.courses': SharedCourses;
       'shared.delivery-management': SharedDeliveryManagement;
       'shared.foundersbar-blog-sections': SharedFoundersbarBlogSections;
+      'shared.foundersbar-case-studies-sections': SharedFoundersbarCaseStudiesSections;
       'shared.frontend-development': SharedFrontendDevelopment;
       'shared.full-stack-development': SharedFullStackDevelopment;
       'shared.media': SharedMedia;
@@ -348,6 +392,7 @@ declare module '@strapi/strapi' {
       'shared.navigation-menu-items': SharedNavigationMenuItems;
       'shared.options': SharedOptions;
       'shared.perfomance-marketing': SharedPerfomanceMarketing;
+      'shared.product-overview': SharedProductOverview;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.sections': SharedSections;
