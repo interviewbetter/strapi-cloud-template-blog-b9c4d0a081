@@ -858,6 +858,7 @@ export interface ApiIbFaangPageIbFaangPage extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    freePersonal: Schema.Attribute.JSON;
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
