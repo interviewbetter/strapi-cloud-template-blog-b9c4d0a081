@@ -665,6 +665,41 @@ export interface ApiFoundersbarBlogFoundersbarBlog
   };
 }
 
+export interface ApiFoundersbarCaseStudyListFoundersbarCaseStudyList
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'foundersbar_case_study_lists';
+  info: {
+    displayName: 'foundersbarCaseStudyList';
+    pluralName: 'foundersbar-case-study-lists';
+    singularName: 'foundersbar-case-study-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.RichText;
+    foundersbar_case_study_detail: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::foundersbar-case-study.foundersbar-case-study'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::foundersbar-case-study-list.foundersbar-case-study-list'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFoundersbarCaseStudyFoundersbarCaseStudy
   extends Struct.CollectionTypeSchema {
   collectionName: 'foundersbar_case_studies';
@@ -1560,6 +1595,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::course.course': ApiCourseCourse;
       'api::foundersbar-blog.foundersbar-blog': ApiFoundersbarBlogFoundersbarBlog;
+      'api::foundersbar-case-study-list.foundersbar-case-study-list': ApiFoundersbarCaseStudyListFoundersbarCaseStudyList;
       'api::foundersbar-case-study.foundersbar-case-study': ApiFoundersbarCaseStudyFoundersbarCaseStudy;
       'api::foundersbar-category.foundersbar-category': ApiFoundersbarCategoryFoundersbarCategory;
       'api::global.global': ApiGlobalGlobal;

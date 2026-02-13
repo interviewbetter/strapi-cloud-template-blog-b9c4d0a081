@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foundersbar_case_study_lists",
+  "info": {
+    "singularName": "foundersbar-case-study-list",
+    "pluralName": "foundersbar-case-study-lists",
+    "displayName": "foundersbarCaseStudyList"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "foundersbar_case_study_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::foundersbar-case-study.foundersbar-case-study"
+    }
+  }
+}
