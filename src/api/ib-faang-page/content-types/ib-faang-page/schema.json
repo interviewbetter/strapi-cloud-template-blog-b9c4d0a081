@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_faang_pages",
+  "info": {
+    "singularName": "ib-faang-page",
+    "pluralName": "ib-faang-pages",
+    "displayName": "IB_Faang_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startFaang": {
+      "type": "json"
+    }
+  }
+}
