@@ -160,6 +160,7 @@ export interface SharedFullStackDevelopment extends Struct.ComponentSchema {
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     internship: Schema.Attribute.JSON;
+    prepPlan: Schema.Attribute.JSON;
     whyThisCourse: Schema.Attribute.JSON;
   };
 }
