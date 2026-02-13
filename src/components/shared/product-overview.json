@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_product_overviews",
+  "info": {
+    "displayName": "productOverview"
+  },
+  "options": {},
+  "attributes": {
+    "overviewId": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

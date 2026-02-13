@@ -665,6 +665,42 @@ export interface ApiFoundersbarBlogFoundersbarBlog
   };
 }
 
+export interface ApiFoundersbarCaseStudyFoundersbarCaseStudy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'foundersbar_case_studies';
+  info: {
+    displayName: 'foundersbarCaseStudyDetails';
+    pluralName: 'foundersbar-case-studies';
+    singularName: 'foundersbar-case-study';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    caseStudiesSections: Schema.Attribute.Component<
+      'shared.foundersbar-case-studies-sections',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.RichText;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::foundersbar-case-study.foundersbar-case-study'
+    > &
+      Schema.Attribute.Private;
+    overviews: Schema.Attribute.Component<'shared.product-overview', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFoundersbarCategoryFoundersbarCategory
   extends Struct.CollectionTypeSchema {
   collectionName: 'foundersbar_categories';
@@ -1263,8 +1299,8 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    alternativeText: Schema.Attribute.Text;
-    caption: Schema.Attribute.Text;
+    alternativeText: Schema.Attribute.String;
+    caption: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1288,7 +1324,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     mime: Schema.Attribute.String & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    previewUrl: Schema.Attribute.Text;
+    previewUrl: Schema.Attribute.String;
     provider: Schema.Attribute.String & Schema.Attribute.Required;
     provider_metadata: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
@@ -1297,7 +1333,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    url: Schema.Attribute.Text & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
     width: Schema.Attribute.Integer;
   };
 }
@@ -1523,6 +1559,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::course.course': ApiCourseCourse;
       'api::foundersbar-blog.foundersbar-blog': ApiFoundersbarBlogFoundersbarBlog;
+      'api::foundersbar-case-study.foundersbar-case-study': ApiFoundersbarCaseStudyFoundersbarCaseStudy;
       'api::foundersbar-category.foundersbar-category': ApiFoundersbarCategoryFoundersbarCategory;
       'api::global.global': ApiGlobalGlobal;
       'api::header.header': ApiHeaderHeader;
