@@ -22,6 +22,9 @@
     },
     "freePersonal": {
       "type": "json"
+    },
+    "whyThis": {
+      "type": "json"
     }
   }
 }
