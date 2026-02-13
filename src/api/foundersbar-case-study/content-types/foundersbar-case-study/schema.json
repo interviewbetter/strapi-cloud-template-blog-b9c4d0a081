@@ -12,14 +12,7 @@
   "pluginOptions": {},
   "attributes": {
     "slug": {
-      "type": "uid",
-      "targetField": "title"
-    },
-    "title": {
-      "type": "text"
-    },
-    "description": {
-      "type": "richtext"
+      "type": "uid"
     },
     "overviews": {
       "type": "component",
