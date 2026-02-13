@@ -25,6 +25,9 @@
     },
     "whyThisCourse": {
       "type": "json"
+    },
+    "prepPlan": {
+      "type": "json"
     }
   },
   "config": {}
