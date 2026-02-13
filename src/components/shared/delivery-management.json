@@ -25,6 +25,9 @@
     },
     "floattingButton": {
       "type": "json"
+    },
+    "prepPlan": {
+      "type": "json"
     }
   },
   "config": {}
