@@ -11,7 +11,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "startFaang": {
+    "startFaang": {      
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "heroMobile": {
       "type": "json"
     }
   }
