@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_interview_prep_pages",
+  "info": {
+    "singularName": "ib-interview-prep-page",
+    "pluralName": "ib-interview-prep-pages",
+    "displayName": "IB_Interview_Prep_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "floatingButton": {
+      "type": "json"
+    },
+    "programHighlights": {
+      "type": "json"
+    },
+    "curriculum": {
+      "type": "json"
+    },
+    "theTraining": {
+      "type": "json"
+    },
+    "outcome": {
+      "type": "json"
+    },
+    "getGuidance": {
+      "type": "json"
+    }
+  }
+}

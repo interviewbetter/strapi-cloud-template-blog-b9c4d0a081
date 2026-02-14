@@ -898,6 +898,41 @@ export interface ApiIbHomePageIbHomePage extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiIbInterviewPrepPageIbInterviewPrepPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_interview_prep_pages';
+  info: {
+    displayName: 'IB_Interview_Prep_Page';
+    pluralName: 'ib-interview-prep-pages';
+    singularName: 'ib-interview-prep-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    curriculum: Schema.Attribute.JSON;
+    floatingButton: Schema.Attribute.JSON;
+    getGuidance: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-interview-prep-page.ib-interview-prep-page'
+    > &
+      Schema.Attribute.Private;
+    outcome: Schema.Attribute.JSON;
+    programHighlights: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    theTraining: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   collectionName: 'landing_pages';
   info: {
@@ -1478,6 +1513,7 @@ declare module '@strapi/strapi' {
       'api::ib-course-page.ib-course-page': ApiIbCoursePageIbCoursePage;
       'api::ib-freshser-page.ib-freshser-page': ApiIbFreshserPageIbFreshserPage;
       'api::ib-home-page.ib-home-page': ApiIbHomePageIbHomePage;
+      'api::ib-interview-prep-page.ib-interview-prep-page': ApiIbInterviewPrepPageIbInterviewPrepPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'plugin::content-releases.release': PluginContentReleasesRelease;
