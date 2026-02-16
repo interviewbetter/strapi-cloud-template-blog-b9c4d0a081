@@ -274,7 +274,7 @@ export interface SharedProductOverview extends Struct.ComponentSchema {
     displayName: 'productOverview';
   };
   attributes: {
-    description: Schema.Attribute.RichText;
+    description: Schema.Attribute.Text;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     overviewId: Schema.Attribute.String;
     title: Schema.Attribute.Text;
