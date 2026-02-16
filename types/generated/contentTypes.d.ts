@@ -1055,6 +1055,41 @@ export interface ApiIbInterviewPrepPageIbInterviewPrepPage
   };
 }
 
+export interface ApiIbInterviewPrepProfessionalPageIbInterviewPrepProfessionalPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_interview_prep_professional_pages';
+  info: {
+    displayName: 'IB_Interview_Prep_Professional_Page';
+    pluralName: 'ib-interview-prep-professional-pages';
+    singularName: 'ib-interview-prep-professional-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    curriculum: Schema.Attribute.JSON;
+    floatingButton: Schema.Attribute.JSON;
+    getGuidance: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-interview-prep-professional-page.ib-interview-prep-professional-page'
+    > &
+      Schema.Attribute.Private;
+    outcome: Schema.Attribute.JSON;
+    programHighlights: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    theTraining: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   collectionName: 'landing_pages';
   info: {
@@ -1639,6 +1674,7 @@ declare module '@strapi/strapi' {
       'api::ib-freshser-page.ib-freshser-page': ApiIbFreshserPageIbFreshserPage;
       'api::ib-home-page.ib-home-page': ApiIbHomePageIbHomePage;
       'api::ib-interview-prep-page.ib-interview-prep-page': ApiIbInterviewPrepPageIbInterviewPrepPage;
+      'api::ib-interview-prep-professional-page.ib-interview-prep-professional-page': ApiIbInterviewPrepProfessionalPageIbInterviewPrepProfessionalPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'plugin::content-releases.release': PluginContentReleasesRelease;
