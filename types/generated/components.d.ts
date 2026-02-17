@@ -154,7 +154,7 @@ export interface SharedFoundersbarCaseStudiesSections
       'shared.case-studies-section-cards',
       true
     >;
-    description: Schema.Attribute.RichText;
+    description: Schema.Attribute.Blocks;
     media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     sectionId: Schema.Attribute.String;
     title: Schema.Attribute.Text;

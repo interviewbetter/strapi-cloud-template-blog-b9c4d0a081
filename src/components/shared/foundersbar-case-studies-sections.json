@@ -11,9 +11,6 @@
     "title": {
       "type": "text"
     },
-    "description": {
-      "type": "richtext"
-    },
     "cards": {
       "type": "component",
       "component": "shared.case-studies-section-cards",
@@ -28,6 +25,9 @@
         "videos",
         "audios"
       ]
+    },
+    "description": {
+      "type": "blocks"
     }
   },
   "config": {}
