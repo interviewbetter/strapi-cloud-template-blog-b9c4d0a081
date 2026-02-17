@@ -57,7 +57,8 @@ export interface SharedCaseStudiesSectionCards extends Struct.ComponentSchema {
     displayName: 'caseStudiesSectionCards';
   };
   attributes: {
-    description: Schema.Attribute.Blocks;
+    desc: Schema.Attribute.Blocks;
+    description: Schema.Attribute.RichText;
     title: Schema.Attribute.Text;
   };
 }
@@ -133,7 +134,8 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
     displayName: 'foundersbarBlogSections';
   };
   attributes: {
-    secDescription: Schema.Attribute.Blocks;
+    secDesc: Schema.Attribute.Blocks;
+    sectionDescription: Schema.Attribute.RichText;
     sectionid: Schema.Attribute.String & Schema.Attribute.Unique;
     sectionMedia: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
@@ -154,7 +156,8 @@ export interface SharedFoundersbarCaseStudiesSections
       'shared.case-studies-section-cards',
       true
     >;
-    description: Schema.Attribute.Blocks;
+    desc: Schema.Attribute.Blocks;
+    description: Schema.Attribute.RichText;
     media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     sectionId: Schema.Attribute.String;
     title: Schema.Attribute.Text;
