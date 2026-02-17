@@ -22,8 +22,8 @@
         "audios"
       ]
     },
-    "sectionDescription": {
-      "type": "richtext"
+    "secDescription": {
+      "type": "blocks"
     }
   },
   "config": {}

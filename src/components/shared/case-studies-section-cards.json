@@ -8,8 +8,8 @@
     "title": {
       "type": "text"
     },
-    "description": {
-      "type": "richtext"
+    "desc": {
+      "type": "blocks"
     }
   },
   "config": {}

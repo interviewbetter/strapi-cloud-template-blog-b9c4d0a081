@@ -57,7 +57,7 @@ export interface SharedCaseStudiesSectionCards extends Struct.ComponentSchema {
     displayName: 'caseStudiesSectionCards';
   };
   attributes: {
-    description: Schema.Attribute.RichText;
+    desc: Schema.Attribute.Blocks;
     title: Schema.Attribute.Text;
   };
 }
@@ -133,7 +133,7 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
     displayName: 'foundersbarBlogSections';
   };
   attributes: {
-    sectionDescription: Schema.Attribute.RichText;
+    secDescription: Schema.Attribute.Blocks;
     sectionid: Schema.Attribute.String & Schema.Attribute.Unique;
     sectionMedia: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
