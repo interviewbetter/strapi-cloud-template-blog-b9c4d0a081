@@ -8,7 +8,7 @@
     "title": {
       "type": "text"
     },
-    "desc": {
+    "description": {
       "type": "blocks"
     }
   },

@@ -57,7 +57,7 @@ export interface SharedCaseStudiesSectionCards extends Struct.ComponentSchema {
     displayName: 'caseStudiesSectionCards';
   };
   attributes: {
-    desc: Schema.Attribute.Blocks;
+    description: Schema.Attribute.Blocks;
     title: Schema.Attribute.Text;
   };
 }
