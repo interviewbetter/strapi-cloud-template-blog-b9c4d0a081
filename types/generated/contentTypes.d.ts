@@ -680,7 +680,7 @@ export interface ApiFoundersbarCaseStudyListFoundersbarCaseStudyList
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.RichText;
+    desc: Schema.Attribute.Blocks;
     foundersbar_case_study_detail: Schema.Attribute.Relation<
       'oneToOne',
       'api::foundersbar-case-study.foundersbar-case-study'

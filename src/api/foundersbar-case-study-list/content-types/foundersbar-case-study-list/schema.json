@@ -18,9 +18,6 @@
       "type": "uid",
       "targetField": "title"
     },
-    "description": {
-      "type": "richtext"
-    },
     "foundersbar_case_study_detail": {
       "type": "relation",
       "relation": "oneToOne",
@@ -35,6 +32,9 @@
         "videos",
         "audios"
       ]
+    },
+    "desc": {
+      "type": "blocks"
     }
   }
 }
