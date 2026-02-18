@@ -23,6 +23,22 @@
       "type": "component",
       "component": "shared.foundersbar-case-studies-sections",
       "repeatable": true
+    },
+    "ctaContent": {
+      "type": "blocks"
+    },
+    "videoTitle": {
+      "type": "blocks"
+    },
+    "videoSection": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     }
   }
 }

@@ -28,9 +28,6 @@
     },
     "desc": {
       "type": "blocks"
-    },
-    "description": {
-      "type": "richtext"
     }
   },
   "config": {}

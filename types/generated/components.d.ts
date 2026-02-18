@@ -58,7 +58,6 @@ export interface SharedCaseStudiesSectionCards extends Struct.ComponentSchema {
   };
   attributes: {
     desc: Schema.Attribute.Blocks;
-    description: Schema.Attribute.RichText;
     title: Schema.Attribute.Text;
   };
 }
@@ -157,7 +156,6 @@ export interface SharedFoundersbarCaseStudiesSections
       true
     >;
     desc: Schema.Attribute.Blocks;
-    description: Schema.Attribute.RichText;
     media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     sectionId: Schema.Attribute.String;
     title: Schema.Attribute.Text;
