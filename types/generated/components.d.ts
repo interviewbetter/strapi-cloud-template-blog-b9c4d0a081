@@ -269,6 +269,16 @@ export interface SharedPerfomanceMarketing extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedPricingSection extends Struct.ComponentSchema {
+  collectionName: 'components_shared_pricing_sections';
+  info: {
+    displayName: 'pricingSection';
+  };
+  attributes: {
+    cards: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedProductOverview extends Struct.ComponentSchema {
   collectionName: 'components_shared_product_overviews';
   info: {
@@ -397,6 +407,7 @@ declare module '@strapi/strapi' {
       'shared.navigation-menu-items': SharedNavigationMenuItems;
       'shared.options': SharedOptions;
       'shared.perfomance-marketing': SharedPerfomanceMarketing;
+      'shared.pricing-section': SharedPricingSection;
       'shared.product-overview': SharedProductOverview;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

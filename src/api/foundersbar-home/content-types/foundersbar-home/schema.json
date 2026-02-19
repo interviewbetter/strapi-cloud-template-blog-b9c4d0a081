@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foundersbar_homes",
+  "info": {
+    "singularName": "foundersbar-home",
+    "pluralName": "foundersbar-homes",
+    "displayName": "foundersbarHome"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pricingCard": {
+      "type": "component",
+      "component": "shared.pricing-section",
+      "repeatable": true
+    }
+  }
+}

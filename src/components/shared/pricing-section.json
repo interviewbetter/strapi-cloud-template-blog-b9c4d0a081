@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_pricing_sections",
+  "info": {
+    "displayName": "pricingSection"
+  },
+  "options": {},
+  "attributes": {
+    "cards": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}
