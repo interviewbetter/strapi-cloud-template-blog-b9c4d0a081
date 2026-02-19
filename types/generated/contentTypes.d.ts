@@ -966,6 +966,7 @@ export interface ApiIbFaangPageIbFaangPage extends Struct.CollectionTypeSchema {
     freePersonal: Schema.Attribute.JSON;
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
+    hiringPattern: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
