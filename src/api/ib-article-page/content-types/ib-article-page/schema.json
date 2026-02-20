@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_article_pages",
+  "info": {
+    "singularName": "ib-article-page",
+    "pluralName": "ib-article-pages",
+    "displayName": "IB_Article_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "heroMobile": {
+      "type": "json"
+    },
+    "articleList": {
+      "type": "json"
+    },
+    "levelUp": {
+      "type": "json"
+    }
+  }
+}

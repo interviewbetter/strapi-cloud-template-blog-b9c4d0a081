@@ -792,6 +792,38 @@ export interface ApiIbAcademyPageIbAcademyPage
   };
 }
 
+export interface ApiIbArticlePageIbArticlePage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_article_pages';
+  info: {
+    displayName: 'IB_Article_Page';
+    pluralName: 'ib-article-pages';
+    singularName: 'ib-article-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    articleList: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    levelUp: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-article-page.ib-article-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiIbCoursePageIbCoursePage
   extends Struct.CollectionTypeSchema {
   collectionName: 'ib_course_pages';
@@ -1527,6 +1559,7 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::header.header': ApiHeaderHeader;
       'api::ib-academy-page.ib-academy-page': ApiIbAcademyPageIbAcademyPage;
+      'api::ib-article-page.ib-article-page': ApiIbArticlePageIbArticlePage;
       'api::ib-course-page.ib-course-page': ApiIbCoursePageIbCoursePage;
       'api::ib-faang-page.ib-faang-page': ApiIbFaangPageIbFaangPage;
       'api::ib-freshser-page.ib-freshser-page': ApiIbFreshserPageIbFreshserPage;
