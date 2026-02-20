@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meta_seos",
+  "info": {
+    "singularName": "meta-seo",
+    "pluralName": "meta-seos",
+    "displayName": "Meta-seo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seoDetails": {
+      "type": "json"
+    }
+  }
+}

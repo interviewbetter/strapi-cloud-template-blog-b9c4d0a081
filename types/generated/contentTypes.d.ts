@@ -1215,6 +1215,34 @@ export interface ApiLandingLanding extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMetaSeoMetaSeo extends Struct.CollectionTypeSchema {
+  collectionName: 'meta_seos';
+  info: {
+    displayName: 'Meta-seo';
+    pluralName: 'meta-seos';
+    singularName: 'meta-seo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::meta-seo.meta-seo'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seoDetails: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1749,6 +1777,7 @@ declare module '@strapi/strapi' {
       'api::ib-interview-prep-professional-page.ib-interview-prep-professional-page': ApiIbInterviewPrepProfessionalPageIbInterviewPrepProfessionalPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
+      'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
