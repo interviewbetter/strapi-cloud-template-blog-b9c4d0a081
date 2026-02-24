@@ -14,6 +14,16 @@
     "slug": {
       "type": "uid"
     },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
     "overviews": {
       "type": "component",
       "component": "shared.product-overview",

@@ -134,7 +134,6 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
   };
   attributes: {
     secDesc: Schema.Attribute.Blocks;
-    sectionDescription: Schema.Attribute.RichText;
     sectionid: Schema.Attribute.String & Schema.Attribute.Unique;
     sectionMedia: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',

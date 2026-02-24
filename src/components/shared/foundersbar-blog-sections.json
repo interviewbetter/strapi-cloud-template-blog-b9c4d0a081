@@ -24,9 +24,6 @@
     },
     "secDesc": {
       "type": "blocks"
-    },
-    "sectionDescription": {
-      "type": "richtext"
     }
   },
   "config": {}
