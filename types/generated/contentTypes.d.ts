@@ -1160,6 +1160,43 @@ export interface ApiIbInterviewPrepProfessionalPageIbInterviewPrepProfessionalPa
   };
 }
 
+export interface ApiIbPricingPageIbPricingPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_pricing_pages';
+  info: {
+    displayName: 'IB_Pricing_Page';
+    pluralName: 'ib-pricing-pages';
+    singularName: 'ib-pricing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    careerGuidence: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    interviewPack: Schema.Attribute.JSON;
+    interviewPackMobile: Schema.Attribute.JSON;
+    interviewPrepIconic: Schema.Attribute.JSON;
+    interviewPrepMobile: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-pricing-page.ib-pricing-page'
+    > &
+      Schema.Attribute.Private;
+    plans: Schema.Attribute.JSON;
+    plansMobile: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
   collectionName: 'landing_pages';
   info: {
@@ -1507,7 +1544,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -1776,6 +1812,7 @@ declare module '@strapi/strapi' {
       'api::ib-home-page.ib-home-page': ApiIbHomePageIbHomePage;
       'api::ib-interview-prep-page.ib-interview-prep-page': ApiIbInterviewPrepPageIbInterviewPrepPage;
       'api::ib-interview-prep-professional-page.ib-interview-prep-professional-page': ApiIbInterviewPrepProfessionalPageIbInterviewPrepProfessionalPage;
+      'api::ib-pricing-page.ib-pricing-page': ApiIbPricingPageIbPricingPage;
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
