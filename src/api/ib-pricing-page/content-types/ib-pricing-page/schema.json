@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_pricing_pages",
+  "info": {
+    "singularName": "ib-pricing-page",
+    "pluralName": "ib-pricing-pages",
+    "displayName": "IB_Pricing_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "heroMobile": {
+      "type": "json"
+    },
+    "interviewPack": {
+      "type": "json"
+    },
+    "interviewPrepIconic": {
+      "type": "json"
+    },
+    "plans": {
+      "type": "json"
+    },
+    "careerGuidence": {
+      "type": "json"
+    },
+    "interviewPackMobile": {
+      "type": "json"
+    },
+    "interviewPrepMobile": {
+      "type": "json"
+    },
+    "plansMobile": {
+      "type": "json"
+    }
+  }
+}
