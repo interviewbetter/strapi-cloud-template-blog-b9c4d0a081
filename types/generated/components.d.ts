@@ -161,6 +161,24 @@ export interface SharedFoundersbarCaseStudiesSections
   };
 }
 
+export interface SharedFresherPricing extends Struct.ComponentSchema {
+  collectionName: 'components_shared_fresher_pricings';
+  info: {
+    displayName: 'fresher-pricing';
+  };
+  attributes: {
+    careerGuidence: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    interviewPack: Schema.Attribute.JSON;
+    interviewPackMobile: Schema.Attribute.JSON;
+    interviewPrepIconic: Schema.Attribute.JSON;
+    interviewPrepMobile: Schema.Attribute.JSON;
+    plans: Schema.Attribute.JSON;
+    plansMobile: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedFrontendDevelopment extends Struct.ComponentSchema {
   collectionName: 'components_shared_frontend_developments';
   info: {
@@ -424,6 +442,7 @@ declare module '@strapi/strapi' {
       'shared.delivery-management': SharedDeliveryManagement;
       'shared.foundersbar-blog-sections': SharedFoundersbarBlogSections;
       'shared.foundersbar-case-studies-sections': SharedFoundersbarCaseStudiesSections;
+      'shared.fresher-pricing': SharedFresherPricing;
       'shared.frontend-development': SharedFrontendDevelopment;
       'shared.full-stack-development': SharedFullStackDevelopment;
       'shared.media': SharedMedia;

@@ -42,6 +42,11 @@
       "type": "component",
       "component": "shared.professional-pricing",
       "repeatable": false
+    },
+    "fresher": {
+      "type": "component",
+      "component": "shared.fresher-pricing",
+      "repeatable": false
     }
   }
 }
