@@ -291,6 +291,32 @@ export interface SharedProductOverview extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedProfessional extends Struct.ComponentSchema {
+  collectionName: 'components_shared_professionals';
+  info: {
+    displayName: 'professional';
+  };
+  attributes: {};
+}
+
+export interface SharedProfessionalPricing extends Struct.ComponentSchema {
+  collectionName: 'components_shared_professional_pricings';
+  info: {
+    displayName: 'professional-pricing';
+  };
+  attributes: {
+    careerGuidence: Schema.Attribute.JSON;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    interviewPack: Schema.Attribute.JSON;
+    interviewPackMobile: Schema.Attribute.JSON;
+    interviewPrepIconic: Schema.Attribute.JSON;
+    interviewPrepMobile: Schema.Attribute.JSON;
+    plans: Schema.Attribute.JSON;
+    plansMobile: Schema.Attribute.JSON;
+  };
+}
+
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
@@ -408,6 +434,8 @@ declare module '@strapi/strapi' {
       'shared.perfomance-marketing': SharedPerfomanceMarketing;
       'shared.pricing-section': SharedPricingSection;
       'shared.product-overview': SharedProductOverview;
+      'shared.professional': SharedProfessional;
+      'shared.professional-pricing': SharedProfessionalPricing;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.sections': SharedSections;

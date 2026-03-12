@@ -37,6 +37,11 @@
     },
     "plansMobile": {
       "type": "json"
+    },
+    "professional": {
+      "type": "component",
+      "component": "shared.professional-pricing",
+      "repeatable": false
     }
   }
 }

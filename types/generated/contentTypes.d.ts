@@ -1190,6 +1190,10 @@ export interface ApiIbPricingPageIbPricingPage
       Schema.Attribute.Private;
     plans: Schema.Attribute.JSON;
     plansMobile: Schema.Attribute.JSON;
+    professional: Schema.Attribute.Component<
+      'shared.professional-pricing',
+      false
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
