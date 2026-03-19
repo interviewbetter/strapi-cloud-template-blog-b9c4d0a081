@@ -930,6 +930,36 @@ export interface ApiIbArticlePageIbArticlePage
   };
 }
 
+export interface ApiIbAtsCheckPageIbAtsCheckPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_ats_check_pages';
+  info: {
+    displayName: 'IB_AtsCheck_Page';
+    pluralName: 'ib-ats-check-pages';
+    singularName: 'ib-ats-check-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-ats-check-page.ib-ats-check-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiIbCoursePageIbCoursePage
   extends Struct.CollectionTypeSchema {
   collectionName: 'ib_course_pages';
@@ -1549,6 +1579,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
+    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -1811,6 +1842,7 @@ declare module '@strapi/strapi' {
       'api::header.header': ApiHeaderHeader;
       'api::ib-academy-page.ib-academy-page': ApiIbAcademyPageIbAcademyPage;
       'api::ib-article-page.ib-article-page': ApiIbArticlePageIbArticlePage;
+      'api::ib-ats-check-page.ib-ats-check-page': ApiIbAtsCheckPageIbAtsCheckPage;
       'api::ib-course-page.ib-course-page': ApiIbCoursePageIbCoursePage;
       'api::ib-faang-page.ib-faang-page': ApiIbFaangPageIbFaangPage;
       'api::ib-freshser-page.ib-freshser-page': ApiIbFreshserPageIbFreshserPage;
