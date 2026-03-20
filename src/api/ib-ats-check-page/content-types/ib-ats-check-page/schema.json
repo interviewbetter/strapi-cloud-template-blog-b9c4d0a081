@@ -16,6 +16,9 @@
     },
     "heroMobile": {
       "type": "json"
+    },
+    "atsPlanSection": {
+      "type": "json"
     }
   }
 }
