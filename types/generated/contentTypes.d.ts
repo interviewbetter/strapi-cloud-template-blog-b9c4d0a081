@@ -942,6 +942,7 @@ export interface ApiIbAtsCheckPageIbAtsCheckPage
     draftAndPublish: true;
   };
   attributes: {
+    atsPlanSection: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
