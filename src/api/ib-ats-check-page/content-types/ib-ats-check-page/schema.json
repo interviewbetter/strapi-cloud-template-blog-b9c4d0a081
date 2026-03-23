@@ -19,6 +19,12 @@
     },
     "atsPlanSection": {
       "type": "json"
+    },
+    "atsInsights": {
+      "type": "json"
+    },
+    "atsCta": {
+      "type": "json"
     }
   }
 }
