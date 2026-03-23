@@ -22,6 +22,9 @@
     },
     "atsInsights": {
       "type": "json"
+    },
+    "atsCta": {
+      "type": "json"
     }
   }
 }
