@@ -19,6 +19,9 @@
     },
     "atsPlanSection": {
       "type": "json"
+    },
+    "atsInsights": {
+      "type": "json"
     }
   }
 }
