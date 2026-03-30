@@ -57,17 +57,14 @@
       "target": "api::foundersbar-category.foundersbar-category",
       "inversedBy": "foundersbar_blogs"
     },
-    "ctaContentDesktop": {
-      "type": "blocks"
-    },
-    "ctaContentMobile": {
-      "type": "blocks"
-    },
     "ctaButtonLink": {
       "type": "string"
     },
     "ctaButtonText": {
       "type": "string"
+    },
+    "ctaContent": {
+      "type": "json"
     }
   }
 }
