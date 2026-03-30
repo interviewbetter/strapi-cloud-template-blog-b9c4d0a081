@@ -24,6 +24,18 @@
     },
     "secDesc": {
       "type": "blocks"
+    },
+    "ctaHeading": {
+      "type": "text"
+    },
+    "ctaDescription": {
+      "type": "blocks"
+    },
+    "ctaButtonText": {
+      "type": "string"
+    },
+    "ctaButtonLink": {
+      "type": "string"
     }
   },
   "config": {}

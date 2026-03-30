@@ -133,6 +133,10 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
     displayName: 'foundersbarBlogSections';
   };
   attributes: {
+    ctaButtonLink: Schema.Attribute.String;
+    ctaButtonText: Schema.Attribute.String;
+    ctaDescription: Schema.Attribute.Blocks;
+    ctaHeading: Schema.Attribute.Text;
     secDesc: Schema.Attribute.Blocks;
     sectionid: Schema.Attribute.String & Schema.Attribute.Unique;
     sectionMedia: Schema.Attribute.Media<

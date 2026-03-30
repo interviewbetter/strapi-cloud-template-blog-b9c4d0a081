@@ -642,8 +642,10 @@ export interface ApiFoundersbarBlogFoundersbarBlog
       true
     >;
     createdDate: Schema.Attribute.Date;
-    ctaContent: Schema.Attribute.JSON;
-    ctaContentMobile: Schema.Attribute.String;
+    ctaButtonLink: Schema.Attribute.String;
+    ctaButtonText: Schema.Attribute.String;
+    ctaContentDesktop: Schema.Attribute.Blocks;
+    ctaContentMobile: Schema.Attribute.Blocks;
     description: Schema.Attribute.Text;
     foundersbar_blog_categories: Schema.Attribute.Relation<
       'manyToMany',

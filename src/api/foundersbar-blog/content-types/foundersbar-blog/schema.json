@@ -46,12 +46,6 @@
         "audios"
       ]
     },
-    "ctaContentMobile": {
-      "type": "string"
-    },
-    "ctaContent": {
-      "type": "json"
-    },
     "blogSections": {
       "type": "component",
       "component": "shared.foundersbar-blog-sections",
@@ -62,6 +56,18 @@
       "relation": "manyToMany",
       "target": "api::foundersbar-category.foundersbar-category",
       "inversedBy": "foundersbar_blogs"
+    },
+    "ctaContentDesktop": {
+      "type": "blocks"
+    },
+    "ctaContentMobile": {
+      "type": "blocks"
+    },
+    "ctaButtonLink": {
+      "type": "string"
+    },
+    "ctaButtonText": {
+      "type": "string"
     }
   }
 }
