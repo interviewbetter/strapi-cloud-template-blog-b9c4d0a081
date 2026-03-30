@@ -62,9 +62,6 @@
     },
     "ctaButtonText": {
       "type": "string"
-    },
-    "ctaContent": {
-      "type": "json"
     }
   }
 }
