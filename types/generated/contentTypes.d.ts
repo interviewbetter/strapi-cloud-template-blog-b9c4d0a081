@@ -642,8 +642,10 @@ export interface ApiFoundersbarBlogFoundersbarBlog
       true
     >;
     createdDate: Schema.Attribute.Date;
-    ctaContent: Schema.Attribute.JSON;
-    ctaContentMobile: Schema.Attribute.String;
+    ctaButtonLink: Schema.Attribute.String;
+    ctaButtonText: Schema.Attribute.String;
+    ctaContentDesktop: Schema.Attribute.Blocks;
+    ctaContentMobile: Schema.Attribute.Blocks;
     description: Schema.Attribute.Text;
     foundersbar_blog_categories: Schema.Attribute.Relation<
       'manyToMany',
@@ -921,6 +923,39 @@ export interface ApiIbArticlePageIbArticlePage
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::ib-article-page.ib-article-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIbAtsCheckPageIbAtsCheckPage
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_ats_check_pages';
+  info: {
+    displayName: 'IB_AtsCheck_Page';
+    pluralName: 'ib-ats-check-pages';
+    singularName: 'ib-ats-check-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    atsCta: Schema.Attribute.JSON;
+    atsInsights: Schema.Attribute.JSON;
+    atsPlanSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroMobile: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-ats-check-page.ib-ats-check-page'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1812,6 +1847,7 @@ declare module '@strapi/strapi' {
       'api::header.header': ApiHeaderHeader;
       'api::ib-academy-page.ib-academy-page': ApiIbAcademyPageIbAcademyPage;
       'api::ib-article-page.ib-article-page': ApiIbArticlePageIbArticlePage;
+      'api::ib-ats-check-page.ib-ats-check-page': ApiIbAtsCheckPageIbAtsCheckPage;
       'api::ib-course-page.ib-course-page': ApiIbCoursePageIbCoursePage;
       'api::ib-faang-page.ib-faang-page': ApiIbFaangPageIbFaangPage;
       'api::ib-freshser-page.ib-freshser-page': ApiIbFreshserPageIbFreshserPage;

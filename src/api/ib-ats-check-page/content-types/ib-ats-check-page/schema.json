@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ib_ats_check_pages",
+  "info": {
+    "singularName": "ib-ats-check-page",
+    "pluralName": "ib-ats-check-pages",
+    "displayName": "IB_AtsCheck_Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "heroMobile": {
+      "type": "json"
+    },
+    "atsPlanSection": {
+      "type": "json"
+    },
+    "atsInsights": {
+      "type": "json"
+    },
+    "atsCta": {
+      "type": "json"
+    }
+  }
+}
