@@ -47,6 +47,11 @@
       "type": "component",
       "component": "shared.fresher-pricing",
       "repeatable": false
+    },
+    "freshersMain": {
+      "type": "component",
+      "component": "shared.fresher-pricing",
+      "repeatable": true
     }
   }
 }

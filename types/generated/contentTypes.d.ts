@@ -1177,6 +1177,7 @@ export interface ApiIbPricingPageIbPricingPage
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     fresher: Schema.Attribute.Component<'shared.fresher-pricing', false>;
+    freshersMain: Schema.Attribute.Component<'shared.fresher-pricing', true>;
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     interviewPack: Schema.Attribute.JSON;
