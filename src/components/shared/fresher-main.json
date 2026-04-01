@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_fresher_mains",
+  "info": {
+    "displayName": "fresher-main"
+  },
+  "options": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "heroMobile": {
+      "type": "json"
+    },
+    "interviewPack": {
+      "type": "json"
+    },
+    "interviewPrepIconic": {
+      "type": "json"
+    },
+    "plans": {
+      "type": "json"
+    },
+    "careerGuidence": {
+      "type": "json"
+    },
+    "interviewPackMobile": {
+      "type": "json"
+    },
+    "interviewPrepMobile": {
+      "type": "json"
+    },
+    "plansMobile": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}
