@@ -50,8 +50,8 @@
     },
     "freshersMain": {
       "type": "component",
-      "component": "shared.fresher-pricing",
-      "repeatable": true
+      "component": "shared.fresher-main",
+      "repeatable": false
     }
   }
 }
