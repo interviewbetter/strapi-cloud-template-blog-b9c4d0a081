@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_extras",
+  "info": {
+    "displayName": "Extras"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

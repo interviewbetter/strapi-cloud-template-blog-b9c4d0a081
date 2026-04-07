@@ -127,6 +127,28 @@ export interface SharedDeliveryManagement extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedExtras extends Struct.ComponentSchema {
+  collectionName: 'components_shared_extras';
+  info: {
+    displayName: 'Extras';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    Heading: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFaq extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faqs';
+  info: {
+    displayName: 'faq';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    question: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
   collectionName: 'components_shared_foundersbar_blog_sections';
   info: {
@@ -159,6 +181,7 @@ export interface SharedFoundersbarCaseStudiesSections
       true
     >;
     desc: Schema.Attribute.Blocks;
+    details: Schema.Attribute.Component<'shared.extras', true>;
     media: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     sectionId: Schema.Attribute.String;
     title: Schema.Attribute.Text;
@@ -462,6 +485,8 @@ declare module '@strapi/strapi' {
       'shared.course-details': SharedCourseDetails;
       'shared.courses': SharedCourses;
       'shared.delivery-management': SharedDeliveryManagement;
+      'shared.extras': SharedExtras;
+      'shared.faq': SharedFaq;
       'shared.foundersbar-blog-sections': SharedFoundersbarBlogSections;
       'shared.foundersbar-case-studies-sections': SharedFoundersbarCaseStudiesSections;
       'shared.fresher-main': SharedFresherMain;

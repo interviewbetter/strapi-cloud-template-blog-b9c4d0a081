@@ -49,6 +49,11 @@
         "videos",
         "audios"
       ]
+    },
+    "faqSection": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": true
     }
   }
 }

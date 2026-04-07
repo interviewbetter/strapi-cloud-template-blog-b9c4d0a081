@@ -28,6 +28,11 @@
     },
     "desc": {
       "type": "blocks"
+    },
+    "details": {
+      "type": "component",
+      "component": "shared.extras",
+      "repeatable": true
     }
   },
   "config": {}
