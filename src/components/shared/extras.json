@@ -7,9 +7,6 @@
   "attributes": {
     "Heading": {
       "type": "string"
-    },
-    "description": {
-      "type": "text"
     }
   },
   "config": {}
