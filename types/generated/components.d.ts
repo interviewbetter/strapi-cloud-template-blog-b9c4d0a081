@@ -133,6 +133,7 @@ export interface SharedExtras extends Struct.ComponentSchema {
     displayName: 'Extras';
   };
   attributes: {
+    desc: Schema.Attribute.Blocks;
     Heading: Schema.Attribute.String;
   };
 }

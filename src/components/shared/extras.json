@@ -7,6 +7,9 @@
   "attributes": {
     "Heading": {
       "type": "string"
+    },
+    "desc": {
+      "type": "blocks"
     }
   },
   "config": {}
