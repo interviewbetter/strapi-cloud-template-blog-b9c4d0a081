@@ -36,6 +36,24 @@
     },
     "ctaButtonLink": {
       "type": "string"
+    },
+    "blogCardsWithBg": {
+      "type": "component",
+      "component": "shared.case-studies-section-cards",
+      "repeatable": true
+    },
+    "blogCardsWithoutBg": {
+      "type": "component",
+      "component": "shared.case-studies-section-cards",
+      "repeatable": true
+    },
+    "blogCardsWithHover": {
+      "type": "component",
+      "component": "shared.case-studies-section-cards",
+      "repeatable": true
+    },
+    "comparisonTable": {
+      "type": "json"
     }
   },
   "config": {}

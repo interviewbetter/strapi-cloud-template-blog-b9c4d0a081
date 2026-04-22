@@ -155,6 +155,19 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
     displayName: 'foundersbarBlogSections';
   };
   attributes: {
+    blogCardsWithBg: Schema.Attribute.Component<
+      'shared.case-studies-section-cards',
+      true
+    >;
+    blogCardsWithHover: Schema.Attribute.Component<
+      'shared.case-studies-section-cards',
+      true
+    >;
+    blogCardsWithoutBg: Schema.Attribute.Component<
+      'shared.case-studies-section-cards',
+      true
+    >;
+    comparisonTable: Schema.Attribute.JSON;
     ctaButtonLink: Schema.Attribute.String;
     ctaButtonText: Schema.Attribute.String;
     ctaDescription: Schema.Attribute.Blocks;
