@@ -658,6 +658,8 @@ export interface ApiFoundersbarBlogFoundersbarBlog
       'api::foundersbar-blog.foundersbar-blog'
     > &
       Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String;
@@ -731,6 +733,8 @@ export interface ApiFoundersbarCaseStudyFoundersbarCaseStudy
       'api::foundersbar-case-study.foundersbar-case-study'
     > &
       Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
     overviews: Schema.Attribute.Component<'shared.product-overview', true>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID;
@@ -1586,6 +1590,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
+    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &

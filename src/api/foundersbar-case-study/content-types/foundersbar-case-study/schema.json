@@ -54,6 +54,12 @@
       "type": "component",
       "component": "shared.faq",
       "repeatable": true
+    },
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
     }
   }
 }

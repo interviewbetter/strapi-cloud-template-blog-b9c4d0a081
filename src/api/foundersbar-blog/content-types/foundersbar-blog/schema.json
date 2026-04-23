@@ -68,6 +68,12 @@
     },
     "ctaContentMobile": {
       "type": "blocks"
+    },
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
     }
   }
 }
