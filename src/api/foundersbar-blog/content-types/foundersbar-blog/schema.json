@@ -68,6 +68,12 @@
     },
     "ctaContentMobile": {
       "type": "blocks"
+    },
+    "foundersbar_authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::foundersbar-author.foundersbar-author",
+      "mappedBy": "foundersbar_blogs"
     }
   }
 }

@@ -617,6 +617,41 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFoundersbarAuthorFoundersbarAuthor
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'foundersbar_authors';
+  info: {
+    displayName: 'Foundersbar_Author';
+    pluralName: 'foundersbar-authors';
+    singularName: 'foundersbar-author';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    foundersbar_blogs: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::foundersbar-blog.foundersbar-blog'
+    >;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Link: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::foundersbar-author.foundersbar-author'
+    > &
+      Schema.Attribute.Private;
+    Name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFoundersbarBlogFoundersbarBlog
   extends Struct.CollectionTypeSchema {
   collectionName: 'foundersbar_blogs';
@@ -647,6 +682,10 @@ export interface ApiFoundersbarBlogFoundersbarBlog
     ctaContentDesktop: Schema.Attribute.Blocks;
     ctaContentMobile: Schema.Attribute.Blocks;
     description: Schema.Attribute.Text;
+    foundersbar_authors: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::foundersbar-author.foundersbar-author'
+    >;
     foundersbar_blog_categories: Schema.Attribute.Relation<
       'manyToMany',
       'api::foundersbar-category.foundersbar-category'
@@ -1840,6 +1879,7 @@ declare module '@strapi/strapi' {
       'api::career-path.career-path': ApiCareerPathCareerPath;
       'api::category.category': ApiCategoryCategory;
       'api::course.course': ApiCourseCourse;
+      'api::foundersbar-author.foundersbar-author': ApiFoundersbarAuthorFoundersbarAuthor;
       'api::foundersbar-blog.foundersbar-blog': ApiFoundersbarBlogFoundersbarBlog;
       'api::foundersbar-case-study-list.foundersbar-case-study-list': ApiFoundersbarCaseStudyListFoundersbarCaseStudyList;
       'api::foundersbar-case-study.foundersbar-case-study': ApiFoundersbarCaseStudyFoundersbarCaseStudy;

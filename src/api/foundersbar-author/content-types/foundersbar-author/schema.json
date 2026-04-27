@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foundersbar_authors",
+  "info": {
+    "singularName": "foundersbar-author",
+    "pluralName": "foundersbar-authors",
+    "displayName": "Foundersbar_Author"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Link": {
+      "type": "string"
+    },
+    "foundersbar_blogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::foundersbar-blog.foundersbar-blog",
+      "inversedBy": "foundersbar_authors"
+    }
+  }
+}
