@@ -857,6 +857,35 @@ export interface ApiFoundersbarHomeFoundersbarHome
   };
 }
 
+export interface ApiFoundersbarSiteMapFoundersbarSiteMap
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'foundersbar_site_maps';
+  info: {
+    displayName: 'foundersbarSiteMap';
+    pluralName: 'foundersbar-site-maps';
+    singularName: 'foundersbar-site-map';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    data: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::foundersbar-site-map.foundersbar-site-map'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1634,7 +1663,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -1894,6 +1922,7 @@ declare module '@strapi/strapi' {
       'api::foundersbar-case-study.foundersbar-case-study': ApiFoundersbarCaseStudyFoundersbarCaseStudy;
       'api::foundersbar-category.foundersbar-category': ApiFoundersbarCategoryFoundersbarCategory;
       'api::foundersbar-home.foundersbar-home': ApiFoundersbarHomeFoundersbarHome;
+      'api::foundersbar-site-map.foundersbar-site-map': ApiFoundersbarSiteMapFoundersbarSiteMap;
       'api::global.global': ApiGlobalGlobal;
       'api::header.header': ApiHeaderHeader;
       'api::ib-academy-page.ib-academy-page': ApiIbAcademyPageIbAcademyPage;

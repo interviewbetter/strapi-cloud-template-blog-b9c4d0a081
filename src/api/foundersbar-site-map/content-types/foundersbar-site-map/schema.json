@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "foundersbar_site_maps",
+  "info": {
+    "singularName": "foundersbar-site-map",
+    "pluralName": "foundersbar-site-maps",
+    "displayName": "foundersbarSiteMap"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}
