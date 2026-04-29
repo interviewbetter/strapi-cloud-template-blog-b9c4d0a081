@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_references",
+  "info": {
+    "displayName": "references"
+  },
+  "options": {},
+  "attributes": {
+    "references_id": {
+      "type": "string"
+    },
+    "references_description": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}

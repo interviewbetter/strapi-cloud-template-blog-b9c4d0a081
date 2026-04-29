@@ -80,6 +80,11 @@
       "relation": "manyToMany",
       "target": "api::foundersbar-author.foundersbar-author",
       "mappedBy": "foundersbar_blogs"
+    },
+    "foundersbar_references": {
+      "type": "component",
+      "component": "shared.references",
+      "repeatable": true
     }
   }
 }
