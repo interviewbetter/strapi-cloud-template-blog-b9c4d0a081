@@ -817,6 +817,8 @@ export interface ApiFoundersbarCategoryFoundersbarCategory
       'api::foundersbar-category.foundersbar-category'
     > &
       Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;

@@ -26,6 +26,12 @@
     },
     "description": {
       "type": "text"
+    },
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
     }
   }
 }
