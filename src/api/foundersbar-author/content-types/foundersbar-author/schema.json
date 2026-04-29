@@ -32,6 +32,9 @@
       "relation": "manyToMany",
       "target": "api::foundersbar-blog.foundersbar-blog",
       "inversedBy": "foundersbar_authors"
+    },
+    "nameMobile": {
+      "type": "string"
     }
   }
 }
