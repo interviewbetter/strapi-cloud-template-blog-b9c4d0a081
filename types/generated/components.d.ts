@@ -405,6 +405,17 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedReferences extends Struct.ComponentSchema {
+  collectionName: 'components_shared_references';
+  info: {
+    displayName: 'references';
+  };
+  attributes: {
+    references_description: Schema.Attribute.Blocks;
+    references_id: Schema.Attribute.String;
+  };
+}
+
 export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
@@ -517,6 +528,7 @@ declare module '@strapi/strapi' {
       'shared.professional': SharedProfessional;
       'shared.professional-pricing': SharedProfessionalPricing;
       'shared.quote': SharedQuote;
+      'shared.references': SharedReferences;
       'shared.rich-text': SharedRichText;
       'shared.sections': SharedSections;
       'shared.seo': SharedSeo;
