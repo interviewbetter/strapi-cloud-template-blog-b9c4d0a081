@@ -85,6 +85,9 @@
       "type": "component",
       "component": "shared.references",
       "repeatable": true
+    },
+    "schema": {
+      "type": "json"
     }
   }
 }

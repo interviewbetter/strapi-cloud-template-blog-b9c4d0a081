@@ -708,6 +708,7 @@ export interface ApiFoundersbarBlogFoundersbarBlog
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -744,6 +745,7 @@ export interface ApiFoundersbarCaseStudyListFoundersbarCaseStudyList
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
@@ -784,6 +786,7 @@ export interface ApiFoundersbarCaseStudyFoundersbarCaseStudy
     metaTitle: Schema.Attribute.Text;
     overviews: Schema.Attribute.Component<'shared.product-overview', true>;
     publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -825,6 +828,7 @@ export interface ApiFoundersbarCategoryFoundersbarCategory
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

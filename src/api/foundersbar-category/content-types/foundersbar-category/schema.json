@@ -32,6 +32,9 @@
     },
     "metaDescription": {
       "type": "text"
+    },
+    "schema": {
+      "type": "json"
     }
   }
 }
