@@ -17,19 +17,6 @@
     "title": {
       "type": "string"
     },
-    "createdby": {
-      "type": "string"
-    },
-    "createdbyimage": {
-      "type": "media",
-      "multiple": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "createdDate": {
       "type": "date"
     },
