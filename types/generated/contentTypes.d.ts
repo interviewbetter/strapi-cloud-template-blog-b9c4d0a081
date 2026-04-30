@@ -673,13 +673,8 @@ export interface ApiFoundersbarBlogFoundersbarBlog
       true
     >;
     createdAt: Schema.Attribute.DateTime;
-    createdby: Schema.Attribute.String;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    createdbyimage: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
-    >;
     createdDate: Schema.Attribute.Date;
     ctaButtonLink: Schema.Attribute.String;
     ctaButtonText: Schema.Attribute.String;
