@@ -689,6 +689,10 @@ export interface ApiFoundersbarBlogFoundersbarBlog
       'manyToMany',
       'api::foundersbar-category.foundersbar-category'
     >;
+    foundersbar_blogs: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::foundersbar-blog.foundersbar-blog'
+    >;
     foundersbar_references: Schema.Attribute.Component<
       'shared.references',
       true
@@ -703,6 +707,10 @@ export interface ApiFoundersbarBlogFoundersbarBlog
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    related_articles: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::foundersbar-blog.foundersbar-blog'
+    >;
     schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String;
