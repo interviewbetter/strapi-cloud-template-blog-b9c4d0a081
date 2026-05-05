@@ -75,6 +75,18 @@
     },
     "schema": {
       "type": "json"
+    },
+    "foundersbar_blogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::foundersbar-blog.foundersbar-blog",
+      "inversedBy": "related_articles"
+    },
+    "related_articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::foundersbar-blog.foundersbar-blog",
+      "mappedBy": "foundersbar_blogs"
     }
   }
 }
