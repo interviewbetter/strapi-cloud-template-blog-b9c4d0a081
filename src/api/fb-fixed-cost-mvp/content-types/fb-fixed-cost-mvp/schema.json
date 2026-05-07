@@ -32,6 +32,9 @@
     "fourthSection": {
       "type": "json"
     },
+    "fifthSection": {
+      "type": "json"
+    },
     "footer": {
       "type": "json"
     }
