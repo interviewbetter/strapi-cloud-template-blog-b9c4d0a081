@@ -738,6 +738,7 @@ export interface ApiFbProductBlueprintFbProductBlueprint
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    fifthSection: Schema.Attribute.JSON;
     footer: Schema.Attribute.JSON;
     fourthSection: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
