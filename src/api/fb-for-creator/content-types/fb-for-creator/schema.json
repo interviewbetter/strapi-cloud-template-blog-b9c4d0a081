@@ -22,6 +22,9 @@
     },
     "strategyFirst": {
       "type": "json"
+    },
+    "newModel": {
+      "type": "json"
     }
   }
 }

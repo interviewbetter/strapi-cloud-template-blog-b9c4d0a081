@@ -713,6 +713,7 @@ export interface ApiFbForCreatorFbForCreator
       Schema.Attribute.Private;
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
+    newModel: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     strategyFirst: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
