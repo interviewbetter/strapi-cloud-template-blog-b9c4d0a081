@@ -689,6 +689,37 @@ export interface ApiFbFixedCostMvpFbFixedCostMvp
   };
 }
 
+export interface ApiFbForCreatorFbForCreator
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_for_creators';
+  info: {
+    displayName: 'FB_For_Creator';
+    pluralName: 'fb-for-creators';
+    singularName: 'fb-for-creator';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-for-creator.fb-for-creator'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbGtmFbGtm extends Struct.CollectionTypeSchema {
   collectionName: 'fb_gtms';
   info: {
@@ -2075,6 +2106,7 @@ declare module '@strapi/strapi' {
       'api::course.course': ApiCourseCourse;
       'api::fb-advisory.fb-advisory': ApiFbAdvisoryFbAdvisory;
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
+      'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
       'api::foundersbar-author.foundersbar-author': ApiFoundersbarAuthorFoundersbarAuthor;
