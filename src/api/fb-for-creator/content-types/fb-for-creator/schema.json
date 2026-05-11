@@ -19,6 +19,9 @@
     },
     "heroSection": {
       "type": "json"
+    },
+    "strategyFirst": {
+      "type": "json"
     }
   }
 }
