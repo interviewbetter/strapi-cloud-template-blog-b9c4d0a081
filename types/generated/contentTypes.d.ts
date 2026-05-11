@@ -714,6 +714,7 @@ export interface ApiFbForCreatorFbForCreator
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    strategyFirst: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
