@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_solo_founders",
+  "info": {
+    "singularName": "fb-solo-founder",
+    "pluralName": "fb-solo-founders",
+    "displayName": "FB_Solo_Founder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "problemSection": {
+      "type": "json"
+    },
+    "howItWorks": {
+      "type": "json"
+    },
+    "benefitSection": {
+      "type": "json"
+    },
+    "finalCTA": {
+      "type": "json"
+    }
+  }
+}

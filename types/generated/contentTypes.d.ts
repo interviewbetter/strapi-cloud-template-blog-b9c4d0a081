@@ -796,6 +796,42 @@ export interface ApiFbProductBlueprintFbProductBlueprint
   };
 }
 
+export interface ApiFbSoloFounderFbSoloFounder
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_solo_founders';
+  info: {
+    displayName: 'FB_Solo_Founder';
+    pluralName: 'fb-solo-founders';
+    singularName: 'fb-solo-founder';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    benefitSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    finalCTA: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    howItWorks: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-solo-founder.fb-solo-founder'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    problemSection: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFoundersbarAuthorFoundersbarAuthor
   extends Struct.CollectionTypeSchema {
   collectionName: 'foundersbar_authors';
@@ -2113,6 +2149,7 @@ declare module '@strapi/strapi' {
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
+      'api::fb-solo-founder.fb-solo-founder': ApiFbSoloFounderFbSoloFounder;
       'api::foundersbar-author.foundersbar-author': ApiFoundersbarAuthorFoundersbarAuthor;
       'api::foundersbar-blog.foundersbar-blog': ApiFoundersbarBlogFoundersbarBlog;
       'api::foundersbar-case-study-list.foundersbar-case-study-list': ApiFoundersbarCaseStudyListFoundersbarCaseStudyList;
