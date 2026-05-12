@@ -714,6 +714,7 @@ export interface ApiFbForCreatorFbForCreator
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
     newModel: Schema.Attribute.JSON;
+    owner: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     strategyFirst: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;

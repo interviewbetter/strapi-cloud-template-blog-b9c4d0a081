@@ -25,6 +25,9 @@
     },
     "newModel": {
       "type": "json"
+    },
+    "owner": {
+      "type": "json"
     }
   }
 }
