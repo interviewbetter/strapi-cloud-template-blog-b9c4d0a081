@@ -28,6 +28,9 @@
     },
     "owner": {
       "type": "json"
+    },
+    "schema": {
+      "type": "json"
     }
   }
 }
