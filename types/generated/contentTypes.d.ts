@@ -716,6 +716,7 @@ export interface ApiFbForCreatorFbForCreator
     newModel: Schema.Attribute.JSON;
     owner: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
     strategyFirst: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
