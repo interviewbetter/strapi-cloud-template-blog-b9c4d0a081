@@ -37,6 +37,9 @@
     },
     "footer": {
       "type": "json"
+    },
+    "faq": {
+      "type": "json"
     }
   }
 }
