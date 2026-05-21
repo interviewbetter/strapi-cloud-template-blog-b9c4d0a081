@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_performance_marketings",
+  "info": {
+    "singularName": "fb-performance-marketing",
+    "pluralName": "fb-performance-marketings",
+    "displayName": "FB_Performance_Marketing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "thirdSection": {
+      "type": "json"
+    },
+    "fourthSection": {
+      "type": "json"
+    },
+    "fifthSection": {
+      "type": "json"
+    },
+    "faq": {
+      "type": "json"
+    }
+  }
+}

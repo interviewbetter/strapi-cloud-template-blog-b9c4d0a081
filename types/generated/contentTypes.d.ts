@@ -762,6 +762,42 @@ export interface ApiFbGtmFbGtm extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbPerformanceMarketingFbPerformanceMarketing
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_performance_marketings';
+  info: {
+    displayName: 'FB_Performance_Marketing';
+    pluralName: 'fb-performance-marketings';
+    singularName: 'fb-performance-marketing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.JSON;
+    fifthSection: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-performance-marketing.fb-performance-marketing'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbProductBlueprintFbProductBlueprint
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_product_blueprints';
@@ -2151,6 +2187,7 @@ declare module '@strapi/strapi' {
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
+      'api::fb-performance-marketing.fb-performance-marketing': ApiFbPerformanceMarketingFbPerformanceMarketing;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
       'api::fb-solo-founder.fb-solo-founder': ApiFbSoloFounderFbSoloFounder;
       'api::foundersbar-author.foundersbar-author': ApiFoundersbarAuthorFoundersbarAuthor;
