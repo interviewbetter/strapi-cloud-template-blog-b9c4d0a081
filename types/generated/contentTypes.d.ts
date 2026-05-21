@@ -762,6 +762,42 @@ export interface ApiFbGtmFbGtm extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbMarketValidationFbMarketValidation
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_market_validations';
+  info: {
+    displayName: 'FB_Market_Validation';
+    pluralName: 'fb-market-validations';
+    singularName: 'fb-market-validation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faqs: Schema.Attribute.JSON;
+    footer: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-market-validation.fb-market-validation'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    roadmap: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    validation: Schema.Attribute.JSON;
+  };
+}
+
 export interface ApiFbPerformanceMarketingFbPerformanceMarketing
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_performance_marketings';
@@ -779,6 +815,7 @@ export interface ApiFbPerformanceMarketingFbPerformanceMarketing
       Schema.Attribute.Private;
     faq: Schema.Attribute.JSON;
     fifthSection: Schema.Attribute.JSON;
+    footer: Schema.Attribute.JSON;
     fourthSection: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -790,6 +827,7 @@ export interface ApiFbPerformanceMarketingFbPerformanceMarketing
     metaDescription: Schema.Attribute.String;
     metaTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
     secondSection: Schema.Attribute.JSON;
     thirdSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
@@ -1930,6 +1968,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
+    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -2187,6 +2226,7 @@ declare module '@strapi/strapi' {
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
+      'api::fb-market-validation.fb-market-validation': ApiFbMarketValidationFbMarketValidation;
       'api::fb-performance-marketing.fb-performance-marketing': ApiFbPerformanceMarketingFbPerformanceMarketing;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
       'api::fb-solo-founder.fb-solo-founder': ApiFbSoloFounderFbSoloFounder;

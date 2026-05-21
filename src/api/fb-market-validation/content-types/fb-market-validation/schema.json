@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_market_validations",
+  "info": {
+    "singularName": "fb-market-validation",
+    "pluralName": "fb-market-validations",
+    "displayName": "FB_Market_Validation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "validation": {
+      "type": "json"
+    },
+    "roadmap": {
+      "type": "json"
+    },
+    "faqs": {
+      "type": "json"
+    },
+    "footer": {
+      "type": "json"
+    }
+  }
+}
