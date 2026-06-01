@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_homes",
+  "info": {
+    "singularName": "fb-home",
+    "pluralName": "fb-homes",
+    "displayName": "FB_Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "json"
+    },
+    "services": {
+      "type": "json"
+    },
+    "comparisonData": {
+      "type": "json"
+    },
+    "trustedBy": {
+      "type": "json"
+    }
+  }
+}
