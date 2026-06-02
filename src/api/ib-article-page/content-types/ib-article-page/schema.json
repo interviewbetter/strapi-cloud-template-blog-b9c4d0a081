@@ -22,12 +22,6 @@
     },
     "levelUp": {
       "type": "json"
-    },
-    "foundersbar_authors": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::foundersbar-author.foundersbar-author",
-      "mappedBy": "ib_article_pages"
     }
   }
 }

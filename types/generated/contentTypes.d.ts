@@ -960,10 +960,6 @@ export interface ApiFoundersbarAuthorFoundersbarAuthor
       'manyToMany',
       'api::foundersbar-blog.foundersbar-blog'
     >;
-    ib_article_pages: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::ib-article-page.ib-article-page'
-    >;
     Image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -1334,10 +1330,6 @@ export interface ApiIbArticlePageIbArticlePage
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    foundersbar_authors: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::foundersbar-author.foundersbar-author'
-    >;
     heroMobile: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     levelUp: Schema.Attribute.JSON;
