@@ -35,6 +35,12 @@
     },
     "nameMobile": {
       "type": "string"
+    },
+    "ib_article_pages": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ib-article-page.ib-article-page",
+      "inversedBy": "foundersbar_authors"
     }
   }
 }
