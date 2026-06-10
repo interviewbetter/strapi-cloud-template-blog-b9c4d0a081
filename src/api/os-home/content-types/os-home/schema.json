@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_homes",
+  "info": {
+    "singularName": "os-home",
+    "pluralName": "os-homes",
+    "displayName": "OS-Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTtile": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "pricingSection": {
+      "type": "json"
+    },
+    "carousalSection": {
+      "type": "json"
+    },
+    "cardsSection": {
+      "type": "json"
+    },
+    "mapSection": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}

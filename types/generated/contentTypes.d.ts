@@ -1705,6 +1705,42 @@ export interface ApiMetaSeoMetaSeo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOsHomeOsHome extends Struct.CollectionTypeSchema {
+  collectionName: 'os_homes';
+  info: {
+    displayName: 'OS-Home';
+    pluralName: 'os-homes';
+    singularName: 'os-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardsSection: Schema.Attribute.JSON;
+    carousalSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-home.os-home'
+    > &
+      Schema.Attribute.Private;
+    mapSection: Schema.Attribute.JSON;
+    metaDescription: Schema.Attribute.Text;
+    metaTtile: Schema.Attribute.Text;
+    pricingSection: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2252,6 +2288,7 @@ declare module '@strapi/strapi' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
+      'api::os-home.os-home': ApiOsHomeOsHome;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
