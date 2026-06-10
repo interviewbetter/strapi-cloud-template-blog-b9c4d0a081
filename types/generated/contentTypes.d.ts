@@ -762,6 +762,37 @@ export interface ApiFbGtmFbGtm extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbHomeFbHome extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_homes';
+  info: {
+    displayName: 'FB_Home';
+    pluralName: 'fb-homes';
+    singularName: 'fb-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    comparisonData: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-home.fb-home'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    services: Schema.Attribute.JSON;
+    trustedBy: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbMarketValidationFbMarketValidation
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_market_validations';
@@ -2262,6 +2293,7 @@ declare module '@strapi/strapi' {
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
+      'api::fb-home.fb-home': ApiFbHomeFbHome;
       'api::fb-market-validation.fb-market-validation': ApiFbMarketValidationFbMarketValidation;
       'api::fb-performance-marketing.fb-performance-marketing': ApiFbPerformanceMarketingFbPerformanceMarketing;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
