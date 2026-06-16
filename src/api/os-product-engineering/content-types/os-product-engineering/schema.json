@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_product_engineerings",
+  "info": {
+    "singularName": "os-product-engineering",
+    "pluralName": "os-product-engineerings",
+    "displayName": "OS-ProductEngineering"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "buildForGrowth": {
+      "type": "json"
+    },
+    "engineeringCapabilities": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
