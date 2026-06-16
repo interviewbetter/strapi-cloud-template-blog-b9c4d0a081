@@ -1736,6 +1736,42 @@ export interface ApiMetaSeoMetaSeo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_build_the_right_products';
+  info: {
+    displayName: 'OS-BuildTheRightProduct';
+    pluralName: 'os-build-the-right-products';
+    singularName: 'os-build-the-right-product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-build-the-right-product.os-build-the-right-product'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    strategicPlanning: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsHomeOsHome extends Struct.CollectionTypeSchema {
   collectionName: 'os_homes';
   info: {
@@ -1764,6 +1800,41 @@ export interface ApiOsHomeOsHome extends Struct.CollectionTypeSchema {
     metaDescription: Schema.Attribute.Text;
     metaTtile: Schema.Attribute.Text;
     pricingSection: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsProductEngineeringOsProductEngineering
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_product_engineerings';
+  info: {
+    displayName: 'OS-ProductEngineering';
+    pluralName: 'os-product-engineerings';
+    singularName: 'os-product-engineering';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    buildForGrowth: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    engineeringCapabilities: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-product-engineering.os-product-engineering'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
@@ -2320,7 +2391,9 @@ declare module '@strapi/strapi' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
+      'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
       'api::os-home.os-home': ApiOsHomeOsHome;
+      'api::os-product-engineering.os-product-engineering': ApiOsProductEngineeringOsProductEngineering;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
