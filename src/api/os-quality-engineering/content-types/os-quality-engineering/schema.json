@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_quality_engineerings",
+  "info": {
+    "singularName": "os-quality-engineering",
+    "pluralName": "os-quality-engineerings",
+    "displayName": "OS-QualityEngineering"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "qualityBeyond": {
+      "type": "json"
+    },
+    "qualityEngineering": {
+      "type": "json"
+    },
+    "relatedCapabilities": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}

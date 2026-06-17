@@ -1879,6 +1879,42 @@ export interface ApiOsProductEngineeringOsProductEngineering
   };
 }
 
+export interface ApiOsQualityEngineeringOsQualityEngineering
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_quality_engineerings';
+  info: {
+    displayName: 'OS-QualityEngineering';
+    pluralName: 'os-quality-engineerings';
+    singularName: 'os-quality-engineering';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-quality-engineering.os-quality-engineering'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    qualityBeyond: Schema.Attribute.JSON;
+    qualityEngineering: Schema.Attribute.JSON;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2431,6 +2467,7 @@ declare module '@strapi/strapi' {
       'api::os-home.os-home': ApiOsHomeOsHome;
       'api::os-product-development.os-product-development': ApiOsProductDevelopmentOsProductDevelopment;
       'api::os-product-engineering.os-product-engineering': ApiOsProductEngineeringOsProductEngineering;
+      'api::os-quality-engineering.os-quality-engineering': ApiOsQualityEngineeringOsQualityEngineering;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
