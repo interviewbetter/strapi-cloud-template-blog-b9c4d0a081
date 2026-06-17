@@ -1987,6 +1987,42 @@ export interface ApiOsSoftwareDevelopmentOsSoftwareDevelopment
   };
 }
 
+export interface ApiOsStrategyConsultingOsStrategyConsulting
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_strategy_consultings';
+  info: {
+    displayName: 'OS-StrategyConsulting';
+    pluralName: 'os-strategy-consultings';
+    singularName: 'os-strategy-consulting';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    consultingCapabilities: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-strategy-consulting.os-strategy-consulting'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    transformation: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2250,6 +2286,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
+    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -2541,6 +2578,7 @@ declare module '@strapi/strapi' {
       'api::os-product-engineering.os-product-engineering': ApiOsProductEngineeringOsProductEngineering;
       'api::os-quality-engineering.os-quality-engineering': ApiOsQualityEngineeringOsQualityEngineering;
       'api::os-software-development.os-software-development': ApiOsSoftwareDevelopmentOsSoftwareDevelopment;
+      'api::os-strategy-consulting.os-strategy-consulting': ApiOsStrategyConsultingOsStrategyConsulting;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
