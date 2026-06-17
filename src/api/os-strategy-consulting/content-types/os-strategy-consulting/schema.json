@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_strategy_consultings",
+  "info": {
+    "singularName": "os-strategy-consulting",
+    "pluralName": "os-strategy-consultings",
+    "displayName": "OS-StrategyConsulting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "transformation": {
+      "type": "json"
+    },
+    "consultingCapabilities": {
+      "type": "json"
+    },
+    "relatedCapabilities": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
