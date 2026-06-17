@@ -1808,6 +1808,42 @@ export interface ApiOsHomeOsHome extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOsOperationSupportOsOperationSupport
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_operation_supports';
+  info: {
+    displayName: 'OS-OperationSupport';
+    pluralName: 'os-operation-supports';
+    singularName: 'os-operation-support';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-operation-support.os-operation-support'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsProductDevelopmentOsProductDevelopment
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_product_developments';
@@ -1909,6 +1945,42 @@ export interface ApiOsQualityEngineeringOsQualityEngineering
     qualityEngineering: Schema.Attribute.JSON;
     relatedCapabilities: Schema.Attribute.JSON;
     schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsSoftwareDevelopmentOsSoftwareDevelopment
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_software_developments';
+  info: {
+    displayName: 'OS-SoftwareDevelopment';
+    pluralName: 'os-software-developments';
+    singularName: 'os-software-development';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-software-development.os-software-development'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2178,7 +2250,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -2465,9 +2536,11 @@ declare module '@strapi/strapi' {
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
       'api::os-home.os-home': ApiOsHomeOsHome;
+      'api::os-operation-support.os-operation-support': ApiOsOperationSupportOsOperationSupport;
       'api::os-product-development.os-product-development': ApiOsProductDevelopmentOsProductDevelopment;
       'api::os-product-engineering.os-product-engineering': ApiOsProductEngineeringOsProductEngineering;
       'api::os-quality-engineering.os-quality-engineering': ApiOsQualityEngineeringOsQualityEngineering;
+      'api::os-software-development.os-software-development': ApiOsSoftwareDevelopmentOsSoftwareDevelopment;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
