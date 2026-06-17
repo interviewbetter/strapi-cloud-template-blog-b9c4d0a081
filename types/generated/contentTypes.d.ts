@@ -1808,6 +1808,42 @@ export interface ApiOsHomeOsHome extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOsProductDevelopmentOsProductDevelopment
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_product_developments';
+  info: {
+    displayName: 'OS-ProductDevelopment';
+    pluralName: 'os-product-developments';
+    singularName: 'os-product-development';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardsSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    endToEndEncryption: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-product-development.os-product-development'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsProductEngineeringOsProductEngineering
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_product_engineerings';
@@ -2393,6 +2429,7 @@ declare module '@strapi/strapi' {
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
       'api::os-home.os-home': ApiOsHomeOsHome;
+      'api::os-product-development.os-product-development': ApiOsProductDevelopmentOsProductDevelopment;
       'api::os-product-engineering.os-product-engineering': ApiOsProductEngineeringOsProductEngineering;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
