@@ -1771,6 +1771,42 @@ export interface ApiOsAiModernizationOsAiModernization
   };
 }
 
+export interface ApiOsApplicationModernizationOsApplicationModernization
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_application_modernizations';
+  info: {
+    displayName: 'OS-ApplicationModernization';
+    pluralName: 'os-application-modernizations';
+    singularName: 'os-application-modernization';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ApplicationCapabilities: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    evolveSystem: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-application-modernization.os-application-modernization'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_build_the_right_products';
@@ -2643,6 +2679,7 @@ declare module '@strapi/strapi' {
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
+      'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
       'api::os-home.os-home': ApiOsHomeOsHome;
