@@ -1736,6 +1736,41 @@ export interface ApiMetaSeoMetaSeo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOsAiModernizationOsAiModernization
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_ai_modernizations';
+  info: {
+    displayName: 'OS-AI-Modernization';
+    pluralName: 'os-ai-modernizations';
+    singularName: 'os-ai-modernization';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-ai-modernization.os-ai-modernization'
+    > &
+      Schema.Attribute.Private;
+    meaningfulBusinessImpact: Schema.Attribute.JSON;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_build_the_right_products';
@@ -1766,6 +1801,42 @@ export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
     relatedCapabilities: Schema.Attribute.JSON;
     schema: Schema.Attribute.JSON;
     strategicPlanning: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsEnergeticAiOsEnergeticAi
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_energetic_ais';
+  info: {
+    displayName: 'OS-Energetic-AI';
+    pluralName: 'os-energetic-ais';
+    singularName: 'os-energetic-ai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-energetic-ai.os-energetic-ai'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    practicalAi: Schema.Attribute.JSON;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2571,7 +2642,9 @@ declare module '@strapi/strapi' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
+      'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
+      'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
       'api::os-home.os-home': ApiOsHomeOsHome;
       'api::os-operation-support.os-operation-support': ApiOsOperationSupportOsOperationSupport;
       'api::os-product-development.os-product-development': ApiOsProductDevelopmentOsProductDevelopment;

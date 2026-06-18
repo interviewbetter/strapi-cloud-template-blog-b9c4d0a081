@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_energetic_ais",
+  "info": {
+    "singularName": "os-energetic-ai",
+    "pluralName": "os-energetic-ais",
+    "displayName": "OS-Energetic-AI"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "practicalAi": {
+      "type": "json"
+    },
+    "cardSection": {
+      "type": "json"
+    },
+    "relatedCapabilities": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
