@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_staff_augmentations",
+  "info": {
+    "singularName": "os-staff-augmentation",
+    "pluralName": "os-staff-augmentations",
+    "displayName": "OS-Staff-Augmentation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "cardSection": {
+      "type": "json"
+    },
+    "relatedCapabilities": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
