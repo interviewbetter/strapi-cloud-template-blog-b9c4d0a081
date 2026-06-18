@@ -1843,6 +1843,76 @@ export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
   };
 }
 
+export interface ApiOsDataAndAiOsDataAndAi extends Struct.CollectionTypeSchema {
+  collectionName: 'os_data_and_ais';
+  info: {
+    displayName: 'OS-DataAndAi';
+    pluralName: 'os-data-and-ais';
+    singularName: 'os-data-and-ai';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-data-and-ai.os-data-and-ai'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsDeliveryModelOsDeliveryModel
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_delivery_models';
+  info: {
+    displayName: 'OS-Delivery-Model';
+    pluralName: 'os-delivery-models';
+    singularName: 'os-delivery-model';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-delivery-model.os-delivery-model'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsEnergeticAiOsEnergeticAi
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_energetic_ais';
@@ -1909,6 +1979,42 @@ export interface ApiOsHomeOsHome extends Struct.CollectionTypeSchema {
     pricingSection: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsMlOpsAndDevopOsMlOpsAndDevop
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_ml_ops_and_devops';
+  info: {
+    displayName: 'OS-MLOpsAndDevop';
+    pluralName: 'os-ml-ops-and-devops';
+    singularName: 'os-ml-ops-and-devop';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-ml-ops-and-devop.os-ml-ops-and-devop'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2080,6 +2186,42 @@ export interface ApiOsSoftwareDevelopmentOsSoftwareDevelopment
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::os-software-development.os-software-development'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsStaffAugmentationOsStaffAugmentation
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_staff_augmentations';
+  info: {
+    displayName: 'OS-Staff-Augmentation';
+    pluralName: 'os-staff-augmentations';
+    singularName: 'os-staff-augmentation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-staff-augmentation.os-staff-augmentation'
     > &
       Schema.Attribute.Private;
     metaDescription: Schema.Attribute.Text;
@@ -2393,7 +2535,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -2681,13 +2822,17 @@ declare module '@strapi/strapi' {
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
+      'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
+      'api::os-delivery-model.os-delivery-model': ApiOsDeliveryModelOsDeliveryModel;
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
       'api::os-home.os-home': ApiOsHomeOsHome;
+      'api::os-ml-ops-and-devop.os-ml-ops-and-devop': ApiOsMlOpsAndDevopOsMlOpsAndDevop;
       'api::os-operation-support.os-operation-support': ApiOsOperationSupportOsOperationSupport;
       'api::os-product-development.os-product-development': ApiOsProductDevelopmentOsProductDevelopment;
       'api::os-product-engineering.os-product-engineering': ApiOsProductEngineeringOsProductEngineering;
       'api::os-quality-engineering.os-quality-engineering': ApiOsQualityEngineeringOsQualityEngineering;
       'api::os-software-development.os-software-development': ApiOsSoftwareDevelopmentOsSoftwareDevelopment;
+      'api::os-staff-augmentation.os-staff-augmentation': ApiOsStaffAugmentationOsStaffAugmentation;
       'api::os-strategy-consulting.os-strategy-consulting': ApiOsStrategyConsultingOsStrategyConsulting;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
