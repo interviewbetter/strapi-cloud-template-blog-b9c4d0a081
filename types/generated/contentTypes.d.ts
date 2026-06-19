@@ -1964,6 +1964,7 @@ export interface ApiOsDomainAndExpertiseOsDomainAndExpertise
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    heroSection: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1973,6 +1974,7 @@ export interface ApiOsDomainAndExpertiseOsDomainAndExpertise
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

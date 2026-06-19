@@ -16,6 +16,12 @@
     },
     "metaDescription": {
       "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
     }
   }
 }
