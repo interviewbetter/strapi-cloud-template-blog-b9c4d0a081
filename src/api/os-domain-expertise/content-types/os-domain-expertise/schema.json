@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_domain_expertises",
+  "info": {
+    "singularName": "os-domain-expertise",
+    "pluralName": "os-domain-expertises",
+    "displayName": "OS-DomainExpertise"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
