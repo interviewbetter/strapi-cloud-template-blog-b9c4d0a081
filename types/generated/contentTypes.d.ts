@@ -1978,6 +1978,7 @@ export interface ApiOsDomainAndExpertiseOsDomainAndExpertise
     metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

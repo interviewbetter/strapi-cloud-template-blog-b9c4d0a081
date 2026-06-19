@@ -31,6 +31,9 @@
     },
     "formSection": {
       "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
     }
   }
 }
