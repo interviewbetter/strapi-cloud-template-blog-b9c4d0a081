@@ -1949,70 +1949,6 @@ export interface ApiOsDeliveryModelOsDeliveryModel
   };
 }
 
-export interface ApiOsDomainAndExpertiseOsDomainAndExpertise
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'os_domain_and_expertises';
-  info: {
-    displayName: 'OS-DomainAndExpertise';
-    pluralName: 'os-domain-and-expertises';
-    singularName: 'os-domain-and-expertise';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::os-domain-and-expertise.os-domain-and-expertise'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiOsDomainExpertiseOsDomainExpertise
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'os_domain_expertises';
-  info: {
-    displayName: 'OS-DomainExpertise';
-    pluralName: 'os-domain-expertises';
-    singularName: 'os-domain-expertise';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    cardSection: Schema.Attribute.JSON;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    deliverySupport: Schema.Attribute.JSON;
-    formSection: Schema.Attribute.JSON;
-    heroSection: Schema.Attribute.JSON;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::os-domain-expertise.os-domain-expertise'
-    > &
-      Schema.Attribute.Private;
-    metaDescription: Schema.Attribute.Text;
-    metaTitle: Schema.Attribute.Text;
-    publishedAt: Schema.Attribute.DateTime;
-    schema: Schema.Attribute.JSON;
-    secondSection: Schema.Attribute.JSON;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiOsEnergeticAiOsEnergeticAi
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_energetic_ais';
@@ -2707,7 +2643,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -2998,8 +2933,6 @@ declare module '@strapi/strapi' {
       'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
       'api::os-dedicated-team.os-dedicated-team': ApiOsDedicatedTeamOsDedicatedTeam;
       'api::os-delivery-model.os-delivery-model': ApiOsDeliveryModelOsDeliveryModel;
-      'api::os-domain-and-expertise.os-domain-and-expertise': ApiOsDomainAndExpertiseOsDomainAndExpertise;
-      'api::os-domain-expertise.os-domain-expertise': ApiOsDomainExpertiseOsDomainExpertise;
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
       'api::os-fractional-cto.os-fractional-cto': ApiOsFractionalCtoOsFractionalCto;
       'api::os-home.os-home': ApiOsHomeOsHome;
