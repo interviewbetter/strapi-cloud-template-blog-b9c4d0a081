@@ -1965,7 +1965,7 @@ export interface ApiOsDomainExpertiseOsDomainExpertise
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    expertiseSupport: Schema.Attribute.JSON;
+    deliverySupport: Schema.Attribute.JSON;
     formSection: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
