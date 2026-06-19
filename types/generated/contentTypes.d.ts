@@ -1949,6 +1949,34 @@ export interface ApiOsDeliveryModelOsDeliveryModel
   };
 }
 
+export interface ApiOsDomainAndExpertiseOsDomainAndExpertise
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_domain_and_expertises';
+  info: {
+    displayName: 'OS-DomainAndExpertise';
+    pluralName: 'os-domain-and-expertises';
+    singularName: 'os-domain-and-expertise';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-domain-and-expertise.os-domain-and-expertise'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsDomainExpertiseOsDomainExpertise
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_domain_expertises';
@@ -2970,6 +2998,7 @@ declare module '@strapi/strapi' {
       'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
       'api::os-dedicated-team.os-dedicated-team': ApiOsDedicatedTeamOsDedicatedTeam;
       'api::os-delivery-model.os-delivery-model': ApiOsDeliveryModelOsDeliveryModel;
+      'api::os-domain-and-expertise.os-domain-and-expertise': ApiOsDomainAndExpertiseOsDomainAndExpertise;
       'api::os-domain-expertise.os-domain-expertise': ApiOsDomainExpertiseOsDomainExpertise;
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
       'api::os-fractional-cto.os-fractional-cto': ApiOsFractionalCtoOsFractionalCto;
