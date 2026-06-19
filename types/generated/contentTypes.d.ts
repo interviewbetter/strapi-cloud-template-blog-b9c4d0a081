@@ -1878,6 +1878,42 @@ export interface ApiOsDataAndAiOsDataAndAi extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOsDedicatedTeamOsDedicatedTeam
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_dedicated_teams';
+  info: {
+    displayName: 'OS-DedicatedTeam';
+    pluralName: 'os-dedicated-teams';
+    singularName: 'os-dedicated-team';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-dedicated-team.os-dedicated-team'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsDeliveryModelOsDeliveryModel
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_delivery_models';
@@ -1943,6 +1979,42 @@ export interface ApiOsEnergeticAiOsEnergeticAi
     publishedAt: Schema.Attribute.DateTime;
     relatedCapabilities: Schema.Attribute.JSON;
     schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsFractionalCtoOsFractionalCto
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_fractional_ctos';
+  info: {
+    displayName: 'OS-FractionalCTO';
+    pluralName: 'os-fractional-ctos';
+    singularName: 'os-fractional-cto';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-fractional-cto.os-fractional-cto'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2571,7 +2643,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -2860,8 +2931,10 @@ declare module '@strapi/strapi' {
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
       'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
+      'api::os-dedicated-team.os-dedicated-team': ApiOsDedicatedTeamOsDedicatedTeam;
       'api::os-delivery-model.os-delivery-model': ApiOsDeliveryModelOsDeliveryModel;
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
+      'api::os-fractional-cto.os-fractional-cto': ApiOsFractionalCtoOsFractionalCto;
       'api::os-home.os-home': ApiOsHomeOsHome;
       'api::os-ml-ops-and-devop.os-ml-ops-and-devop': ApiOsMlOpsAndDevopOsMlOpsAndDevop;
       'api::os-operation-support.os-operation-support': ApiOsOperationSupportOsOperationSupport;

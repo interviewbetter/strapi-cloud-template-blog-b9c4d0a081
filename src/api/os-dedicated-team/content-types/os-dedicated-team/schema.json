@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_dedicated_teams",
+  "info": {
+    "singularName": "os-dedicated-team",
+    "pluralName": "os-dedicated-teams",
+    "displayName": "OS-DedicatedTeam"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "cardSection": {
+      "type": "json"
+    },
+    "relatedCapabilities": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
