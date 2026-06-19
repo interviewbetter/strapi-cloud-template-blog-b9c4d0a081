@@ -22,6 +22,15 @@
     },
     "heroSection": {
       "type": "json"
+    },
+    "cardSection": {
+      "type": "json"
+    },
+    "blackCardSection": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
     }
   }
 }

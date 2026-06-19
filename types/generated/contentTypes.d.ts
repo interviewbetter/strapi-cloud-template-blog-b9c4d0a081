@@ -1961,9 +1961,12 @@ export interface ApiOsDomainAndExpertiseOsDomainAndExpertise
     draftAndPublish: true;
   };
   attributes: {
+    blackCardSection: Schema.Attribute.JSON;
+    cardSection: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
