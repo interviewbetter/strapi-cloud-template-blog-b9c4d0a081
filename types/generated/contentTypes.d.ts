@@ -1913,6 +1913,42 @@ export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
   };
 }
 
+export interface ApiOsConsumerApplicationOsConsumerApplication
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_consumer_applications';
+  info: {
+    displayName: 'OS-ConsumerApplication';
+    pluralName: 'os-consumer-applications';
+    singularName: 'os-consumer-application';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-consumer-application.os-consumer-application'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsDataAndAiOsDataAndAi extends Struct.CollectionTypeSchema {
   collectionName: 'os_data_and_ais';
   info: {
@@ -2091,6 +2127,42 @@ export interface ApiOsEnergeticAiOsEnergeticAi
   };
 }
 
+export interface ApiOsEntertainmentSportOsEntertainmentSport
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_entertainment_sports';
+  info: {
+    displayName: 'OS-EntertainmentSport';
+    pluralName: 'os-entertainment-sports';
+    singularName: 'os-entertainment-sport';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-entertainment-sport.os-entertainment-sport'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsFractionalCtoOsFractionalCto
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_fractional_ctos';
@@ -2157,6 +2229,42 @@ export interface ApiOsHomeOsHome extends Struct.CollectionTypeSchema {
     pricingSection: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsLogisticsSupplyOsLogisticsSupply
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_logistics_supplies';
+  info: {
+    displayName: 'OS-LogisticsSupply';
+    pluralName: 'os-logistics-supplies';
+    singularName: 'os-logistics-supply';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-logistics-supply.os-logistics-supply'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3111,13 +3219,16 @@ declare module '@strapi/strapi' {
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
+      'api::os-consumer-application.os-consumer-application': ApiOsConsumerApplicationOsConsumerApplication;
       'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
       'api::os-dedicated-team.os-dedicated-team': ApiOsDedicatedTeamOsDedicatedTeam;
       'api::os-delivery-model.os-delivery-model': ApiOsDeliveryModelOsDeliveryModel;
       'api::os-domain-and-expertise.os-domain-and-expertise': ApiOsDomainAndExpertiseOsDomainAndExpertise;
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
+      'api::os-entertainment-sport.os-entertainment-sport': ApiOsEntertainmentSportOsEntertainmentSport;
       'api::os-fractional-cto.os-fractional-cto': ApiOsFractionalCtoOsFractionalCto;
       'api::os-home.os-home': ApiOsHomeOsHome;
+      'api::os-logistics-supply.os-logistics-supply': ApiOsLogisticsSupplyOsLogisticsSupply;
       'api::os-ml-ops-and-devop.os-ml-ops-and-devop': ApiOsMlOpsAndDevopOsMlOpsAndDevop;
       'api::os-operation-support.os-operation-support': ApiOsOperationSupportOsOperationSupport;
       'api::os-product-development.os-product-development': ApiOsProductDevelopmentOsProductDevelopment;
