@@ -2416,6 +2416,42 @@ export interface ApiOsTalentSolutionOsTalentSolution
   };
 }
 
+export interface ApiRetailAndCommerceRetailAndCommerce
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'retail_and_commerces';
+  info: {
+    displayName: 'RetailAndCommerce';
+    pluralName: 'retail-and-commerces';
+    singularName: 'retail-and-commerce';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    capabilities: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    featuredRetail: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::retail-and-commerce.retail-and-commerce'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    technologyBuild: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -2983,6 +3019,7 @@ declare module '@strapi/strapi' {
       'api::os-staff-augmentation.os-staff-augmentation': ApiOsStaffAugmentationOsStaffAugmentation;
       'api::os-strategy-consulting.os-strategy-consulting': ApiOsStrategyConsultingOsStrategyConsulting;
       'api::os-talent-solution.os-talent-solution': ApiOsTalentSolutionOsTalentSolution;
+      'api::retail-and-commerce.retail-and-commerce': ApiRetailAndCommerceRetailAndCommerce;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
