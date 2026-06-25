@@ -2420,7 +2420,7 @@ export interface ApiRetailAndCommerceRetailAndCommerce
   extends Struct.CollectionTypeSchema {
   collectionName: 'retail_and_commerces';
   info: {
-    displayName: 'RetailAndCommerce';
+    displayName: 'OS-RetailAndCommerce';
     pluralName: 'retail-and-commerces';
     singularName: 'retail-and-commerce';
   };

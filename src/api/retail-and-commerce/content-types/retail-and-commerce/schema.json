@@ -4,7 +4,7 @@
   "info": {
     "singularName": "retail-and-commerce",
     "pluralName": "retail-and-commerces",
-    "displayName": "RetailAndCommerce"
+    "displayName": "OS-RetailAndCommerce"
   },
   "options": {
     "draftAndPublish": true
