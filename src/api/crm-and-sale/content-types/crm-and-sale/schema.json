@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "crm_and_sales",
+  "info": {
+    "singularName": "crm-and-sale",
+    "pluralName": "crm-and-sales",
+    "displayName": "OS-CrmAndSale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "cardSection": {
+      "type": "json"
+    },
+    "flipCardSection": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}

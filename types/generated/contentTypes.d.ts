@@ -617,6 +617,76 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCrmAndSaleCrmAndSale extends Struct.CollectionTypeSchema {
+  collectionName: 'crm_and_sales';
+  info: {
+    displayName: 'OS-CrmAndSale';
+    pluralName: 'crm-and-sales';
+    singularName: 'crm-and-sale';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    flipCardSection: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::crm-and-sale.crm-and-sale'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEdTechEdTech extends Struct.CollectionTypeSchema {
+  collectionName: 'ed_teches';
+  info: {
+    displayName: 'OS-EdTech';
+    pluralName: 'ed-teches';
+    singularName: 'ed-tech';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    flipSection: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ed-tech.ed-tech'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbAdvisoryFbAdvisory extends Struct.CollectionTypeSchema {
   collectionName: 'fb_advisories';
   info: {
@@ -2416,6 +2486,42 @@ export interface ApiOsTalentSolutionOsTalentSolution
   };
 }
 
+export interface ApiOsWorkforceManagementOsWorkforceManagement
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_workforce_managements';
+  info: {
+    displayName: 'OS-Workforce-Management';
+    pluralName: 'os-workforce-managements';
+    singularName: 'os-workforce-management';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    flipCardSection: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-workforce-management.os-workforce-management'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRetailAndCommerceRetailAndCommerce
   extends Struct.CollectionTypeSchema {
   collectionName: 'retail_and_commerces';
@@ -2969,6 +3075,8 @@ declare module '@strapi/strapi' {
       'api::career-path.career-path': ApiCareerPathCareerPath;
       'api::category.category': ApiCategoryCategory;
       'api::course.course': ApiCourseCourse;
+      'api::crm-and-sale.crm-and-sale': ApiCrmAndSaleCrmAndSale;
+      'api::ed-tech.ed-tech': ApiEdTechEdTech;
       'api::fb-advisory.fb-advisory': ApiFbAdvisoryFbAdvisory;
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
@@ -3019,6 +3127,7 @@ declare module '@strapi/strapi' {
       'api::os-staff-augmentation.os-staff-augmentation': ApiOsStaffAugmentationOsStaffAugmentation;
       'api::os-strategy-consulting.os-strategy-consulting': ApiOsStrategyConsultingOsStrategyConsulting;
       'api::os-talent-solution.os-talent-solution': ApiOsTalentSolutionOsTalentSolution;
+      'api::os-workforce-management.os-workforce-management': ApiOsWorkforceManagementOsWorkforceManagement;
       'api::retail-and-commerce.retail-and-commerce': ApiRetailAndCommerceRetailAndCommerce;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
