@@ -1913,6 +1913,42 @@ export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
   };
 }
 
+export interface ApiOsConstructionOsConstruction
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_constructions';
+  info: {
+    displayName: 'OS-Construction';
+    pluralName: 'os-constructions';
+    singularName: 'os-construction';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-construction.os-construction'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    solutions: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsConsumerApplicationOsConsumerApplication
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_consumer_applications';
@@ -2369,6 +2405,40 @@ export interface ApiOsMlOpsAndDevopOsMlOpsAndDevop
     metaTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     relatedCapabilities: Schema.Attribute.JSON;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsNist800OsNist800 extends Struct.CollectionTypeSchema {
+  collectionName: 'os_nist_800s';
+  info: {
+    displayName: 'OS-NIST-800';
+    pluralName: 'os-nist-800s';
+    singularName: 'os-nist-800';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    howWeSupport: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-nist-800.os-nist-800'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     secondSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
@@ -3288,6 +3358,7 @@ declare module '@strapi/strapi' {
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
+      'api::os-construction.os-construction': ApiOsConstructionOsConstruction;
       'api::os-consumer-application.os-consumer-application': ApiOsConsumerApplicationOsConsumerApplication;
       'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
       'api::os-dedicated-team.os-dedicated-team': ApiOsDedicatedTeamOsDedicatedTeam;
@@ -3301,6 +3372,7 @@ declare module '@strapi/strapi' {
       'api::os-industry.os-industry': ApiOsIndustryOsIndustry;
       'api::os-logistics-supply.os-logistics-supply': ApiOsLogisticsSupplyOsLogisticsSupply;
       'api::os-ml-ops-and-devop.os-ml-ops-and-devop': ApiOsMlOpsAndDevopOsMlOpsAndDevop;
+      'api::os-nist-800.os-nist-800': ApiOsNist800OsNist800;
       'api::os-operation-support.os-operation-support': ApiOsOperationSupportOsOperationSupport;
       'api::os-product-development.os-product-development': ApiOsProductDevelopmentOsProductDevelopment;
       'api::os-product-engineering.os-product-engineering': ApiOsProductEngineeringOsProductEngineering;
