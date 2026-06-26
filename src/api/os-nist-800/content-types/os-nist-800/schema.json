@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_nist_800s",
+  "info": {
+    "singularName": "os-nist-800",
+    "pluralName": "os-nist-800s",
+    "displayName": "OS-NIST-800"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "howWeSupport": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
