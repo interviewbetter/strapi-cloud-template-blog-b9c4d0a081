@@ -1913,6 +1913,40 @@ export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
   };
 }
 
+export interface ApiOsCmmcOsCmmc extends Struct.CollectionTypeSchema {
+  collectionName: 'os_cmmcs';
+  info: {
+    displayName: 'OS-CMMC';
+    pluralName: 'os-cmmcs';
+    singularName: 'os-cmmc';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-cmmc.os-cmmc'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsComplianceOsCompliance
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_compliances';
@@ -2113,6 +2147,40 @@ export interface ApiOsDeliveryModelOsDeliveryModel
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::os-delivery-model.os-delivery-model'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsDfarOsDfar extends Struct.CollectionTypeSchema {
+  collectionName: 'os_dfars';
+  info: {
+    displayName: 'OS-DFAR';
+    pluralName: 'os-dfars';
+    singularName: 'os-dfar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-dfar.os-dfar'
     > &
       Schema.Attribute.Private;
     metaDescription: Schema.Attribute.Text;
@@ -3240,6 +3308,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
+    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -3529,12 +3598,14 @@ declare module '@strapi/strapi' {
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
+      'api::os-cmmc.os-cmmc': ApiOsCmmcOsCmmc;
       'api::os-compliance.os-compliance': ApiOsComplianceOsCompliance;
       'api::os-construction.os-construction': ApiOsConstructionOsConstruction;
       'api::os-consumer-application.os-consumer-application': ApiOsConsumerApplicationOsConsumerApplication;
       'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
       'api::os-dedicated-team.os-dedicated-team': ApiOsDedicatedTeamOsDedicatedTeam;
       'api::os-delivery-model.os-delivery-model': ApiOsDeliveryModelOsDeliveryModel;
+      'api::os-dfar.os-dfar': ApiOsDfarOsDfar;
       'api::os-domain-and-expertise.os-domain-and-expertise': ApiOsDomainAndExpertiseOsDomainAndExpertise;
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
       'api::os-entertainment-sport.os-entertainment-sport': ApiOsEntertainmentSportOsEntertainmentSport;
