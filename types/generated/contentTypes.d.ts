@@ -1913,6 +1913,41 @@ export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
   };
 }
 
+export interface ApiOsComplianceOsCompliance
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_compliances';
+  info: {
+    displayName: 'OS-Compliance';
+    pluralName: 'os-compliances';
+    singularName: 'os-compliance';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-compliance.os-compliance'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsConstructionOsConstruction
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_constructions';
@@ -2265,6 +2300,40 @@ export interface ApiOsHealthcareOsHealthcare
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsHippaOsHippa extends Struct.CollectionTypeSchema {
+  collectionName: 'os_hippas';
+  info: {
+    displayName: 'OS-Hippa';
+    pluralName: 'os-hippas';
+    singularName: 'os-hippa';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-hippa.os-hippa'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -2770,6 +2839,40 @@ export interface ApiOsWorkforceManagementOsWorkforceManagement
   };
 }
 
+export interface ApiOsZeroTrustOsZeroTrust extends Struct.CollectionTypeSchema {
+  collectionName: 'os_zero_trusts';
+  info: {
+    displayName: 'OS-ZeroTrust';
+    pluralName: 'os-zero-trusts';
+    singularName: 'os-zero-trust';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-zero-trust.os-zero-trust'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRetailAndCommerceRetailAndCommerce
   extends Struct.CollectionTypeSchema {
   collectionName: 'retail_and_commerces';
@@ -3069,6 +3172,7 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
+    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -3358,6 +3462,7 @@ declare module '@strapi/strapi' {
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
+      'api::os-compliance.os-compliance': ApiOsComplianceOsCompliance;
       'api::os-construction.os-construction': ApiOsConstructionOsConstruction;
       'api::os-consumer-application.os-consumer-application': ApiOsConsumerApplicationOsConsumerApplication;
       'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
@@ -3368,6 +3473,7 @@ declare module '@strapi/strapi' {
       'api::os-entertainment-sport.os-entertainment-sport': ApiOsEntertainmentSportOsEntertainmentSport;
       'api::os-fractional-cto.os-fractional-cto': ApiOsFractionalCtoOsFractionalCto;
       'api::os-healthcare.os-healthcare': ApiOsHealthcareOsHealthcare;
+      'api::os-hippa.os-hippa': ApiOsHippaOsHippa;
       'api::os-home.os-home': ApiOsHomeOsHome;
       'api::os-industry.os-industry': ApiOsIndustryOsIndustry;
       'api::os-logistics-supply.os-logistics-supply': ApiOsLogisticsSupplyOsLogisticsSupply;
@@ -3382,6 +3488,7 @@ declare module '@strapi/strapi' {
       'api::os-strategy-consulting.os-strategy-consulting': ApiOsStrategyConsultingOsStrategyConsulting;
       'api::os-talent-solution.os-talent-solution': ApiOsTalentSolutionOsTalentSolution;
       'api::os-workforce-management.os-workforce-management': ApiOsWorkforceManagementOsWorkforceManagement;
+      'api::os-zero-trust.os-zero-trust': ApiOsZeroTrustOsZeroTrust;
       'api::retail-and-commerce.retail-and-commerce': ApiRetailAndCommerceRetailAndCommerce;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
