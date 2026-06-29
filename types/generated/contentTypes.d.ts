@@ -2270,6 +2270,40 @@ export interface ApiOsFractionalCtoOsFractionalCto
   };
 }
 
+export interface ApiOsGxPOsGxP extends Struct.CollectionTypeSchema {
+  collectionName: 'os_gx_ps';
+  info: {
+    displayName: 'OS-GxP';
+    pluralName: 'os-gx-ps';
+    singularName: 'os-gx-p';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    howWeSupport: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-gx-p.os-gx-p'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsHealthcareOsHealthcare
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_healthcares';
@@ -2653,6 +2687,40 @@ export interface ApiOsQualityEngineeringOsQualityEngineering
     qualityEngineering: Schema.Attribute.JSON;
     relatedCapabilities: Schema.Attribute.JSON;
     schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsSoc2OsSoc2 extends Struct.CollectionTypeSchema {
+  collectionName: 'os_soc_2s';
+  info: {
+    displayName: 'OS-SOC-2';
+    pluralName: 'os-soc-2s';
+    singularName: 'os-soc-2';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    howWeSupport: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-soc-2.os-soc-2'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3172,7 +3240,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -3472,6 +3539,7 @@ declare module '@strapi/strapi' {
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
       'api::os-entertainment-sport.os-entertainment-sport': ApiOsEntertainmentSportOsEntertainmentSport;
       'api::os-fractional-cto.os-fractional-cto': ApiOsFractionalCtoOsFractionalCto;
+      'api::os-gx-p.os-gx-p': ApiOsGxPOsGxP;
       'api::os-healthcare.os-healthcare': ApiOsHealthcareOsHealthcare;
       'api::os-hippa.os-hippa': ApiOsHippaOsHippa;
       'api::os-home.os-home': ApiOsHomeOsHome;
@@ -3483,6 +3551,7 @@ declare module '@strapi/strapi' {
       'api::os-product-development.os-product-development': ApiOsProductDevelopmentOsProductDevelopment;
       'api::os-product-engineering.os-product-engineering': ApiOsProductEngineeringOsProductEngineering;
       'api::os-quality-engineering.os-quality-engineering': ApiOsQualityEngineeringOsQualityEngineering;
+      'api::os-soc-2.os-soc-2': ApiOsSoc2OsSoc2;
       'api::os-software-development.os-software-development': ApiOsSoftwareDevelopmentOsSoftwareDevelopment;
       'api::os-staff-augmentation.os-staff-augmentation': ApiOsStaffAugmentationOsStaffAugmentation;
       'api::os-strategy-consulting.os-strategy-consulting': ApiOsStrategyConsultingOsStrategyConsulting;

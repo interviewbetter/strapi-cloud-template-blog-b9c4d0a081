@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_soc_2s",
+  "info": {
+    "singularName": "os-soc-2",
+    "pluralName": "os-soc-2s",
+    "displayName": "OS-SOC-2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "howWeSupport": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
