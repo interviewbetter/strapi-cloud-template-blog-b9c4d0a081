@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_gx_ps",
+  "info": {
+    "singularName": "os-gx-p",
+    "pluralName": "os-gx-ps",
+    "displayName": "OS-GxP"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "howWeSupport": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
