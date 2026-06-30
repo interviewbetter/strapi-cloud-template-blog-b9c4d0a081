@@ -20,12 +20,6 @@
     "schema": {
       "type": "json"
     },
-    "title": {
-      "type": "text"
-    },
-    "description": {
-      "type": "blocks"
-    },
     "image": {
       "type": "media",
       "multiple": false,
@@ -58,6 +52,9 @@
       "type": "json"
     },
     "footerData": {
+      "type": "json"
+    },
+    "heroSection": {
       "type": "json"
     }
   }
