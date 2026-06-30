@@ -56,6 +56,12 @@
     },
     "heroSection": {
       "type": "json"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

@@ -750,8 +750,10 @@ export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.String;
+    name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
+    slug: Schema.Attribute.String;
     storySection: Schema.Attribute.JSON;
     subImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
