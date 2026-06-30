@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_cities",
+  "info": {
+    "singularName": "fb-city",
+    "pluralName": "fb-cities",
+    "displayName": "FB-City"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "storySection": {
+      "type": "json"
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.sections",
+      "repeatable": true
+    },
+    "ecoSystem": {
+      "type": "json"
+    },
+    "footerData": {
+      "type": "json"
+    }
+  }
+}

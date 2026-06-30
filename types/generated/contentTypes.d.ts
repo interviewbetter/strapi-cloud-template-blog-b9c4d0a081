@@ -723,6 +723,47 @@ export interface ApiFbAdvisoryFbAdvisory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_cities';
+  info: {
+    displayName: 'FB-City';
+    pluralName: 'fb-cities';
+    singularName: 'fb-city';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'shared.sections', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    ecoSystem: Schema.Attribute.JSON;
+    footerData: Schema.Attribute.JSON;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-city.fb-city'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    storySection: Schema.Attribute.JSON;
+    subImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.Text;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbFixedCostMvpFbFixedCostMvp
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_fixed_cost_mvps';
@@ -3565,6 +3606,7 @@ declare module '@strapi/strapi' {
       'api::crm-and-sale.crm-and-sale': ApiCrmAndSaleCrmAndSale;
       'api::ed-tech.ed-tech': ApiEdTechEdTech;
       'api::fb-advisory.fb-advisory': ApiFbAdvisoryFbAdvisory;
+      'api::fb-city.fb-city': ApiFbCityFbCity;
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
