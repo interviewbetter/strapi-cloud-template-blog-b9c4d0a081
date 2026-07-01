@@ -740,6 +740,10 @@ export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     ecoSystem: Schema.Attribute.JSON;
     footerData: Schema.Attribute.JSON;
+    foundersbar_blogs: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::foundersbar-blog.foundersbar-blog'
+    >;
     heroSection: Schema.Attribute.JSON;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -1149,6 +1153,7 @@ export interface ApiFoundersbarBlogFoundersbarBlog
     ctaContentDesktop: Schema.Attribute.Blocks;
     ctaContentMobile: Schema.Attribute.Blocks;
     description: Schema.Attribute.Text;
+    fb_city: Schema.Attribute.Relation<'manyToOne', 'api::fb-city.fb-city'>;
     foundersbar_authors: Schema.Attribute.Relation<
       'manyToMany',
       'api::foundersbar-author.foundersbar-author'

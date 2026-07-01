@@ -87,6 +87,12 @@
       "relation": "manyToMany",
       "target": "api::foundersbar-blog.foundersbar-blog",
       "mappedBy": "foundersbar_blogs"
+    },
+    "fb_city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fb-city.fb-city",
+      "inversedBy": "foundersbar_blogs"
     }
   }
 }

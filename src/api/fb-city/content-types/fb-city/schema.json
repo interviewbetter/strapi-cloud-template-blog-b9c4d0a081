@@ -62,6 +62,12 @@
     },
     "name": {
       "type": "string"
+    },
+    "foundersbar_blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::foundersbar-blog.foundersbar-blog",
+      "mappedBy": "fb_city"
     }
   }
 }
