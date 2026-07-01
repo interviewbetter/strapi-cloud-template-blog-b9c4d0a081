@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_directories",
+  "info": {
+    "singularName": "fb-directory",
+    "pluralName": "fb-directories",
+    "displayName": "FB_Directory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "footerSection": {
+      "type": "json"
+    }
+  }
+}

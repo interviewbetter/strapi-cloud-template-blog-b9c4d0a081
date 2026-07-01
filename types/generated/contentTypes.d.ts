@@ -765,6 +765,38 @@ export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbDirectoryFbDirectory extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_directories';
+  info: {
+    displayName: 'FB_Directory';
+    pluralName: 'fb-directories';
+    singularName: 'fb-directory';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footerSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-directory.fb-directory'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbFixedCostMvpFbFixedCostMvp
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_fixed_cost_mvps';
@@ -3608,6 +3640,7 @@ declare module '@strapi/strapi' {
       'api::ed-tech.ed-tech': ApiEdTechEdTech;
       'api::fb-advisory.fb-advisory': ApiFbAdvisoryFbAdvisory;
       'api::fb-city.fb-city': ApiFbCityFbCity;
+      'api::fb-directory.fb-directory': ApiFbDirectoryFbDirectory;
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
