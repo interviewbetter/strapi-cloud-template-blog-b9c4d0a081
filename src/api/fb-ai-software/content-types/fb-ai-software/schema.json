@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_ai_softwares",
+  "info": {
+    "singularName": "fb-ai-software",
+    "pluralName": "fb-ai-softwares",
+    "displayName": "FB_AISoftware"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "whyStartupNeed": {
+      "type": "json"
+    },
+    "faq": {
+      "type": "json"
+    },
+    "footer": {
+      "type": "json"
+    }
+  }
+}

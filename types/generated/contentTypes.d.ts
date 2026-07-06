@@ -723,6 +723,41 @@ export interface ApiFbAdvisoryFbAdvisory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbAiSoftwareFbAiSoftware
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_ai_softwares';
+  info: {
+    displayName: 'FB_AISoftware';
+    pluralName: 'fb-ai-softwares';
+    singularName: 'fb-ai-software';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.JSON;
+    footer: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-ai-software.fb-ai-software'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whyStartupNeed: Schema.Attribute.JSON;
+  };
+}
+
 export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
   collectionName: 'fb_cities';
   info: {
@@ -3680,6 +3715,7 @@ declare module '@strapi/strapi' {
       'api::crm-and-sale.crm-and-sale': ApiCrmAndSaleCrmAndSale;
       'api::ed-tech.ed-tech': ApiEdTechEdTech;
       'api::fb-advisory.fb-advisory': ApiFbAdvisoryFbAdvisory;
+      'api::fb-ai-software.fb-ai-software': ApiFbAiSoftwareFbAiSoftware;
       'api::fb-city.fb-city': ApiFbCityFbCity;
       'api::fb-directory.fb-directory': ApiFbDirectoryFbDirectory;
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
