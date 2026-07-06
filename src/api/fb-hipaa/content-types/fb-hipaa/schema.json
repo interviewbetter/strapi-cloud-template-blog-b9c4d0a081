@@ -37,6 +37,9 @@
     },
     "footerSection": {
       "type": "json"
+    },
+    "pricing": {
+      "type": "json"
     }
   }
 }
