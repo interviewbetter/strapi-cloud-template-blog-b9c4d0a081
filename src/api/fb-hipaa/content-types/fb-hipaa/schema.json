@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_hipaas",
+  "info": {
+    "singularName": "fb-hipaa",
+    "pluralName": "fb-hipaas",
+    "displayName": "FB_HIPAA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroSection": {
+      "type": "json"
+    },
+    "StepSection": {
+      "type": "json"
+    },
+    "cardSection": {
+      "type": "json"
+    },
+    "developmentProcess": {
+      "type": "json"
+    },
+    "faq": {
+      "type": "json"
+    },
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    }
+  }
+}

@@ -910,6 +910,41 @@ export interface ApiFbGtmFbGtm extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbHipaaFbHipaa extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_hipaas';
+  info: {
+    displayName: 'FB_HIPAA';
+    pluralName: 'fb-hipaas';
+    singularName: 'fb-hipaa';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    developmentProcess: Schema.Attribute.JSON;
+    faq: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-hipaa.fb-hipaa'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    StepSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbHomeFbHome extends Struct.CollectionTypeSchema {
   collectionName: 'fb_homes';
   info: {
@@ -3649,6 +3684,7 @@ declare module '@strapi/strapi' {
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
+      'api::fb-hipaa.fb-hipaa': ApiFbHipaaFbHipaa;
       'api::fb-home.fb-home': ApiFbHomeFbHome;
       'api::fb-market-validation.fb-market-validation': ApiFbMarketValidationFbMarketValidation;
       'api::fb-performance-marketing.fb-performance-marketing': ApiFbPerformanceMarketingFbPerformanceMarketing;
