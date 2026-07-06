@@ -927,6 +927,7 @@ export interface ApiFbHipaaFbHipaa extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     developmentProcess: Schema.Attribute.JSON;
     faq: Schema.Attribute.JSON;
+    footerSection: Schema.Attribute.JSON;
     heroSection: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<

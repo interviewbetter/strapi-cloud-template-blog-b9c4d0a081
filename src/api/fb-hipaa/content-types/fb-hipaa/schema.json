@@ -34,6 +34,9 @@
     },
     "schema": {
       "type": "json"
+    },
+    "footerSection": {
+      "type": "json"
     }
   }
 }
