@@ -749,6 +749,7 @@ export interface ApiFbAiSoftwareFbAiSoftware
       Schema.Attribute.Private;
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
+    pricing: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
@@ -972,6 +973,7 @@ export interface ApiFbHipaaFbHipaa extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.String;
+    pricing: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     StepSection: Schema.Attribute.JSON;

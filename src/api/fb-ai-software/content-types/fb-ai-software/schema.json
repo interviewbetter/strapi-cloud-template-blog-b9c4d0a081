@@ -31,6 +31,9 @@
     },
     "footer": {
       "type": "json"
+    },
+    "pricing": {
+      "type": "json"
     }
   }
 }
