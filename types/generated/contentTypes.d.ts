@@ -755,6 +755,7 @@ export interface ApiFbAiSoftwareFbAiSoftware
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    whatWeDeliver: Schema.Attribute.JSON;
     whyStartupNeed: Schema.Attribute.JSON;
   };
 }
