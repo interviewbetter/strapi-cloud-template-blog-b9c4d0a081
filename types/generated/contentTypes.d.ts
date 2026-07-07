@@ -2419,6 +2419,44 @@ export interface ApiOsEnergeticAiOsEnergeticAi
   };
 }
 
+export interface ApiOsEnterpriseOrganisationOsEnterpriseOrganisation
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_enterprise_organisations';
+  info: {
+    displayName: 'OS-EnterpriseOrganisation';
+    pluralName: 'os-enterprise-organisations';
+    singularName: 'os-enterprise-organisation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    fifthSection: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-enterprise-organisation.os-enterprise-organisation'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    sixthSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsEntertainmentSportOsEntertainmentSport
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_entertainment_sports';
@@ -2694,6 +2732,44 @@ export interface ApiOsLogisticsSupplyOsLogisticsSupply
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsMidMarketBusinessOsMidMarketBusiness
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_mid_market_businesses';
+  info: {
+    displayName: 'OS-MidMarketBusiness';
+    pluralName: 'os-mid-market-businesses';
+    singularName: 'os-mid-market-business';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    fifthSection: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-mid-market-business.os-mid-market-business'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    sixthSection: Schema.Attribute.JSON;
     thirdSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -3801,6 +3877,7 @@ declare module '@strapi/strapi' {
       'api::os-dfar.os-dfar': ApiOsDfarOsDfar;
       'api::os-domain-and-expertise.os-domain-and-expertise': ApiOsDomainAndExpertiseOsDomainAndExpertise;
       'api::os-energetic-ai.os-energetic-ai': ApiOsEnergeticAiOsEnergeticAi;
+      'api::os-enterprise-organisation.os-enterprise-organisation': ApiOsEnterpriseOrganisationOsEnterpriseOrganisation;
       'api::os-entertainment-sport.os-entertainment-sport': ApiOsEntertainmentSportOsEntertainmentSport;
       'api::os-fractional-cto.os-fractional-cto': ApiOsFractionalCtoOsFractionalCto;
       'api::os-gx-p.os-gx-p': ApiOsGxPOsGxP;
@@ -3809,6 +3886,7 @@ declare module '@strapi/strapi' {
       'api::os-home.os-home': ApiOsHomeOsHome;
       'api::os-industry.os-industry': ApiOsIndustryOsIndustry;
       'api::os-logistics-supply.os-logistics-supply': ApiOsLogisticsSupplyOsLogisticsSupply;
+      'api::os-mid-market-business.os-mid-market-business': ApiOsMidMarketBusinessOsMidMarketBusiness;
       'api::os-ml-ops-and-devop.os-ml-ops-and-devop': ApiOsMlOpsAndDevopOsMlOpsAndDevop;
       'api::os-nist-800.os-nist-800': ApiOsNist800OsNist800;
       'api::os-operation-support.os-operation-support': ApiOsOperationSupportOsOperationSupport;

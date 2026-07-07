@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_enterprise_organisations",
+  "info": {
+    "singularName": "os-enterprise-organisation",
+    "pluralName": "os-enterprise-organisations",
+    "displayName": "OS-EnterpriseOrganisation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "thirdSection": {
+      "type": "json"
+    },
+    "fourthSection": {
+      "type": "json"
+    },
+    "fifthSection": {
+      "type": "json"
+    },
+    "sixthSection": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}
