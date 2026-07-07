@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_startups_via_foundersbars",
+  "info": {
+    "singularName": "os-startups-via-foundersbar",
+    "pluralName": "os-startups-via-foundersbars",
+    "displayName": "OS-Startups-via-Foundersbar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "cardSection": {
+      "type": "json"
+    },
+    "structuredPath": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}

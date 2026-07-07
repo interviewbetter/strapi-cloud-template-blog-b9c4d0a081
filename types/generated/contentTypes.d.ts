@@ -3020,6 +3020,42 @@ export interface ApiOsStaffAugmentationOsStaffAugmentation
   };
 }
 
+export interface ApiOsStartupsViaFoundersbarOsStartupsViaFoundersbar
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_startups_via_foundersbars';
+  info: {
+    displayName: 'OS-Startups-via-Foundersbar';
+    pluralName: 'os-startups-via-foundersbars';
+    singularName: 'os-startups-via-foundersbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-startups-via-foundersbar.os-startups-via-foundersbar'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    structuredPath: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsStrategyConsultingOsStrategyConsulting
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_strategy_consultings';
@@ -3461,7 +3497,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -3782,6 +3817,7 @@ declare module '@strapi/strapi' {
       'api::os-soc-2.os-soc-2': ApiOsSoc2OsSoc2;
       'api::os-software-development.os-software-development': ApiOsSoftwareDevelopmentOsSoftwareDevelopment;
       'api::os-staff-augmentation.os-staff-augmentation': ApiOsStaffAugmentationOsStaffAugmentation;
+      'api::os-startups-via-foundersbar.os-startups-via-foundersbar': ApiOsStartupsViaFoundersbarOsStartupsViaFoundersbar;
       'api::os-strategy-consulting.os-strategy-consulting': ApiOsStrategyConsultingOsStrategyConsulting;
       'api::os-talent-solution.os-talent-solution': ApiOsTalentSolutionOsTalentSolution;
       'api::os-workforce-management.os-workforce-management': ApiOsWorkforceManagementOsWorkforceManagement;
