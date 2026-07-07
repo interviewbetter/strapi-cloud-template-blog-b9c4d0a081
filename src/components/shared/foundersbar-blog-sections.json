@@ -54,6 +54,9 @@
     },
     "comparisonTable": {
       "type": "json"
+    },
+    "tableDescription": {
+      "type": "blocks"
     }
   },
   "config": {}

@@ -179,6 +179,7 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
       true
     >;
     sectionTitle: Schema.Attribute.Text;
+    tableDescription: Schema.Attribute.Blocks;
   };
 }
 
