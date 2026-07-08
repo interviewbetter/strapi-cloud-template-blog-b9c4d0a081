@@ -172,6 +172,7 @@ export interface SharedFoundersbarBlogSections extends Struct.ComponentSchema {
     ctaButtonText: Schema.Attribute.String;
     ctaDescription: Schema.Attribute.Blocks;
     ctaHeading: Schema.Attribute.Text;
+    faq: Schema.Attribute.Component<'shared.faq', true>;
     secDesc: Schema.Attribute.Blocks;
     sectionid: Schema.Attribute.String & Schema.Attribute.Unique;
     sectionMedia: Schema.Attribute.Media<
