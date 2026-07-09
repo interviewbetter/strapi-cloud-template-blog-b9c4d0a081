@@ -687,6 +687,41 @@ export interface ApiEdTechEdTech extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbAboutFbAbout extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_abouts';
+  info: {
+    displayName: 'FB_About';
+    pluralName: 'fb-abouts';
+    singularName: 'fb-about';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footerCta: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-about.fb-about'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whereWeWant: Schema.Attribute.JSON;
+  };
+}
+
 export interface ApiFbAdvisoryFbAdvisory extends Struct.CollectionTypeSchema {
   collectionName: 'fb_advisories';
   info: {
@@ -3829,6 +3864,7 @@ declare module '@strapi/strapi' {
       'api::course.course': ApiCourseCourse;
       'api::crm-and-sale.crm-and-sale': ApiCrmAndSaleCrmAndSale;
       'api::ed-tech.ed-tech': ApiEdTechEdTech;
+      'api::fb-about.fb-about': ApiFbAboutFbAbout;
       'api::fb-advisory.fb-advisory': ApiFbAdvisoryFbAdvisory;
       'api::fb-ai-software.fb-ai-software': ApiFbAiSoftwareFbAiSoftware;
       'api::fb-city.fb-city': ApiFbCityFbCity;
