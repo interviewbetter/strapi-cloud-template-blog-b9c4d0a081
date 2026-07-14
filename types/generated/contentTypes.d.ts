@@ -2694,7 +2694,7 @@ export interface ApiOsHomeOsHome extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     mapSection: Schema.Attribute.JSON;
     metaDescription: Schema.Attribute.Text;
-    metaTtile: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
     pricingSection: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
