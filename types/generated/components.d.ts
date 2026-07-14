@@ -146,6 +146,7 @@ export interface SharedFaq extends Struct.ComponentSchema {
   attributes: {
     answer: Schema.Attribute.Text;
     question: Schema.Attribute.Text;
+    sectionId: Schema.Attribute.String;
   };
 }
 
