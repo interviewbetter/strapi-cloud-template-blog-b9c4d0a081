@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_abouts",
+  "info": {
+    "singularName": "os-about",
+    "pluralName": "os-abouts",
+    "displayName": "OS-About"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "firstSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "cardSection": {
+      "type": "json"
+    },
+    "formSection": {
+      "type": "json"
+    }
+  }
+}

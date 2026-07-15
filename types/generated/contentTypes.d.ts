@@ -1994,6 +1994,40 @@ export interface ApiMetaSeoMetaSeo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiOsAboutOsAbout extends Struct.CollectionTypeSchema {
+  collectionName: 'os_abouts';
+  info: {
+    displayName: 'OS-About';
+    pluralName: 'os-abouts';
+    singularName: 'os-about';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cardSection: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    firstSection: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-about.os-about'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsAiModernizationOsAiModernization
   extends Struct.CollectionTypeSchema {
   collectionName: 'os_ai_modernizations';
@@ -3900,6 +3934,7 @@ declare module '@strapi/strapi' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
+      'api::os-about.os-about': ApiOsAboutOsAbout;
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
