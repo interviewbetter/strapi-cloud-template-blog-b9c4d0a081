@@ -2276,6 +2276,39 @@ export interface ApiOsConsumerApplicationOsConsumerApplication
   };
 }
 
+export interface ApiOsContactOsContact extends Struct.CollectionTypeSchema {
+  collectionName: 'os_contacts';
+  info: {
+    displayName: 'OS-Contact';
+    pluralName: 'os-contacts';
+    singularName: 'os-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    cards: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footerCta: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-contact.os-contact'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsDataAndAiOsDataAndAi extends Struct.CollectionTypeSchema {
   collectionName: 'os_data_and_ais';
   info: {
@@ -3942,6 +3975,7 @@ declare module '@strapi/strapi' {
       'api::os-compliance.os-compliance': ApiOsComplianceOsCompliance;
       'api::os-construction.os-construction': ApiOsConstructionOsConstruction;
       'api::os-consumer-application.os-consumer-application': ApiOsConsumerApplicationOsConsumerApplication;
+      'api::os-contact.os-contact': ApiOsContactOsContact;
       'api::os-data-and-ai.os-data-and-ai': ApiOsDataAndAiOsDataAndAi;
       'api::os-dedicated-team.os-dedicated-team': ApiOsDedicatedTeamOsDedicatedTeam;
       'api::os-delivery-model.os-delivery-model': ApiOsDeliveryModelOsDeliveryModel;
