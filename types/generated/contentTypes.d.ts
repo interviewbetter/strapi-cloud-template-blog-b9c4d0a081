@@ -2135,6 +2135,41 @@ export interface ApiOsBuildTheRightProductOsBuildTheRightProduct
   };
 }
 
+export interface ApiOsCareerOsCareer extends Struct.CollectionTypeSchema {
+  collectionName: 'os_careers';
+  info: {
+    displayName: 'OS-Career';
+    pluralName: 'os-careers';
+    singularName: 'os-career';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    dedicatedFormSection: Schema.Attribute.JSON;
+    exploreOpportunities: Schema.Attribute.JSON;
+    footerSection: Schema.Attribute.JSON;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-career.os-career'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    openings: Schema.Attribute.Component<'shared.openings', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsCmmcOsCmmc extends Struct.CollectionTypeSchema {
   collectionName: 'os_cmmcs';
   info: {
@@ -3971,6 +4006,7 @@ declare module '@strapi/strapi' {
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
+      'api::os-career.os-career': ApiOsCareerOsCareer;
       'api::os-cmmc.os-cmmc': ApiOsCmmcOsCmmc;
       'api::os-compliance.os-compliance': ApiOsComplianceOsCompliance;
       'api::os-construction.os-construction': ApiOsConstructionOsConstruction;

@@ -145,8 +145,8 @@ export interface SharedFaq extends Struct.ComponentSchema {
   };
   attributes: {
     answer: Schema.Attribute.Text;
+    faqId: Schema.Attribute.String;
     question: Schema.Attribute.Text;
-    sectionId: Schema.Attribute.String;
   };
 }
 
@@ -318,6 +318,39 @@ export interface SharedNavigationMenuItems extends Struct.ComponentSchema {
     displayName: 'navigation.menuItems';
   };
   attributes: {};
+}
+
+export interface SharedOpenings extends Struct.ComponentSchema {
+  collectionName: 'components_shared_openings';
+  info: {
+    displayName: 'openings';
+    icon: 'stack';
+  };
+  attributes: {
+    Active: Schema.Attribute.Boolean;
+    experience: Schema.Attribute.Enumeration<
+      [
+        'Fresher',
+        'E0-1',
+        'E0-2',
+        'E0-3',
+        'E1-2',
+        'E1-3',
+        'E2-3',
+        'E2-5',
+        'E3-5',
+        'E5-8',
+        'E5-10',
+        'E10+',
+      ]
+    >;
+    jobName: Schema.Attribute.Text;
+    jobSummary: Schema.Attribute.Text;
+    keyResponsibility: Schema.Attribute.JSON;
+    openDate: Schema.Attribute.Date;
+    requiredSkills: Schema.Attribute.Text;
+    shift: Schema.Attribute.Enumeration<['Full-time', 'Half-time']>;
+  };
 }
 
 export interface SharedOptions extends Struct.ComponentSchema {
@@ -524,6 +557,7 @@ declare module '@strapi/strapi' {
       'shared.mobile-app-development': SharedMobileAppDevelopment;
       'shared.navigation-link': SharedNavigationLink;
       'shared.navigation-menu-items': SharedNavigationMenuItems;
+      'shared.openings': SharedOpenings;
       'shared.options': SharedOptions;
       'shared.perfomance-marketing': SharedPerfomanceMarketing;
       'shared.pricing-section': SharedPricingSection;

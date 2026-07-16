@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_shared_openings",
+  "info": {
+    "displayName": "openings",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Active": {
+      "type": "boolean"
+    },
+    "openDate": {
+      "type": "date"
+    },
+    "jobName": {
+      "type": "text"
+    },
+    "shift": {
+      "type": "enumeration",
+      "enum": [
+        "Full-time",
+        "Half-time"
+      ]
+    },
+    "jobSummary": {
+      "type": "text"
+    },
+    "requiredSkills": {
+      "type": "text"
+    },
+    "keyResponsibility": {
+      "type": "json"
+    },
+    "experience": {
+      "type": "enumeration",
+      "enum": [
+        "Fresher",
+        "E0-1",
+        "E0-2",
+        "E0-3",
+        "E1-2",
+        "E1-3",
+        "E2-3",
+        "E2-5",
+        "E3-5",
+        "E5-8",
+        "E5-10",
+        "E10+"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -11,7 +11,7 @@
     "answer": {
       "type": "text"
     },
-    "sectionId": {
+    "faqId": {
       "type": "string"
     }
   },
