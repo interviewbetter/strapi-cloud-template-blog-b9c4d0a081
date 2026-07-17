@@ -19,7 +19,9 @@
       "type": "enumeration",
       "enum": [
         "Full-time",
-        "Half-time"
+        "Half-time",
+        "Hybrid",
+        "Work From Home"
       ]
     },
     "jobSummary": {
@@ -47,6 +49,9 @@
         "E5-10",
         "E10+"
       ]
+    },
+    "location": {
+      "type": "text"
     }
   },
   "config": {}

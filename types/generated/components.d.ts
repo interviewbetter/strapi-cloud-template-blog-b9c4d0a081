@@ -347,9 +347,12 @@ export interface SharedOpenings extends Struct.ComponentSchema {
     jobName: Schema.Attribute.Text;
     jobSummary: Schema.Attribute.Text;
     keyResponsibility: Schema.Attribute.JSON;
+    location: Schema.Attribute.Text;
     openDate: Schema.Attribute.Date;
     requiredSkills: Schema.Attribute.Text;
-    shift: Schema.Attribute.Enumeration<['Full-time', 'Half-time']>;
+    shift: Schema.Attribute.Enumeration<
+      ['Full-time', 'Half-time', 'Hybrid', 'Work From Home']
+    >;
   };
 }
 

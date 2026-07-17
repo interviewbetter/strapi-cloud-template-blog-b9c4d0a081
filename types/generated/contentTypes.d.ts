@@ -2666,6 +2666,40 @@ export interface ApiOsFractionalCtoOsFractionalCto
   };
 }
 
+export interface ApiOsGlobalPresenceOsGlobalPresence
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'os_global_presences';
+  info: {
+    displayName: 'OS-Global-Presence';
+    pluralName: 'os-global-presences';
+    singularName: 'os-global-presence';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    formSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-global-presence.os-global-presence'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsGxPOsGxP extends Struct.CollectionTypeSchema {
   collectionName: 'os_gx_ps';
   info: {
@@ -4021,6 +4055,7 @@ declare module '@strapi/strapi' {
       'api::os-enterprise-organisation.os-enterprise-organisation': ApiOsEnterpriseOrganisationOsEnterpriseOrganisation;
       'api::os-entertainment-sport.os-entertainment-sport': ApiOsEntertainmentSportOsEntertainmentSport;
       'api::os-fractional-cto.os-fractional-cto': ApiOsFractionalCtoOsFractionalCto;
+      'api::os-global-presence.os-global-presence': ApiOsGlobalPresenceOsGlobalPresence;
       'api::os-gx-p.os-gx-p': ApiOsGxPOsGxP;
       'api::os-healthcare.os-healthcare': ApiOsHealthcareOsHealthcare;
       'api::os-hippa.os-hippa': ApiOsHippaOsHippa;
