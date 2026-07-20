@@ -1239,7 +1239,7 @@ export interface ApiFbStudentIncubatorFbStudentIncubator
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_student_incubators';
   info: {
-    displayName: 'FB_Student_Incubator';
+    displayName: 'FB_Student_Innovator';
     pluralName: 'fb-student-incubators';
     singularName: 'fb-student-incubator';
   };
