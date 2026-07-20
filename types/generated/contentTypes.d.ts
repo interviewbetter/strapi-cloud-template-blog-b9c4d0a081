@@ -1050,6 +1050,43 @@ export interface ApiFbHomeFbHome extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiFbIncubatorPartnershipFbIncubatorPartnership
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_incubator_partnerships';
+  info: {
+    displayName: 'FB_Incubator_Partnership';
+    pluralName: 'fb-incubator-partnerships';
+    singularName: 'fb-incubator-partnership';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.JSON;
+    footerCta: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-incubator-partnership.fb-incubator-partnership'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbMarketValidationFbMarketValidation
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_market_validations';
@@ -1192,6 +1229,42 @@ export interface ApiFbSoloFounderFbSoloFounder
     problemSection: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFbStudentIncubatorFbStudentIncubator
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_student_incubators';
+  info: {
+    displayName: 'FB_Student_Incubator';
+    pluralName: 'fb-student-incubators';
+    singularName: 'fb-student-incubator';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.JSON;
+    form: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-student-incubator.fb-student-incubator'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -4010,10 +4083,12 @@ declare module '@strapi/strapi' {
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
       'api::fb-hipaa.fb-hipaa': ApiFbHipaaFbHipaa;
       'api::fb-home.fb-home': ApiFbHomeFbHome;
+      'api::fb-incubator-partnership.fb-incubator-partnership': ApiFbIncubatorPartnershipFbIncubatorPartnership;
       'api::fb-market-validation.fb-market-validation': ApiFbMarketValidationFbMarketValidation;
       'api::fb-performance-marketing.fb-performance-marketing': ApiFbPerformanceMarketingFbPerformanceMarketing;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
       'api::fb-solo-founder.fb-solo-founder': ApiFbSoloFounderFbSoloFounder;
+      'api::fb-student-incubator.fb-student-incubator': ApiFbStudentIncubatorFbStudentIncubator;
       'api::foundersbar-author.foundersbar-author': ApiFoundersbarAuthorFoundersbarAuthor;
       'api::foundersbar-blog.foundersbar-blog': ApiFoundersbarBlogFoundersbarBlog;
       'api::foundersbar-case-study-list.foundersbar-case-study-list': ApiFoundersbarCaseStudyListFoundersbarCaseStudyList;
