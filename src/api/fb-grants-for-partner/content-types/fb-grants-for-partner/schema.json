@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_grants_for_partners",
+  "info": {
+    "singularName": "fb-grants-for-partner",
+    "pluralName": "fb-grants-for-partners",
+    "displayName": "FB-Grants-For-Partner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "thirdSection": {
+      "type": "json"
+    },
+    "faq": {
+      "type": "json"
+    },
+    "footerCTA": {
+      "type": "json"
+    }
+  }
+}

@@ -946,6 +946,42 @@ export interface ApiFbForCreatorFbForCreator
   };
 }
 
+export interface ApiFbGrantsForPartnerFbGrantsForPartner
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_grants_for_partners';
+  info: {
+    displayName: 'FB-Grants-For-Partner';
+    pluralName: 'fb-grants-for-partners';
+    singularName: 'fb-grants-for-partner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.JSON;
+    footerCTA: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-grants-for-partner.fb-grants-for-partner'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbGtmFbGtm extends Struct.CollectionTypeSchema {
   collectionName: 'fb_gtms';
   info: {
@@ -1229,6 +1265,42 @@ export interface ApiFbSoloFounderFbSoloFounder
     problemSection: Schema.Attribute.JSON;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFbStartupGrantFbStartupGrant
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_startup_grants';
+  info: {
+    displayName: 'FB-Startup-Grant';
+    pluralName: 'fb-startup-grants';
+    singularName: 'fb-startup-grant';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.JSON;
+    footerCTA: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-startup-grant.fb-startup-grant'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -3817,7 +3889,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -4080,6 +4151,7 @@ declare module '@strapi/strapi' {
       'api::fb-directory.fb-directory': ApiFbDirectoryFbDirectory;
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
+      'api::fb-grants-for-partner.fb-grants-for-partner': ApiFbGrantsForPartnerFbGrantsForPartner;
       'api::fb-gtm.fb-gtm': ApiFbGtmFbGtm;
       'api::fb-hipaa.fb-hipaa': ApiFbHipaaFbHipaa;
       'api::fb-home.fb-home': ApiFbHomeFbHome;
@@ -4088,6 +4160,7 @@ declare module '@strapi/strapi' {
       'api::fb-performance-marketing.fb-performance-marketing': ApiFbPerformanceMarketingFbPerformanceMarketing;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
       'api::fb-solo-founder.fb-solo-founder': ApiFbSoloFounderFbSoloFounder;
+      'api::fb-startup-grant.fb-startup-grant': ApiFbStartupGrantFbStartupGrant;
       'api::fb-student-incubator.fb-student-incubator': ApiFbStudentIncubatorFbStudentIncubator;
       'api::foundersbar-author.foundersbar-author': ApiFoundersbarAuthorFoundersbarAuthor;
       'api::foundersbar-blog.foundersbar-blog': ApiFoundersbarBlogFoundersbarBlog;
