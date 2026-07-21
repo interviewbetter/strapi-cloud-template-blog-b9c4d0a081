@@ -1159,6 +1159,42 @@ export interface ApiFbMarketValidationFbMarketValidation
   };
 }
 
+export interface ApiFbPartnershipFbPartnership
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_partnerships';
+  info: {
+    displayName: 'FB_Partnership';
+    pluralName: 'fb-partnerships';
+    singularName: 'fb-partnership';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faqSection: Schema.Attribute.JSON;
+    footerSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-partnership.fb-partnership'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbPerformanceMarketingFbPerformanceMarketing
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_performance_marketings';
@@ -4158,6 +4194,7 @@ declare module '@strapi/strapi' {
       'api::fb-home.fb-home': ApiFbHomeFbHome;
       'api::fb-incubator-partnership.fb-incubator-partnership': ApiFbIncubatorPartnershipFbIncubatorPartnership;
       'api::fb-market-validation.fb-market-validation': ApiFbMarketValidationFbMarketValidation;
+      'api::fb-partnership.fb-partnership': ApiFbPartnershipFbPartnership;
       'api::fb-performance-marketing.fb-performance-marketing': ApiFbPerformanceMarketingFbPerformanceMarketing;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
       'api::fb-solo-founder.fb-solo-founder': ApiFbSoloFounderFbSoloFounder;
