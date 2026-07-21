@@ -19,9 +19,8 @@
       "type": "enumeration",
       "enum": [
         "Full-time",
-        "Half-time",
-        "Hybrid",
-        "Work From Home"
+        "Contract",
+        "Fellowship"
       ]
     },
     "jobSummary": {
