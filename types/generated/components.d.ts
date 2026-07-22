@@ -366,6 +366,27 @@ export interface SharedOptions extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedOsBlogSections extends Struct.ComponentSchema {
+  collectionName: 'components_shared_os_blog_sections';
+  info: {
+    displayName: 'OS-blogSections';
+  };
+  attributes: {
+    imageDescription: Schema.Attribute.Blocks;
+    keyPoints: Schema.Attribute.JSON;
+    sectionDescription: Schema.Attribute.Blocks;
+    sectionId: Schema.Attribute.Text;
+    sectionImages: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    sectionTitle: Schema.Attribute.Text;
+    table: Schema.Attribute.JSON;
+    tableDescription: Schema.Attribute.Blocks;
+    TOCtitle: Schema.Attribute.Text;
+  };
+}
+
 export interface SharedPerfomanceMarketing extends Struct.ComponentSchema {
   collectionName: 'components_shared_perfomance_marketings';
   info: {
@@ -562,6 +583,7 @@ declare module '@strapi/strapi' {
       'shared.navigation-menu-items': SharedNavigationMenuItems;
       'shared.openings': SharedOpenings;
       'shared.options': SharedOptions;
+      'shared.os-blog-sections': SharedOsBlogSections;
       'shared.perfomance-marketing': SharedPerfomanceMarketing;
       'shared.pricing-section': SharedPricingSection;
       'shared.product-overview': SharedProductOverview;

@@ -35,6 +35,12 @@
     },
     "nameMobile": {
       "type": "string"
+    },
+    "os_articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::os-article.os-article",
+      "inversedBy": "foundersbar_authors"
     }
   }
 }
