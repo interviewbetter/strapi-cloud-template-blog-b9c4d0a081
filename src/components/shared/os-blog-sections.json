@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_shared_os_blog_sections",
+  "info": {
+    "displayName": "OS-blogSections"
+  },
+  "options": {},
+  "attributes": {
+    "sectionId": {
+      "type": "text"
+    },
+    "sectionTitle": {
+      "type": "text"
+    },
+    "TOCtitle": {
+      "type": "text"
+    },
+    "sectionDescription": {
+      "type": "blocks"
+    },
+    "table": {
+      "type": "json"
+    },
+    "tableDescription": {
+      "type": "blocks"
+    },
+    "sectionImages": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imageDescription": {
+      "type": "blocks"
+    },
+    "keyPoints": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}

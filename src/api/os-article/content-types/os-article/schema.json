@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "os_articles",
+  "info": {
+    "singularName": "os-article",
+    "pluralName": "os-articles",
+    "displayName": "OS-Article"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "createdDate": {
+      "type": "date"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Article & Research",
+        "Case Studies"
+      ]
+    },
+    "readTime": {
+      "type": "text"
+    },
+    "sections": {
+      "type": "component",
+      "component": "shared.os-blog-sections",
+      "repeatable": true
+    },
+    "listingImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "heroImageMobile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "foundersbar_authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::foundersbar-author.foundersbar-author",
+      "mappedBy": "os_articles"
+    },
+    "footerCTA": {
+      "type": "json"
+    }
+  }
+}

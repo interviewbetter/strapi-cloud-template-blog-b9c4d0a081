@@ -1411,6 +1411,10 @@ export interface ApiFoundersbarAuthorFoundersbarAuthor
       Schema.Attribute.Private;
     Name: Schema.Attribute.String;
     nameMobile: Schema.Attribute.String;
+    os_articles: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::os-article.os-article'
+    >;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -2274,6 +2278,57 @@ export interface ApiOsApplicationModernizationOsApplicationModernization
     publishedAt: Schema.Attribute.DateTime;
     relatedCapabilities: Schema.Attribute.JSON;
     schema: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOsArticleOsArticle extends Struct.CollectionTypeSchema {
+  collectionName: 'os_articles';
+  info: {
+    displayName: 'OS-Article';
+    pluralName: 'os-articles';
+    singularName: 'os-article';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['Article & Research', 'Case Studies']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    createdDate: Schema.Attribute.Date;
+    description: Schema.Attribute.Text;
+    footerCTA: Schema.Attribute.JSON;
+    foundersbar_authors: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::foundersbar-author.foundersbar-author'
+    >;
+    heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    heroImageMobile: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    listingImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::os-article.os-article'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    readTime: Schema.Attribute.Text;
+    schema: Schema.Attribute.JSON;
+    sections: Schema.Attribute.Component<'shared.os-blog-sections', true>;
+    slug: Schema.Attribute.UID;
+    title: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -4225,6 +4280,7 @@ declare module '@strapi/strapi' {
       'api::os-about.os-about': ApiOsAboutOsAbout;
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
+      'api::os-article.os-article': ApiOsArticleOsArticle;
       'api::os-build-the-right-product.os-build-the-right-product': ApiOsBuildTheRightProductOsBuildTheRightProduct;
       'api::os-career.os-career': ApiOsCareerOsCareer;
       'api::os-cmmc.os-cmmc': ApiOsCmmcOsCmmc;
