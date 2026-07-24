@@ -6,7 +6,7 @@
   "options": {},
   "attributes": {
     "sectionId": {
-      "type": "text"
+      "type": "string"
     },
     "sectionTitle": {
       "type": "text"

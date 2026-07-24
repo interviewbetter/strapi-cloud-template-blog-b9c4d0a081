@@ -375,7 +375,7 @@ export interface SharedOsBlogSections extends Struct.ComponentSchema {
     imageDescription: Schema.Attribute.Blocks;
     keyPoints: Schema.Attribute.JSON;
     sectionDescription: Schema.Attribute.Blocks;
-    sectionId: Schema.Attribute.Text;
+    sectionId: Schema.Attribute.String;
     sectionImages: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
