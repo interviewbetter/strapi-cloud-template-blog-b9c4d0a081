@@ -2296,7 +2296,7 @@ export interface ApiOsArticleOsArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['Article & Research', 'Case Studies']
+      ['Articles & Research', 'Case Studies']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

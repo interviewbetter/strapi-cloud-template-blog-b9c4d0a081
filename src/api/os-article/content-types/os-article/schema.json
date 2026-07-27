@@ -35,7 +35,7 @@
     "category": {
       "type": "enumeration",
       "enum": [
-        "Article & Research",
+        "Articles & Research",
         "Case Studies"
       ]
     },
