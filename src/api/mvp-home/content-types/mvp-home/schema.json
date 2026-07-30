@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mvp_homes",
+  "info": {
+    "singularName": "mvp-home",
+    "pluralName": "mvp-homes",
+    "displayName": "MVP-Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "heroSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "thirdSection": {
+      "type": "json"
+    },
+    "fourthSection": {
+      "type": "json"
+    },
+    "fifthSection": {
+      "type": "json"
+    },
+    "sixthSection": {
+      "type": "json"
+    },
+    "footerCTA": {
+      "type": "json"
+    }
+  }
+}
