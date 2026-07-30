@@ -2179,6 +2179,43 @@ export interface ApiMetaSeoMetaSeo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMvpHomeMvpHome extends Struct.CollectionTypeSchema {
+  collectionName: 'mvp_homes';
+  info: {
+    displayName: 'MVP-Home';
+    pluralName: 'mvp-homes';
+    singularName: 'mvp-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    fifthSection: Schema.Attribute.JSON;
+    footerCTA: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    heroSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mvp-home.mvp-home'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    sixthSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOsAboutOsAbout extends Struct.CollectionTypeSchema {
   collectionName: 'os_abouts';
   info: {
@@ -4277,6 +4314,7 @@ declare module '@strapi/strapi' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
+      'api::mvp-home.mvp-home': ApiMvpHomeMvpHome;
       'api::os-about.os-about': ApiOsAboutOsAbout;
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
       'api::os-application-modernization.os-application-modernization': ApiOsApplicationModernizationOsApplicationModernization;
