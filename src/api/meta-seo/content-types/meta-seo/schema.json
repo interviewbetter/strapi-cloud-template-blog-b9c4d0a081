@@ -13,6 +13,9 @@
   "attributes": {
     "seoDetails": {
       "type": "json"
+    },
+    "true": {
+      "type": "boolean"
     }
   }
 }
