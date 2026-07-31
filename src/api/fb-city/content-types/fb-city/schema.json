@@ -11,10 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "orderNumber": {
-      "type": "integer",
-      "unique": true
-    },
     "metaTitle": {
       "type": "string"
     },
