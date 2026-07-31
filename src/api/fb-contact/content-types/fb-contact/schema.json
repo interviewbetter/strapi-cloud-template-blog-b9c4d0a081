@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_contacts",
+  "info": {
+    "singularName": "fb-contact",
+    "pluralName": "fb-contacts",
+    "displayName": "FB_Contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "firstSection": {
+      "type": "json"
+    },
+    "secondSection": {
+      "type": "json"
+    },
+    "thirdSection": {
+      "type": "json"
+    },
+    "fourthSection": {
+      "type": "json"
+    }
+  }
+}

@@ -827,6 +827,7 @@ export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.String;
     name: Schema.Attribute.String;
+    orderNo: Schema.Attribute.Integer & Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.String;
@@ -835,6 +836,40 @@ export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFbContactFbContact extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_contacts';
+  info: {
+    displayName: 'FB_Contact';
+    pluralName: 'fb-contacts';
+    singularName: 'fb-contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    firstSection: Schema.Attribute.JSON;
+    fourthSection: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-contact.fb-contact'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    secondSection: Schema.Attribute.JSON;
+    thirdSection: Schema.Attribute.JSON;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -4277,6 +4312,7 @@ declare module '@strapi/strapi' {
       'api::fb-advisory.fb-advisory': ApiFbAdvisoryFbAdvisory;
       'api::fb-ai-software.fb-ai-software': ApiFbAiSoftwareFbAiSoftware;
       'api::fb-city.fb-city': ApiFbCityFbCity;
+      'api::fb-contact.fb-contact': ApiFbContactFbContact;
       'api::fb-directory.fb-directory': ApiFbDirectoryFbDirectory;
       'api::fb-fixed-cost-mvp.fb-fixed-cost-mvp': ApiFbFixedCostMvpFbFixedCostMvp;
       'api::fb-for-creator.fb-for-creator': ApiFbForCreatorFbForCreator;
