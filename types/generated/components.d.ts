@@ -328,6 +328,7 @@ export interface SharedOpenings extends Struct.ComponentSchema {
   };
   attributes: {
     Active: Schema.Attribute.Boolean;
+    experience: Schema.Attribute.String;
     jobName: Schema.Attribute.Text;
     jobSummary: Schema.Attribute.Text;
     keyResponsibility: Schema.Attribute.JSON;
