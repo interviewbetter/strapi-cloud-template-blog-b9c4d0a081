@@ -68,6 +68,10 @@
       "relation": "oneToMany",
       "target": "api::foundersbar-blog.foundersbar-blog",
       "mappedBy": "fb_city"
+    },
+    "order": {
+      "type": "integer",
+      "unique": true
     }
   }
 }
