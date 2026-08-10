@@ -328,33 +328,6 @@ export interface SharedOpenings extends Struct.ComponentSchema {
   };
   attributes: {
     Active: Schema.Attribute.Boolean;
-    experience: Schema.Attribute.Enumeration<
-      [
-        'Fresher',
-        'E0-1',
-        'E0-2',
-        'E0-3',
-        'E1-2',
-        'E1-3',
-        'E2-3',
-        'E2-5',
-        'E3-5',
-        'E3-6',
-        'E3-7',
-        'E3-8',
-        'E3-9',
-        'E3-10',
-        'E4-5',
-        'E4-6',
-        'E4-7',
-        'E5-6',
-        'E5-7',
-        'E5-8',
-        'E5-9',
-        'E5-10',
-        'E10+',
-      ]
-    >;
     jobName: Schema.Attribute.Text;
     jobSummary: Schema.Attribute.Text;
     keyResponsibility: Schema.Attribute.JSON;
