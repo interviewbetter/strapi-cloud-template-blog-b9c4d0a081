@@ -827,7 +827,6 @@ export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.String;
     name: Schema.Attribute.String;
-    orderNumber: Schema.Attribute.Integer & Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.String;
@@ -1433,6 +1432,10 @@ export interface ApiFoundersbarAuthorFoundersbarAuthor
       'manyToMany',
       'api::foundersbar-blog.foundersbar-blog'
     >;
+    ib_articles: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::ib-article.ib-article'
+    >;
     Image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
@@ -1818,6 +1821,54 @@ export interface ApiIbArticlePageIbArticlePage
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiIbArticleIbArticle extends Struct.CollectionTypeSchema {
+  collectionName: 'ib_articles';
+  info: {
+    displayName: 'IB_Article';
+    pluralName: 'ib-articles';
+    singularName: 'ib-article';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['courses', 'articles&research', 'caseStudies']
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    createdDate: Schema.Attribute.Date;
+    description: Schema.Attribute.Text;
+    footerCTA: Schema.Attribute.JSON;
+    foundersbar_authors: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::foundersbar-author.foundersbar-author'
+    >;
+    heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    listingImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ib-article.ib-article'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    readTime: Schema.Attribute.String;
+    schema: Schema.Attribute.JSON;
+    sections: Schema.Attribute.Component<'shared.os-blog-sections', true>;
+    slug: Schema.Attribute.Text;
+    title: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -4340,6 +4391,7 @@ declare module '@strapi/strapi' {
       'api::header.header': ApiHeaderHeader;
       'api::ib-academy-page.ib-academy-page': ApiIbAcademyPageIbAcademyPage;
       'api::ib-article-page.ib-article-page': ApiIbArticlePageIbArticlePage;
+      'api::ib-article.ib-article': ApiIbArticleIbArticle;
       'api::ib-ats-check-page.ib-ats-check-page': ApiIbAtsCheckPageIbAtsCheckPage;
       'api::ib-course-page.ib-course-page': ApiIbCoursePageIbCoursePage;
       'api::ib-faang-page.ib-faang-page': ApiIbFaangPageIbFaangPage;
