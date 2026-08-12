@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_takeaways",
+  "info": {
+    "displayName": "takeaways"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "takeawayDesc": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

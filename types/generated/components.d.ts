@@ -51,6 +51,17 @@ export interface SharedBlogs extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCards extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    displayName: 'cards';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCaseStudiesSectionCards extends Struct.ComponentSchema {
   collectionName: 'components_shared_case_studies_section_cards';
   info: {
@@ -59,6 +70,24 @@ export interface SharedCaseStudiesSectionCards extends Struct.ComponentSchema {
   attributes: {
     desc: Schema.Attribute.Blocks;
     title: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedCaseStudySections extends Struct.ComponentSchema {
+  collectionName: 'components_shared_case_study_sections';
+  info: {
+    displayName: 'caseStudySections';
+  };
+  attributes: {
+    cardDescription: Schema.Attribute.Blocks;
+    cards: Schema.Attribute.Component<'shared.cards', true>;
+    description: Schema.Attribute.Blocks;
+    sectionId: Schema.Attribute.String;
+    sectionName: Schema.Attribute.String;
+    sectionTitle: Schema.Attribute.String;
+    steps: Schema.Attribute.JSON;
+    takeaway: Schema.Attribute.Component<'shared.takeaways', true>;
+    timeline: Schema.Attribute.JSON;
   };
 }
 
@@ -534,6 +563,17 @@ export interface SharedTabs extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTakeaways extends Struct.ComponentSchema {
+  collectionName: 'components_shared_takeaways';
+  info: {
+    displayName: 'takeaways';
+  };
+  attributes: {
+    takeawayDesc: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedUiUx extends Struct.ComponentSchema {
   collectionName: 'components_shared_ui_uxes';
   info: {
@@ -548,7 +588,9 @@ declare module '@strapi/strapi' {
       'shared.backend-development': SharedBackendDevelopment;
       'shared.blog-sections': SharedBlogSections;
       'shared.blogs': SharedBlogs;
+      'shared.cards': SharedCards;
       'shared.case-studies-section-cards': SharedCaseStudiesSectionCards;
+      'shared.case-study-sections': SharedCaseStudySections;
       'shared.categories': SharedCategories;
       'shared.component': SharedComponent;
       'shared.course-details': SharedCourseDetails;
@@ -582,6 +624,7 @@ declare module '@strapi/strapi' {
       'shared.slider': SharedSlider;
       'shared.tab-name': SharedTabName;
       'shared.tabs': SharedTabs;
+      'shared.takeaways': SharedTakeaways;
       'shared.ui-ux': SharedUiUx;
     }
   }

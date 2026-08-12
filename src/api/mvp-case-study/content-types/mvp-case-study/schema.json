@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mvp_case_studies",
+  "info": {
+    "singularName": "mvp-case-study",
+    "pluralName": "mvp-case-studies",
+    "displayName": "MVP-Case-Study"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "focus": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sectionId": {
+      "type": "component",
+      "component": "shared.case-study-sections",
+      "repeatable": false
+    },
+    "footerCTA": {
+      "type": "json"
+    }
+  }
+}

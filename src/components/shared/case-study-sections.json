@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_case_study_sections",
+  "info": {
+    "displayName": "caseStudySections"
+  },
+  "options": {},
+  "attributes": {
+    "sectionId": {
+      "type": "string"
+    },
+    "sectionName": {
+      "type": "string"
+    },
+    "sectionTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.cards",
+      "repeatable": true
+    },
+    "cardDescription": {
+      "type": "blocks"
+    },
+    "steps": {
+      "type": "json"
+    },
+    "timeline": {
+      "type": "json"
+    },
+    "takeaway": {
+      "type": "component",
+      "component": "shared.takeaways",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
