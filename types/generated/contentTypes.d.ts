@@ -2268,6 +2268,45 @@ export interface ApiMetaSeoMetaSeo extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMvpCaseStudyMvpCaseStudy
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'mvp_case_studies';
+  info: {
+    displayName: 'MVP-Case-Study';
+    pluralName: 'mvp-case-studies';
+    singularName: 'mvp-case-study';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    focus: Schema.Attribute.String;
+    footerCTA: Schema.Attribute.JSON;
+    heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mvp-case-study.mvp-case-study'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schema: Schema.Attribute.JSON;
+    sectionId: Schema.Attribute.Component<'shared.case-study-sections', false>;
+    slug: Schema.Attribute.UID;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    year: Schema.Attribute.String;
+  };
+}
+
 export interface ApiMvpHomeMvpHome extends Struct.CollectionTypeSchema {
   collectionName: 'mvp_homes';
   info: {
@@ -4106,7 +4145,6 @@ export interface PluginUploadFile extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ext: Schema.Attribute.String;
-    focalPoint: Schema.Attribute.JSON;
     folder: Schema.Attribute.Relation<'manyToOne', 'plugin::upload.folder'> &
       Schema.Attribute.Private;
     folderPath: Schema.Attribute.String &
@@ -4405,6 +4443,7 @@ declare module '@strapi/strapi' {
       'api::landing-page.landing-page': ApiLandingPageLandingPage;
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
+      'api::mvp-case-study.mvp-case-study': ApiMvpCaseStudyMvpCaseStudy;
       'api::mvp-home.mvp-home': ApiMvpHomeMvpHome;
       'api::os-about.os-about': ApiOsAboutOsAbout;
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;
