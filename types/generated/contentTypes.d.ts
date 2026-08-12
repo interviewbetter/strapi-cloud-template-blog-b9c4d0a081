@@ -827,7 +827,7 @@ export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.String;
     name: Schema.Attribute.String;
-    order: Schema.Attribute.Integer;
+    order: Schema.Attribute.Integer & Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.String;
@@ -1840,7 +1840,7 @@ export interface ApiIbArticleIbArticle extends Struct.CollectionTypeSchema {
   };
   attributes: {
     category: Schema.Attribute.Enumeration<
-      ['courses', 'articles&research', 'caseStudies']
+      ['courses', 'careerAdvice', 'interviewPreparation']
     >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

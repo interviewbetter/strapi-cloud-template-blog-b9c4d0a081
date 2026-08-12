@@ -71,7 +71,7 @@
     },
     "order": {
       "type": "integer",
-      "unique": false
+      "unique": true
     }
   }
 }

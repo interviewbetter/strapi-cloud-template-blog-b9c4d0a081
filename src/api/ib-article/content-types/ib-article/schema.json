@@ -73,8 +73,8 @@
       "type": "enumeration",
       "enum": [
         "courses",
-        "articles&research",
-        "caseStudies"
+        "careerAdvice",
+        "interviewPreparation"
       ]
     }
   }
