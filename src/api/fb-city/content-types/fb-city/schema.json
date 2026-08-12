@@ -72,6 +72,10 @@
     "order": {
       "type": "integer",
       "unique": true
+    },
+    "position": {
+      "type": "string",
+      "unique": true
     }
   }
 }

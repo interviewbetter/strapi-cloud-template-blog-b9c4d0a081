@@ -828,6 +828,7 @@ export interface ApiFbCityFbCity extends Struct.CollectionTypeSchema {
     metaTitle: Schema.Attribute.String;
     name: Schema.Attribute.String;
     order: Schema.Attribute.Integer & Schema.Attribute.Unique;
+    position: Schema.Attribute.String & Schema.Attribute.Unique;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.String;
