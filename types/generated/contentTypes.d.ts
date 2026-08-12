@@ -2297,7 +2297,7 @@ export interface ApiMvpCaseStudyMvpCaseStudy
     metaTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     schema: Schema.Attribute.JSON;
-    sectionId: Schema.Attribute.Component<'shared.case-study-sections', false>;
+    sectionId: Schema.Attribute.Component<'shared.case-study-sections', true>;
     slug: Schema.Attribute.UID;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

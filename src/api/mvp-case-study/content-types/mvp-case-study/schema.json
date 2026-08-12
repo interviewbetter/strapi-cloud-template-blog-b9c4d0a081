@@ -48,7 +48,7 @@
     "sectionId": {
       "type": "component",
       "component": "shared.case-study-sections",
-      "repeatable": false
+      "repeatable": true
     },
     "footerCTA": {
       "type": "json"
