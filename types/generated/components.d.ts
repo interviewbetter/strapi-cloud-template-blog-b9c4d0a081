@@ -367,6 +367,7 @@ export interface SharedOpenings extends Struct.ComponentSchema {
     shift: Schema.Attribute.Enumeration<
       ['Full-time', 'Contract', 'Fellowship']
     >;
+    workMode: Schema.Attribute.String;
   };
 }
 

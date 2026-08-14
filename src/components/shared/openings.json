@@ -37,6 +37,9 @@
     },
     "experience": {
       "type": "string"
+    },
+    "workMode": {
+      "type": "string"
     }
   },
   "config": {}
