@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_glossaries",
+  "info": {
+    "displayName": "glossary"
+  },
+  "options": {},
+  "attributes": {
+    "word": {
+      "type": "string"
+    },
+    "meaning": {
+      "type": "text"
+    },
+    "glossaryId": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

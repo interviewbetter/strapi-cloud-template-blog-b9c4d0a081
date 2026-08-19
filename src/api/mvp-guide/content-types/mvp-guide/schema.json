@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mvp_guides",
+  "info": {
+    "singularName": "mvp-guide",
+    "pluralName": "mvp-guides",
+    "displayName": "MVP-Guide"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "schema": {
+      "type": "json"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "startingTitle": {
+      "type": "string"
+    },
+    "middleTitle": {
+      "type": "string"
+    },
+    "endingTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "readTime": {
+      "type": "string"
+    },
+    "BestFor": {
+      "type": "string"
+    },
+    "buildApproach": {
+      "type": "string"
+    },
+    "mvpSections": {
+      "type": "component",
+      "component": "shared.mvp-sections",
+      "repeatable": true
+    }
+  }
+}

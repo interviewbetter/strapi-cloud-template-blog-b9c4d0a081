@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_common_mistakes",
+  "info": {
+    "displayName": "commonMistakes"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "titleDesc": {
+      "type": "blocks"
+    }
+  },
+  "config": {}
+}
