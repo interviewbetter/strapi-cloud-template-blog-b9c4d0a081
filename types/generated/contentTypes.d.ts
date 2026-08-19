@@ -2307,6 +2307,45 @@ export interface ApiMvpCaseStudyMvpCaseStudy
   };
 }
 
+export interface ApiMvpGuideMvpGuide extends Struct.CollectionTypeSchema {
+  collectionName: 'mvp_guides';
+  info: {
+    displayName: 'MVP-Guide';
+    pluralName: 'mvp-guides';
+    singularName: 'mvp-guide';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    BestFor: Schema.Attribute.String;
+    buildApproach: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    endingTitle: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mvp-guide.mvp-guide'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    middleTitle: Schema.Attribute.String;
+    mvpSections: Schema.Attribute.Component<'shared.mvp-sections', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    readTime: Schema.Attribute.String;
+    schema: Schema.Attribute.JSON;
+    slug: Schema.Attribute.UID;
+    startingTitle: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMvpHomeMvpHome extends Struct.CollectionTypeSchema {
   collectionName: 'mvp_homes';
   info: {
@@ -4445,6 +4484,7 @@ declare module '@strapi/strapi' {
       'api::landing.landing': ApiLandingLanding;
       'api::meta-seo.meta-seo': ApiMetaSeoMetaSeo;
       'api::mvp-case-study.mvp-case-study': ApiMvpCaseStudyMvpCaseStudy;
+      'api::mvp-guide.mvp-guide': ApiMvpGuideMvpGuide;
       'api::mvp-home.mvp-home': ApiMvpHomeMvpHome;
       'api::os-about.os-about': ApiOsAboutOsAbout;
       'api::os-ai-modernization.os-ai-modernization': ApiOsAiModernizationOsAiModernization;

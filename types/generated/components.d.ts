@@ -106,6 +106,19 @@ export interface SharedCategories extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCommonMistakes extends Struct.ComponentSchema {
+  collectionName: 'components_shared_common_mistakes';
+  info: {
+    displayName: 'commonMistakes';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks;
+    heading: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+    titleDesc: Schema.Attribute.Blocks;
+  };
+}
+
 export interface SharedComponent extends Struct.ComponentSchema {
   collectionName: 'components_shared_components';
   info: {
@@ -175,6 +188,18 @@ export interface SharedFaq extends Struct.ComponentSchema {
   attributes: {
     answer: Schema.Attribute.Text;
     faqId: Schema.Attribute.String;
+    question: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedFaqMvp extends Struct.ComponentSchema {
+  collectionName: 'components_shared_faq_mvps';
+  info: {
+    displayName: 'faqMVP';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    faqID: Schema.Attribute.String;
     question: Schema.Attribute.Text;
   };
 }
@@ -304,6 +329,19 @@ export interface SharedFullStackDevelopment extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedGlossary extends Struct.ComponentSchema {
+  collectionName: 'components_shared_glossaries';
+  info: {
+    displayName: 'glossary';
+  };
+  attributes: {
+    glossaryId: Schema.Attribute.String;
+    meaning: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    word: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -329,6 +367,25 @@ export interface SharedMobileAppDevelopment extends Struct.ComponentSchema {
     internship: Schema.Attribute.JSON;
     prepPlan: Schema.Attribute.JSON;
     whyThisCourse: Schema.Attribute.JSON;
+  };
+}
+
+export interface SharedMvpSections extends Struct.ComponentSchema {
+  collectionName: 'components_shared_mvp_sections';
+  info: {
+    displayName: 'mvpSections';
+  };
+  attributes: {
+    box: Schema.Attribute.JSON;
+    endingTitle: Schema.Attribute.String;
+    faq: Schema.Attribute.Component<'shared.faq-mvp', true>;
+    footerCTA: Schema.Attribute.JSON;
+    glossary: Schema.Attribute.Component<'shared.glossary', true>;
+    middleTitle: Schema.Attribute.String;
+    mistakes: Schema.Attribute.Component<'shared.common-mistakes', true>;
+    sectionDesc: Schema.Attribute.Blocks;
+    sectionId: Schema.Attribute.String;
+    startingTitle: Schema.Attribute.String;
   };
 }
 
@@ -593,20 +650,24 @@ declare module '@strapi/strapi' {
       'shared.case-studies-section-cards': SharedCaseStudiesSectionCards;
       'shared.case-study-sections': SharedCaseStudySections;
       'shared.categories': SharedCategories;
+      'shared.common-mistakes': SharedCommonMistakes;
       'shared.component': SharedComponent;
       'shared.course-details': SharedCourseDetails;
       'shared.courses': SharedCourses;
       'shared.delivery-management': SharedDeliveryManagement;
       'shared.extras': SharedExtras;
       'shared.faq': SharedFaq;
+      'shared.faq-mvp': SharedFaqMvp;
       'shared.foundersbar-blog-sections': SharedFoundersbarBlogSections;
       'shared.foundersbar-case-studies-sections': SharedFoundersbarCaseStudiesSections;
       'shared.fresher-main': SharedFresherMain;
       'shared.fresher-pricing': SharedFresherPricing;
       'shared.frontend-development': SharedFrontendDevelopment;
       'shared.full-stack-development': SharedFullStackDevelopment;
+      'shared.glossary': SharedGlossary;
       'shared.media': SharedMedia;
       'shared.mobile-app-development': SharedMobileAppDevelopment;
+      'shared.mvp-sections': SharedMvpSections;
       'shared.navigation-link': SharedNavigationLink;
       'shared.navigation-menu-items': SharedNavigationMenuItems;
       'shared.openings': SharedOpenings;

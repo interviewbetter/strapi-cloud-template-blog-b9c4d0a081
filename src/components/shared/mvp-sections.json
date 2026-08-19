@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_shared_mvp_sections",
+  "info": {
+    "displayName": "mvpSections"
+  },
+  "options": {},
+  "attributes": {
+    "sectionId": {
+      "type": "string"
+    },
+    "startingTitle": {
+      "type": "string"
+    },
+    "middleTitle": {
+      "type": "string"
+    },
+    "endingTitle": {
+      "type": "string"
+    },
+    "sectionDesc": {
+      "type": "blocks"
+    },
+    "box": {
+      "type": "json"
+    },
+    "faq": {
+      "type": "component",
+      "component": "shared.faq-mvp",
+      "repeatable": true
+    },
+    "glossary": {
+      "type": "component",
+      "component": "shared.glossary",
+      "repeatable": true
+    },
+    "mistakes": {
+      "type": "component",
+      "component": "shared.common-mistakes",
+      "repeatable": true
+    },
+    "footerCTA": {
+      "type": "json"
+    }
+  },
+  "config": {}
+}
