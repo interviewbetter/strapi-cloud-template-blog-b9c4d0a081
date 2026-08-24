@@ -77,11 +77,17 @@
         "interviewPreparation"
       ]
     },
-    "related_articles": {
+    "related_ib_articles": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::article.article",
-      "mappedBy": "ib_articles"
+      "target": "api::ib-article.ib-article",
+      "inversedBy": "ib_articles"
+    },
+    "ib_articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ib-article.ib-article",
+      "mappedBy": "related_ib_articles"
     }
   }
 }

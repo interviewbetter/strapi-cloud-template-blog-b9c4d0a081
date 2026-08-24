@@ -484,10 +484,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 80;
       }>;
-    ib_articles: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::ib-article.ib-article'
-    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1858,6 +1854,10 @@ export interface ApiIbArticleIbArticle extends Struct.CollectionTypeSchema {
       'api::foundersbar-author.foundersbar-author'
     >;
     heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    ib_articles: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::ib-article.ib-article'
+    >;
     listingImage: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
@@ -1871,9 +1871,9 @@ export interface ApiIbArticleIbArticle extends Struct.CollectionTypeSchema {
     metaTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.String;
-    related_articles: Schema.Attribute.Relation<
+    related_ib_articles: Schema.Attribute.Relation<
       'manyToMany',
-      'api::article.article'
+      'api::ib-article.ib-article'
     >;
     schema: Schema.Attribute.JSON;
     sections: Schema.Attribute.Component<'shared.os-blog-sections', true>;
