@@ -2342,6 +2342,7 @@ export interface ApiMvpGuideMvpGuide extends Struct.CollectionTypeSchema {
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
     middleTitle: Schema.Attribute.String;
+    MVPFooterCta: Schema.Attribute.JSON;
     mvpSections: Schema.Attribute.Component<'shared.mvp-sections', true>;
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.String;

@@ -48,6 +48,9 @@
       "type": "component",
       "component": "shared.mvp-sections",
       "repeatable": true
+    },
+    "MVPFooterCta": {
+      "type": "json"
     }
   }
 }
