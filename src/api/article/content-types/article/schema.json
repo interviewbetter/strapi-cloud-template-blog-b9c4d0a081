@@ -53,6 +53,12 @@
         "shared.rich-text",
         "shared.slider"
       ]
+    },
+    "ib_articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ib-article.ib-article",
+      "inversedBy": "related_articles"
     }
   }
 }

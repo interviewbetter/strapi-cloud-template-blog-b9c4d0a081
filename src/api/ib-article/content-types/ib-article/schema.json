@@ -76,6 +76,12 @@
         "careerAdvice",
         "interviewPreparation"
       ]
+    },
+    "related_articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "ib_articles"
     }
   }
 }
