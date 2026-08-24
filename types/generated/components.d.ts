@@ -379,7 +379,6 @@ export interface SharedMvpSections extends Struct.ComponentSchema {
     box: Schema.Attribute.JSON;
     endingTitle: Schema.Attribute.String;
     faq: Schema.Attribute.Component<'shared.faq-mvp', true>;
-    footerCTA: Schema.Attribute.JSON;
     glossary: Schema.Attribute.Component<'shared.glossary', true>;
     middleTitle: Schema.Attribute.String;
     mistakes: Schema.Attribute.Component<'shared.common-mistakes', true>;

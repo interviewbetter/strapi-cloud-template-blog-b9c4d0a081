@@ -37,9 +37,6 @@
       "type": "component",
       "component": "shared.common-mistakes",
       "repeatable": true
-    },
-    "footerCTA": {
-      "type": "json"
     }
   },
   "config": {}
