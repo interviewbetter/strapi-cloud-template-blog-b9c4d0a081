@@ -53,6 +53,12 @@
         "shared.rich-text",
         "shared.slider"
       ]
+    },
+    "mvp_guides": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::mvp-guide.mvp-guide",
+      "inversedBy": "related_guides"
     }
   }
 }

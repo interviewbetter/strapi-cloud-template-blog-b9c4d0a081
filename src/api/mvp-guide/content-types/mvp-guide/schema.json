@@ -51,6 +51,12 @@
     },
     "MVPFooterCta": {
       "type": "json"
+    },
+    "related_guides": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "mappedBy": "mvp_guides"
     }
   }
 }
