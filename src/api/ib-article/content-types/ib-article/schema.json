@@ -88,6 +88,11 @@
       "relation": "manyToMany",
       "target": "api::ib-article.ib-article",
       "mappedBy": "related_ib_articles"
+    },
+    "ib_article_references": {
+      "type": "component",
+      "component": "shared.references",
+      "repeatable": true
     }
   }
 }
