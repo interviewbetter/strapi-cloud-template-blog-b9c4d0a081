@@ -52,7 +52,7 @@
     "MVPFooterCta": {
       "type": "json"
     },
-    "related_guides": {
+    "guide": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::article.article",

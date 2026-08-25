@@ -58,7 +58,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::mvp-guide.mvp-guide",
-      "inversedBy": "related_guides"
+      "inversedBy": "guide"
     }
   }
 }
