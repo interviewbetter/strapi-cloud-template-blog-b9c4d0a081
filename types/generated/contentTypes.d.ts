@@ -490,10 +490,6 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'api::article.article'
     > &
       Schema.Attribute.Private;
-    mvp_guides: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::mvp-guide.mvp-guide'
-    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
@@ -1858,6 +1854,10 @@ export interface ApiIbArticleIbArticle extends Struct.CollectionTypeSchema {
       'api::foundersbar-author.foundersbar-author'
     >;
     heroImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    ib_article_references: Schema.Attribute.Component<
+      'shared.references',
+      true
+    >;
     ib_articles: Schema.Attribute.Relation<
       'manyToMany',
       'api::ib-article.ib-article'
@@ -2350,10 +2350,6 @@ export interface ApiMvpGuideMvpGuide extends Struct.CollectionTypeSchema {
     mvpSections: Schema.Attribute.Component<'shared.mvp-sections', true>;
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.String;
-    related_guides: Schema.Attribute.Relation<
-      'manyToMany',
-      'api::article.article'
-    >;
     schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID;
     startingTitle: Schema.Attribute.String;
