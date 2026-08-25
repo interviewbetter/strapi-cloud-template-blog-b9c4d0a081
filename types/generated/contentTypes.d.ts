@@ -2350,6 +2350,14 @@ export interface ApiMvpGuideMvpGuide extends Struct.CollectionTypeSchema {
     mvpSections: Schema.Attribute.Component<'shared.mvp-sections', true>;
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.String;
+    relatedGuide: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::mvp-guide.mvp-guide'
+    >;
+    relatedGuides: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::mvp-guide.mvp-guide'
+    >;
     schema: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID;
     startingTitle: Schema.Attribute.String;
