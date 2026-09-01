@@ -443,6 +443,7 @@ export interface SharedOsBlogSections extends Struct.ComponentSchema {
     displayName: 'OS-blogSections';
   };
   attributes: {
+    faq: Schema.Attribute.Component<'shared.faq', true>;
     imageDescription: Schema.Attribute.Blocks;
     keyPoints: Schema.Attribute.JSON;
     sectionDescription: Schema.Attribute.Blocks;

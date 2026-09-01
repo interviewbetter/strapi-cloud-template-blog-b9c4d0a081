@@ -38,6 +38,11 @@
     },
     "keyPoints": {
       "type": "json"
+    },
+    "faq": {
+      "type": "component",
+      "component": "shared.faq",
+      "repeatable": true
     }
   },
   "config": {}
