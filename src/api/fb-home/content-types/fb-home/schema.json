@@ -22,6 +22,9 @@
     },
     "trustedBy": {
       "type": "json"
+    },
+    "buildTheTeam": {
+      "type": "json"
     }
   }
 }

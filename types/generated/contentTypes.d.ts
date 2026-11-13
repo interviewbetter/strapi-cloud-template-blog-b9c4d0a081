@@ -1102,6 +1102,7 @@ export interface ApiFbHomeFbHome extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    buildTheTeam: Schema.Attribute.JSON;
     comparisonData: Schema.Attribute.JSON;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
