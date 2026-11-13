@@ -1344,6 +1344,37 @@ export interface ApiFbSoloFounderFbSoloFounder
   };
 }
 
+export interface ApiFbStartupChallengeFbStartupChallenge
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'fb_startup_challenges';
+  info: {
+    displayName: 'FB_Startup_Challenge';
+    pluralName: 'fb-startup-challenges';
+    singularName: 'fb-startup-challenge';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    compareData: Schema.Attribute.JSON;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer: Schema.Attribute.JSON;
+    hero: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::fb-startup-challenge.fb-startup-challenge'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFbStartupGrantFbStartupGrant
   extends Struct.CollectionTypeSchema {
   collectionName: 'fb_startup_grants';
@@ -4480,6 +4511,7 @@ declare module '@strapi/strapi' {
       'api::fb-performance-marketing.fb-performance-marketing': ApiFbPerformanceMarketingFbPerformanceMarketing;
       'api::fb-product-blueprint.fb-product-blueprint': ApiFbProductBlueprintFbProductBlueprint;
       'api::fb-solo-founder.fb-solo-founder': ApiFbSoloFounderFbSoloFounder;
+      'api::fb-startup-challenge.fb-startup-challenge': ApiFbStartupChallengeFbStartupChallenge;
       'api::fb-startup-grant.fb-startup-grant': ApiFbStartupGrantFbStartupGrant;
       'api::fb-student-incubator.fb-student-incubator': ApiFbStudentIncubatorFbStudentIncubator;
       'api::foundersbar-author.foundersbar-author': ApiFoundersbarAuthorFoundersbarAuthor;
