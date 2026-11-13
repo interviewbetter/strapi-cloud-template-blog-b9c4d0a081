@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fb_startup_challenges",
+  "info": {
+    "singularName": "fb-startup-challenge",
+    "pluralName": "fb-startup-challenges",
+    "displayName": "FB_Startup_Challenge"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "type": "json"
+    },
+    "compareData": {
+      "type": "json"
+    },
+    "footer": {
+      "type": "json"
+    }
+  }
+}
